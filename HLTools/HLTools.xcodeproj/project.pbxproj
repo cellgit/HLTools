@@ -13,6 +13,7 @@
 		F2111C0F2067FA5A0032E6E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2111C0E2067FA5A0032E6E7 /* Assets.xcassets */; };
 		F2111C122067FA5A0032E6E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2111C102067FA5A0032E6E7 /* LaunchScreen.storyboard */; };
 		F2111C1D2067FA5A0032E6E7 /* HLToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2111C1C2067FA5A0032E6E7 /* HLToolsTests.swift */; };
+		F2111C292067FCC90032E6E7 /* HLProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2111C282067FCC90032E6E7 /* HLProgressBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		F2111C182067FA5A0032E6E7 /* HLToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HLToolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2111C1C2067FA5A0032E6E7 /* HLToolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLToolsTests.swift; sourceTree = "<group>"; };
 		F2111C1E2067FA5A0032E6E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2111C282067FCC90032E6E7 /* HLProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLProgressBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				F2111C072067FA5A0032E6E7 /* AppDelegate.swift */,
 				F2111C092067FA5A0032E6E7 /* ViewController.swift */,
+				F2111C272067FC790032E6E7 /* Tools */,
 				F2111C0B2067FA5A0032E6E7 /* Main.storyboard */,
 				F2111C0E2067FA5A0032E6E7 /* Assets.xcassets */,
 				F2111C102067FA5A0032E6E7 /* LaunchScreen.storyboard */,
@@ -94,6 +97,14 @@
 				F2111C1E2067FA5A0032E6E7 /* Info.plist */,
 			);
 			path = HLToolsTests;
+			sourceTree = "<group>";
+		};
+		F2111C272067FC790032E6E7 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				F2111C282067FCC90032E6E7 /* HLProgressBar.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +212,7 @@
 			files = (
 				F2111C0A2067FA5A0032E6E7 /* ViewController.swift in Sources */,
 				F2111C082067FA5A0032E6E7 /* AppDelegate.swift in Sources */,
+				F2111C292067FCC90032E6E7 /* HLProgressBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
