@@ -8,85 +8,83 @@
 
 import UIKit
 
-class ViewController: UIViewController,URLSessionDownloadDelegate {
+class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+    
+    let cellId:String = "cellId"
+    var tableView:UITableView!
+    var dataArray:Array = ["进度君",
+                           "日历君",
+                           "相册君",
+                           "警示君",
+                           "弹框君",
+                           "待续... ..."]
     
     let shapelayer = CAShapeLayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupUI()
+        configuration()
+        setupTableView()
     }
     
-    func setupUI() {
-        let trackLayer = CAShapeLayer()
-        let circularPath = UIBezierPath(arcCenter: .zero, radius: 100, startAngle: 0, endAngle: 2*CGFloat.pi, clockwise: true)
-        trackLayer.path = circularPath.cgPath
-        trackLayer.strokeColor = UIColor.lightGray.cgColor
-        trackLayer.lineWidth = 10.0
-        trackLayer.fillColor = UIColor.clear.cgColor
-        trackLayer.lineCap = kCALineCapRound
-        trackLayer.position = view.center
-        
-        view.layer.addSublayer(trackLayer)
-        shapelayer.path = circularPath.cgPath
-        shapelayer.strokeColor = UIColor.red.cgColor
-        shapelayer.lineWidth = 10.0
-        shapelayer.fillColor = UIColor.clear.cgColor
-        shapelayer.strokeEnd = 0
-        shapelayer.lineCap = kCALineCapRound
-        shapelayer.position = view.center
-        view.layer.addSublayer(shapelayer)
-        shapelayer.transform = CATransform3DMakeRotation(-CGFloat.pi / 2, 0, 0, 1)
-        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
+    func configuration() {
+        self.title = "小控件"
     }
     
-    let urlString = "https://firebasestorage.googleapis.com/v0/b/firestorechat-e64ac.appspot.com/o/intermediate_training_rec.mp4?alt=media&token=e20261d0-7219-49d2-b32d-367e1606500c"
     
-    func beginDownLoadingFile() {
-        print("attempting to animate stroke")
-        shapelayer.strokeEnd = 0
-        let configuration = URLSessionConfiguration.default
-        let operationQueue = OperationQueue()
-        let urlSession = URLSession(configuration: configuration, delegate: self, delegateQueue: operationQueue)
+    
+    func setupTableView() {
         
-        guard let url = URL(string:urlString) else {return}
-        let downloadTask = urlSession.downloadTask(with: url)
-        downloadTask.resume()
+        tableView = UITableView.init(frame: self.view.frame, style: .plain)
+        self.view.addSubview(tableView)
+        
+        tableView.delegate = self
+        tableView.dataSource = self;
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
+    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataArray.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+        
+        cell.textLabel?.text = "row \(indexPath.row) : --  \(dataArray[indexPath.row])"
+        cell.textLabel?.textColor = UIColor.init(red: 43/255.0, green: 133/255.0, blue: 208/255.0, alpha: 1.0)
+        
+        return cell;
     }
     
-    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         
-        let percentage = CGFloat(totalBytesWritten) /
-            CGFloat(totalBytesExpectedToWrite)
-        DispatchQueue.main.async {
-            self.shapelayer.strokeEnd = percentage
+        if indexPath.row == 0 {
+            let vc:HLProgressBarViewController = HLProgressBarViewController.init()
+            pushViewController(vc: vc, animated: true)
         }
         
-        print(percentage)
     }
     
-    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
-        print("finished downloading file")
-        
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 55
     }
     
-    
-    fileprivate func animateCircle() {
-        let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
-        basicAnimation.toValue = 1
-        basicAnimation.duration = 2
-        basicAnimation.fillMode = kCAFillModeForwards
-        basicAnimation.isRemovedOnCompletion = false
-        shapelayer.add(basicAnimation, forKey: "urSoBasic")
+}
+
+
+extension ViewController {
+    func pushViewController(vc:UIViewController, animated:Bool) {
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
     }
+
     
-    @objc private func handleTap() {
-        print("tap to animate stroke")
-        
-        beginDownLoadingFile()
-        
-//        animateCircle()
-    }
+    
+    
+    
 }
 

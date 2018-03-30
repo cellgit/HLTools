@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E8DA37C68102C957E0C311B0 /* Pods_HLTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 007071D4A70A357B6D799D66 /* Pods_HLTools.framework */; };
 		F2111C082067FA5A0032E6E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2111C072067FA5A0032E6E7 /* AppDelegate.swift */; };
 		F2111C0A2067FA5A0032E6E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2111C092067FA5A0032E6E7 /* ViewController.swift */; };
 		F2111C0D2067FA5A0032E6E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2111C0B2067FA5A0032E6E7 /* Main.storyboard */; };
@@ -14,6 +15,14 @@
 		F2111C122067FA5A0032E6E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2111C102067FA5A0032E6E7 /* LaunchScreen.storyboard */; };
 		F2111C1D2067FA5A0032E6E7 /* HLToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2111C1C2067FA5A0032E6E7 /* HLToolsTests.swift */; };
 		F2111C292067FCC90032E6E7 /* HLProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2111C282067FCC90032E6E7 /* HLProgressBar.swift */; };
+		F2111C2D206D20920032E6E7 /* HLProgressBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2111C2C206D20920032E6E7 /* HLProgressBarViewController.swift */; };
+		F2111C2F206D239B0032E6E7 /* HLBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2111C2E206D239B0032E6E7 /* HLBaseViewController.swift */; };
+		F2111C33206D39850032E6E7 /* HLConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2111C32206D39850032E6E7 /* HLConfiguration.swift */; };
+		F2111C37206E88900032E6E7 /* SWPopUpsContainerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2111C35206E88900032E6E7 /* SWPopUpsContainerViewController.storyboard */; };
+		F2111C38206E88900032E6E7 /* SWPopUpsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2111C36206E88900032E6E7 /* SWPopUpsContainerViewController.swift */; };
+		F2111C3C206E88AB0032E6E7 /* CalendarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2111C39206E88AB0032E6E7 /* CalendarViewController.storyboard */; };
+		F2111C3D206E88AB0032E6E7 /* SWCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2111C3A206E88AB0032E6E7 /* SWCalendarCell.swift */; };
+		F2111C3E206E88AB0032E6E7 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2111C3B206E88AB0032E6E7 /* CalendarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		007071D4A70A357B6D799D66 /* Pods_HLTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HLTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		628F22F3E48F0A3511381229 /* Pods-HLTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HLTools.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HLTools/Pods-HLTools.debug.xcconfig"; sourceTree = "<group>"; };
+		77A7535D90B9A398DADA3A53 /* Pods-HLTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HLTools.release.xcconfig"; path = "Pods/Target Support Files/Pods-HLTools/Pods-HLTools.release.xcconfig"; sourceTree = "<group>"; };
 		F2111C042067FA5A0032E6E7 /* HLTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HLTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2111C072067FA5A0032E6E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2111C092067FA5A0032E6E7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +50,14 @@
 		F2111C1C2067FA5A0032E6E7 /* HLToolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLToolsTests.swift; sourceTree = "<group>"; };
 		F2111C1E2067FA5A0032E6E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2111C282067FCC90032E6E7 /* HLProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLProgressBar.swift; sourceTree = "<group>"; };
+		F2111C2C206D20920032E6E7 /* HLProgressBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLProgressBarViewController.swift; sourceTree = "<group>"; };
+		F2111C2E206D239B0032E6E7 /* HLBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLBaseViewController.swift; sourceTree = "<group>"; };
+		F2111C32206D39850032E6E7 /* HLConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLConfiguration.swift; sourceTree = "<group>"; };
+		F2111C35206E88900032E6E7 /* SWPopUpsContainerViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SWPopUpsContainerViewController.storyboard; sourceTree = "<group>"; };
+		F2111C36206E88900032E6E7 /* SWPopUpsContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWPopUpsContainerViewController.swift; sourceTree = "<group>"; };
+		F2111C39206E88AB0032E6E7 /* CalendarViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CalendarViewController.storyboard; sourceTree = "<group>"; };
+		F2111C3A206E88AB0032E6E7 /* SWCalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWCalendarCell.swift; sourceTree = "<group>"; };
+		F2111C3B206E88AB0032E6E7 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8DA37C68102C957E0C311B0 /* Pods_HLTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +79,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		83CCA81D835E117660219F52 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				007071D4A70A357B6D799D66 /* Pods_HLTools.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B1C97856AB5B3AF8478D8BAE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				628F22F3E48F0A3511381229 /* Pods-HLTools.debug.xcconfig */,
+				77A7535D90B9A398DADA3A53 /* Pods-HLTools.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F2111BFB2067FA5A0032E6E7 = {
 			isa = PBXGroup;
 			children = (
 				F2111C062067FA5A0032E6E7 /* HLTools */,
 				F2111C1B2067FA5A0032E6E7 /* HLToolsTests */,
 				F2111C052067FA5A0032E6E7 /* Products */,
+				B1C97856AB5B3AF8478D8BAE /* Pods */,
+				83CCA81D835E117660219F52 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +121,8 @@
 			children = (
 				F2111C072067FA5A0032E6E7 /* AppDelegate.swift */,
 				F2111C092067FA5A0032E6E7 /* ViewController.swift */,
+				F2111C2E206D239B0032E6E7 /* HLBaseViewController.swift */,
+				F2111C31206D39570032E6E7 /* Config */,
 				F2111C272067FC790032E6E7 /* Tools */,
 				F2111C0B2067FA5A0032E6E7 /* Main.storyboard */,
 				F2111C0E2067FA5A0032E6E7 /* Assets.xcassets */,
@@ -102,9 +144,47 @@
 		F2111C272067FC790032E6E7 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F2111C34206E88900032E6E7 /* PopUps */,
+				F2111C2B206D20380032E6E7 /* Calendar */,
+				F2111C2A206D20380032E6E7 /* ProgressBar */,
 				F2111C282067FCC90032E6E7 /* HLProgressBar.swift */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		F2111C2A206D20380032E6E7 /* ProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				F2111C2C206D20920032E6E7 /* HLProgressBarViewController.swift */,
+			);
+			path = ProgressBar;
+			sourceTree = "<group>";
+		};
+		F2111C2B206D20380032E6E7 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				F2111C39206E88AB0032E6E7 /* CalendarViewController.storyboard */,
+				F2111C3B206E88AB0032E6E7 /* CalendarViewController.swift */,
+				F2111C3A206E88AB0032E6E7 /* SWCalendarCell.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		F2111C31206D39570032E6E7 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				F2111C32206D39850032E6E7 /* HLConfiguration.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		F2111C34206E88900032E6E7 /* PopUps */ = {
+			isa = PBXGroup;
+			children = (
+				F2111C35206E88900032E6E7 /* SWPopUpsContainerViewController.storyboard */,
+				F2111C36206E88900032E6E7 /* SWPopUpsContainerViewController.swift */,
+			);
+			path = PopUps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -114,9 +194,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F2111C212067FA5A0032E6E7 /* Build configuration list for PBXNativeTarget "HLTools" */;
 			buildPhases = (
+				9EFFB109610FAAFF73389873 /* [CP] Check Pods Manifest.lock */,
 				F2111C002067FA5A0032E6E7 /* Sources */,
 				F2111C012067FA5A0032E6E7 /* Frameworks */,
 				F2111C022067FA5A0032E6E7 /* Resources */,
+				2643D94030E547D0E2B33F02 /* [CP] Embed Pods Frameworks */,
+				A38F75D2FA0FB416F4D98245 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,7 +273,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2111C37206E88900032E6E7 /* SWPopUpsContainerViewController.storyboard in Resources */,
 				F2111C122067FA5A0032E6E7 /* LaunchScreen.storyboard in Resources */,
+				F2111C3C206E88AB0032E6E7 /* CalendarViewController.storyboard in Resources */,
 				F2111C0F2067FA5A0032E6E7 /* Assets.xcassets in Resources */,
 				F2111C0D2067FA5A0032E6E7 /* Main.storyboard in Resources */,
 			);
@@ -205,6 +290,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2643D94030E547D0E2B33F02 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HLTools/Pods-HLTools-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EFFB109610FAAFF73389873 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A38F75D2FA0FB416F4D98245 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HLTools/Pods-HLTools-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F2111C002067FA5A0032E6E7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -212,7 +345,13 @@
 			files = (
 				F2111C0A2067FA5A0032E6E7 /* ViewController.swift in Sources */,
 				F2111C082067FA5A0032E6E7 /* AppDelegate.swift in Sources */,
+				F2111C38206E88900032E6E7 /* SWPopUpsContainerViewController.swift in Sources */,
+				F2111C3D206E88AB0032E6E7 /* SWCalendarCell.swift in Sources */,
 				F2111C292067FCC90032E6E7 /* HLProgressBar.swift in Sources */,
+				F2111C2D206D20920032E6E7 /* HLProgressBarViewController.swift in Sources */,
+				F2111C3E206E88AB0032E6E7 /* CalendarViewController.swift in Sources */,
+				F2111C33206D39850032E6E7 /* HLConfiguration.swift in Sources */,
+				F2111C2F206D239B0032E6E7 /* HLBaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +502,7 @@
 		};
 		F2111C222067FA5A0032E6E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 628F22F3E48F0A3511381229 /* Pods-HLTools.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -379,6 +519,7 @@
 		};
 		F2111C232067FA5A0032E6E7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77A7535D90B9A398DADA3A53 /* Pods-HLTools.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

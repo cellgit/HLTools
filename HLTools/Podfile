@@ -1,0 +1,10 @@
+
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, ’9.0’
+
+target 'HLTools' do
+use_frameworks!
+
+pod 'JTAppleCalendar', '~> 7.0'
+
+end

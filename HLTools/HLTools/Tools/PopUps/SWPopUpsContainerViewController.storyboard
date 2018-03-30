@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pop Ups Container View Controller-->
+        <scene sceneID="2wU-if-BUK">
+            <objects>
+                <viewController storyboardIdentifier="KSWPopUpsContainerViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="L54-yR-wyw" customClass="SWPopUpsContainerViewController" customModule="CampusSafety" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RVR-e6-2fJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dsu-fJ-17v">
+                                <rect key="frame" x="74.5" y="255.5" width="225" height="155"/>
+                                <color key="backgroundColor" red="0.1764705882" green="0.57647058819999997" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="225" id="dUx-5b-Qsr"/>
+                                    <constraint firstAttribute="height" constant="155" id="hrS-rs-bfJ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.33000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dsu-fJ-17v" firstAttribute="centerY" secondItem="RVR-e6-2fJ" secondAttribute="centerY" id="YLd-mM-oTx"/>
+                            <constraint firstItem="dsu-fJ-17v" firstAttribute="centerX" secondItem="RVR-e6-2fJ" secondAttribute="centerX" id="s9U-W0-mGE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Dc1-Mq-Lr2"/>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="dsu-fJ-17v" id="PUB-B7-H4p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y1X-kb-tBg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5.5999999999999996" y="162.3688155922039"/>
+        </scene>
+    </scenes>
+</document>
