@@ -9,7 +9,16 @@
 import UIKit
 import JTAppleCalendar
 
+
+protocol SWCalendarDelegate {
+    func getSelectedDate(selectedDate:Date)
+}
+
+
 class CalendarViewController: UIViewController {
+    
+    open var delegate: SWCalendarDelegate?
+    
     let outsideMonthColor = UIColor.gray
     let monthColor = UIColor.black
     let selectedMonthColor = UIColor.white
@@ -24,8 +33,17 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var nextMonth: UIButton!
     let formatter = DateFormatter()
     
+    let todaysDate = Date()
+    var selectedDate = Date()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        calendarCollectionView.scrollToDate( Date(), animateScroll:false)
+        calendarCollectionView.selectDates([Date()])    // 设置 todaysDate
+        
         
         setupCalendarView()
     }
@@ -45,41 +63,55 @@ class CalendarViewController: UIViewController {
     func handleCellVisibility(cell:SWCalendarCell, cellState:CellState) {
         cell.isHidden = cellState.dateBelongsTo == .thisMonth ? false : true
     }
-    func handleCellTextColor(view: JTAppleCell?, cellState: CellState) {
-        guard let validCell = view as? SWCalendarCell else {return}
-        if validCell.isSelected {
-            validCell.dateLabel.textColor = selectedMonthColor
+    func handleCellTextColor(cell: SWCalendarCell?, cellState: CellState) {
+        
+        formatter.dateFormat = "yyyy MM dd"
+        let todaysDateString = formatter.string(from: todaysDate)
+        let monthDateString = formatter.string(from: cellState.date)
+        
+        if todaysDateString == monthDateString {
+            cell?.dateLabel.textColor = UIColor.magenta
         }
-        else{
-            if cellState.dateBelongsTo == .thisMonth {
-                validCell.dateLabel.textColor = monthColor
-            }
-            else {
-                validCell.dateLabel.textColor = outsideMonthColor
-            }
+        else {
+            cell?.dateLabel.textColor = cellState.isSelected ? selectedMonthColor : monthColor
         }
     }
-    func handleCellSelected(view: JTAppleCell?, cellState: CellState) {
-        guard let validCell = view as? SWCalendarCell else {return}
+    
+    func handleCellSelected(cell: SWCalendarCell?, cellState: CellState) {
+        guard let validCell = cell else {return}
         if validCell.isSelected {
             validCell.selectedView.isHidden = false
         }
         else {
             validCell.selectedView.isHidden = true
         }
+        
     }
+    
+    func getCellSelected(cell: SWCalendarCell, cellState: CellState) {
+        // 如果没选中,则默认为当前
+        selectedDate = cellState.date
+    }
+    
     func setupViewOfCalendar(from visibleDates:DateSegmentInfo) {
         guard let date = visibleDates.monthDates.first?.date else {return}
-        self.formatter.dateFormat = "yyyy"
-        self.year.text = self.formatter.string(from: date)
-        self.formatter.dateFormat = "MM月dd日"
-        self.month.text = self.formatter.string(from: date)
+//        self.formatter.dateFormat = "yyyy"
+//        self.year.text = self.formatter.string(from: date)
+//        self.formatter.dateFormat = "MM月dd日"
+//        self.month.text = self.formatter.string(from: date)
         self.formatter.dateFormat = "yyyy年 MM月"
         self.yearToMonth.text = self.formatter.string(from: date)
+        
+        self.formatter.dateFormat = "yyyy"
+        let todaysYearString = formatter.string(from: todaysDate)
+        self.year.text = todaysYearString
+        self.formatter.dateFormat = "MM月dd日"
+        let todaysMonthString = formatter.string(from: todaysDate)
+        self.month.text = todaysMonthString
     }
     // confirm or cancel action
     @IBAction func confirmAction(_ sender: Any) {
-        //TODO： 在这里获取日期，传递到上一级控制器
+        delegate?.getSelectedDate(selectedDate: self.selectedDate)
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func cancelAction(_ sender: Any) {
@@ -109,8 +141,8 @@ extension CalendarViewController: JTAppleCalendarViewDataSource{
 extension CalendarViewController: JTAppleCalendarViewDelegate {
     func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "SWCalendarCell", for: indexPath) as! SWCalendarCell
-        handleCellTextColor(view: cell, cellState: cellState)
-        handleCellSelected(view: cell, cellState: cellState)
+        handleCellTextColor(cell: cell, cellState: cellState)
+        handleCellSelected(cell: cell, cellState: cellState)
         handleCellVisibility(cell: cell, cellState: cellState)
 //        cell.layer.borderWidth = 1
 //        cell.layer.borderColor = UIColor.red.cgColor
@@ -118,15 +150,34 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
         return cell
     }
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
-        handleCellTextColor(view: cell, cellState: cellState)
-        handleCellSelected(view: cell, cellState: cellState)
+        handleCellTextColor(cell: cell as? SWCalendarCell, cellState: cellState)
+        handleCellSelected(cell: cell as? SWCalendarCell, cellState: cellState)
+        
+        print("selectedDate:\(cellState.date)")
+        print("selectedDateString:\(formatter.string(from: cellState.date))")
+        getCellSelected(cell: cell as! SWCalendarCell, cellState: cellState)
+        cell?.bounce()
     }
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
-        handleCellTextColor(view: cell, cellState: cellState)
-        handleCellSelected(view: cell, cellState: cellState)
+        handleCellTextColor(cell: cell as? SWCalendarCell, cellState: cellState)
+        handleCellSelected(cell: cell as? SWCalendarCell, cellState: cellState)
     }
     func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
         setupViewOfCalendar(from: visibleDates)
+    }
+}
+
+
+extension UIView {
+    func bounce() {
+        self.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        UIView.animate(withDuration: 0.5,
+                       delay: 0, usingSpringWithDamping: 0.3,
+                       initialSpringVelocity: 0.1,
+                       options: UIViewAnimationOptions.beginFromCurrentState,
+                       animations: {
+                        self.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        }, completion: nil)
     }
 }
 

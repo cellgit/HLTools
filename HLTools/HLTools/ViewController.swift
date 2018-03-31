@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,SWCalendarDelegate {
+    
+    
     
     let cellId:String = "cellId"
     var tableView:UITableView!
@@ -20,6 +22,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
                            "待续... ..."]
     
     let shapelayer = CAShapeLayer()
+    let formatter = DateFormatter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +59,8 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         cell.textLabel?.text = "row \(indexPath.row) : --  \(dataArray[indexPath.row])"
         cell.textLabel?.textColor = UIColor.init(red: 43/255.0, green: 133/255.0, blue: 208/255.0, alpha: 1.0)
         
+        
+        
         return cell;
     }
     
@@ -68,7 +73,9 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         }
         else if (dataArray[indexPath.row] .elementsEqual("日历君")) {
             let vc = UIStoryboard(name: "CalendarViewController", bundle: nil).instantiateViewController(withIdentifier: "KCalendarViewController") as UIViewController
-            self.present(vc, animated: true, completion: nil)
+            let viewController:CalendarViewController = vc as! CalendarViewController
+            viewController.delegate = self as? SWCalendarDelegate
+            self.present(viewController, animated: true, completion: nil)
         }
         else if (dataArray[indexPath.row] .elementsEqual("弹框君")) {
             let vc = UIStoryboard(name: "SWPopUpsContainerViewController", bundle: nil).instantiateViewController(withIdentifier: "KSWPopUpsContainerViewController") as UIViewController
@@ -80,6 +87,13 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 55
+    }
+    
+    //MARK: SWCalendarDelegate
+    func getSelectedDate(selectedDate: Date) {
+        
+        print("selectedDateString:\(selectedDate)")
+        print("selectedDateString:\(formatter.string(from: selectedDate))")
     }
     
 }
