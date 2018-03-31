@@ -56,9 +56,12 @@ public struct CellState {
     public let dateSection: () -> (range: (start: Date, end: Date), month: Int, rowCount: Int)
     /// returns the position of a selection in the event you wish to do range selection
     public let selectedPosition: () -> SelectionRangePosition
-    /// returns the cell frame.
+    /// returns the cell.
     /// Useful if you wish to display something at the cell's frame/position
     public var cell: () -> JTAppleCell?
+    /// Shows if a cell's selection/deselection was done either programatically or by the user
+    /// This variable is guranteed to be non-nil inside of a didSelect/didDeselect function
+    public var selectionType: SelectionType? = nil
 }
 
 /// Defines the parameters which configures the calendar.
@@ -135,7 +138,7 @@ struct CalendarData {
 }
 
 /// Defines a month structure.
-struct Month {
+public struct Month {
 
     /// Start index day for the month.
     /// The start is total number of days of previous months
@@ -150,22 +153,22 @@ struct Month {
     let sections: [Int]
 
     /// Number of inDates for this month
-    let inDates: Int
+    public let inDates: Int
 
     /// Number of outDates for this month
-    let outDates: Int
+    public let outDates: Int
 
     /// Maps a section to the index in the total number of sections
     let sectionIndexMaps: [Int: Int]
 
     /// Number of rows for the month
-    let rows: Int
+    public let rows: Int
     
     /// Name of the month
-    let name: MonthsOfYear
+    public let name: MonthsOfYear
 
     // Return the total number of days for the represented month
-    var numberOfDaysInMonth: Int
+    public let numberOfDaysInMonth: Int
 
     // Return the total number of day cells
     // to generate for the represented month
@@ -176,20 +179,6 @@ struct Month {
     var startSection: Int {
         return sectionIndexMaps.keys.min()!
     }
-
-//    func firstIndexPathForExternal(section: Int) -> IndexPath? {
-//        guard let internalSection = sectionIndexMaps[section] else {
-//            return nil
-//        }
-//        if internalSection == 0 {
-//            // Then we need to consider predates
-//            return indexPath(forDay: 1 - inDates)
-//        } else {
-//            let startDay = startDayFor(section: internalSection)!
-//            let path = indexPath(forDay: startDay)
-//            return path
-//        }
-//    }
     
     // Return the section in which a day is contained
     func indexPath(forDay number: Int) -> IndexPath? {
@@ -255,27 +244,6 @@ struct Month {
         }
         return (startIndex: startIndex, endIndex: endIndex)
     }
-    
-//    func startDayFor(section: Int) -> Int? {
-//        var retval: Int?
-//        
-//        if !(0..<sections.count ~= section)  {
-//            return nil
-//        }
-//        if section == 0 {
-//            retval = 1
-//        } else {
-//            var diff: Int = 0
-//            for (index, _) in sections.enumerated() {
-//                guard let bounds = boundaryIndicesFor(section: index), index < section else {
-//                    break
-//                }
-//                diff += bounds.endIndex - bounds.startIndex + 1
-//            }
-//            retval = diff + 1
-//        }
-//        return retval
-//    }
 }
 
 struct JTAppleDateConfigGenerator {
@@ -401,4 +369,30 @@ public struct DateSegmentInfo {
     public let monthDates: [(date: Date, indexPath: IndexPath)]
     /// Visible post-dates
     public let outdates: [(date: Date, indexPath: IndexPath)]
+}
+
+struct SelectedCellData {
+    let indexPath: IndexPath
+    let date: Date
+    var counterIndexPath: IndexPath?
+    let cellState: CellState
+    
+    enum DateOwnerCategory {
+        case inDate, outDate, monthDate
+    }
+    
+    var dateBelongsTo: DateOwnerCategory {
+        switch cellState.dateBelongsTo {
+        case .thisMonth: return .monthDate
+        case .previousMonthOutsideBoundary, .previousMonthWithinBoundary: return .inDate
+        case .followingMonthWithinBoundary, .followingMonthOutsideBoundary: return .outDate
+        }
+    }
+    
+    init(indexPath: IndexPath, counterIndexPath: IndexPath? = nil, date: Date, cellState: CellState) {
+        self.indexPath        = indexPath
+        self.date             = date
+        self.cellState        = cellState
+        self.counterIndexPath = counterIndexPath
+    }
 }

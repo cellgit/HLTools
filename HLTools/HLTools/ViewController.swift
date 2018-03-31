@@ -14,9 +14,9 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     var tableView:UITableView!
     var dataArray:Array = ["进度君",
                            "日历君",
+                           "弹框君",
                            "相册君",
                            "警示君",
-                           "弹框君",
                            "待续... ..."]
     
     let shapelayer = CAShapeLayer()
@@ -62,9 +62,18 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        if indexPath.row == 0 {
+        if (dataArray[indexPath.row] .elementsEqual("进度君")) {
             let vc:HLProgressBarViewController = HLProgressBarViewController.init()
             pushViewController(vc: vc, animated: true)
+        }
+        else if (dataArray[indexPath.row] .elementsEqual("日历君")) {
+            let vc = UIStoryboard(name: "CalendarViewController", bundle: nil).instantiateViewController(withIdentifier: "KCalendarViewController") as UIViewController
+            self.present(vc, animated: true, completion: nil)
+        }
+        else if (dataArray[indexPath.row] .elementsEqual("弹框君")) {
+            let vc = UIStoryboard(name: "SWPopUpsContainerViewController", bundle: nil).instantiateViewController(withIdentifier: "KSWPopUpsContainerViewController") as UIViewController
+            // 这里如果有tabBarController,需要用:self.viewController.tabBarController.present(vc, animated: true, completion: nil), 否则遮不住tabBar
+            self.present(vc, animated: true, completion: nil)
         }
         
     }

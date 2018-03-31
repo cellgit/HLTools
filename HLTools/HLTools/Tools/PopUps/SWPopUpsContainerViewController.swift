@@ -35,7 +35,7 @@ class SWPopUpsContainerViewController: UIViewController {
     func setupUI() {
         containerView.addSubview(closeButton())
     }
-    func evt_close_action() {
+    @objc func evt_close_action() {
         self.dismiss(animated: true, completion: nil)
     }
 
