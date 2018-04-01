@@ -17,7 +17,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     var dataArray:Array = ["进度君",
                            "日历君",
                            "弹框君",
-                           "相册君",
+                           "Popover君",
                            "警示君",
                            "警示君",
                            "警示君",
@@ -46,16 +46,11 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         self.title = "小控件"
     }
     
-    
-    
     func setupTableView() {
-        
         tableView = UITableView.init(frame: self.view.frame, style: .plain)
         self.view.addSubview(tableView)
-        
         tableView.delegate = self
         tableView.dataSource = self;
-        
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
     }
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -66,18 +61,12 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
-        
         cell.textLabel?.text = "row \(indexPath.row) : --  \(dataArray[indexPath.row])"
         cell.textLabel?.textColor = UIColor.init(red: 43/255.0, green: 133/255.0, blue: 208/255.0, alpha: 1.0)
-        
-        
-        
         return cell;
     }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
         if (dataArray[indexPath.row] .elementsEqual("进度君")) {
             let vc:HLProgressBarViewController = HLProgressBarViewController.init()
             pushViewController(vc: vc, animated: true)
@@ -93,9 +82,11 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             // 这里如果有tabBarController,需要用:self.viewController.tabBarController.present(vc, animated: true, completion: nil), 否则遮不住tabBar
             self.present(vc, animated: true, completion: nil)
         }
-        
+        else if (dataArray[indexPath.row] .elementsEqual("Popover君")) {
+            let vc = UIStoryboard(name: "HLPopoverViewController", bundle: nil).instantiateViewController(withIdentifier: "KHLPopoverViewController") as UIViewController
+            self.pushViewController(vc: vc, animated: true)
+        }
     }
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 55
     }
@@ -111,27 +102,16 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             cell.layer.transform = CATransform3DIdentity
         }
     }
-    
-    //MARK: SWCalendarDelegate
+    //MARK: SWCalendarDelegate 获取点击选择的日期
     func getSelectedDate(selectedDate: Date) {
-        
         print("selectedDateString:\(selectedDate)")
-        print("selectedDateString:\(formatter.string(from: selectedDate))")
     }
-    
 }
-
-
 
 extension ViewController {
     func pushViewController(vc:UIViewController, animated:Bool) {
         vc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
     }
-
-    
-    
-    
-    
 }
 

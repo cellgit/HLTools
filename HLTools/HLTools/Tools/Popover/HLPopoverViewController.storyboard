@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Popover View Controller-->
+        <scene sceneID="aFT-h0-iw5">
+            <objects>
+                <viewController storyboardIdentifier="KHLPopoverViewController" id="kHU-W2-BQB" customClass="HLPopoverViewController" customModule="HLTools" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4p4-uU-XGC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJ4-8b-y1Y">
+                                <rect key="frame" x="142" y="318.5" width="90" height="30"/>
+                                <color key="backgroundColor" red="0.10435155359999999" green="0.61563565279999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="PopoverView"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="layer.anchorPoint">
+                                        <point key="value" x="0.5" y="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="PopoverAction:" destination="kHU-W2-BQB" eventType="touchUpInside" id="DMg-TS-JhX"/>
+                                    <segue destination="z1n-xA-yD3" kind="popoverPresentation" identifier="showPopover" popoverAnchorView="NJ4-8b-y1Y" id="Bzp-LH-BaP">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NJ4-8b-y1Y" firstAttribute="centerX" secondItem="4p4-uU-XGC" secondAttribute="centerX" id="JyF-Vp-Ynq"/>
+                            <constraint firstItem="NJ4-8b-y1Y" firstAttribute="centerY" secondItem="4p4-uU-XGC" secondAttribute="centerY" id="aQp-qM-rUK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HcL-ax-vAY"/>
+                    </view>
+                    <connections>
+                        <outlet property="PopoverButton" destination="NJ4-8b-y1Y" id="L1d-aL-ExX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rSZ-e7-Htz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-207.19999999999999" y="196.55172413793105"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="o9h-hV-VVu">
+            <objects>
+                <viewController id="z1n-xA-yD3" sceneMemberID="viewController">
+                    <view key="view" contentMode="right" id="UiK-9s-cSd">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popover" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebU-VA-nhW">
+                                <rect key="frame" x="68" y="139.5" width="64" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.10435155359999999" green="0.61563565279999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ebU-VA-nhW" firstAttribute="centerY" secondItem="UiK-9s-cSd" secondAttribute="centerY" id="L9I-LK-mMX"/>
+                            <constraint firstItem="ebU-VA-nhW" firstAttribute="centerX" secondItem="UiK-9s-cSd" secondAttribute="centerX" id="WMQ-si-FWa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5wJ-7Z-Rcl"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="200" height="300"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="200" height="300"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fnq-pq-SdZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="477" y="199"/>
+        </scene>
+    </scenes>
+</document>
