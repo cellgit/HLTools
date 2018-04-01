@@ -19,6 +19,17 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
                            "弹框君",
                            "相册君",
                            "警示君",
+                           "警示君",
+                           "警示君",
+                           "警示君",
+                           "警示君",
+                           "警示君",
+                           "警示君",
+                           "警示君",
+                           "警示君",
+                           "警示君",
+                           "警示君",
+                           "警示君",
                            "待续... ..."]
     
     let shapelayer = CAShapeLayer()
@@ -88,6 +99,18 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 55
     }
+    // 在这里设置tableViewCell的动画
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        // initial state of cell
+        cell.alpha = 0.0
+        let transform = CATransform3DTranslate(CATransform3DIdentity, -300, 20, 10)
+        cell.layer.transform = transform
+        // change the final state of cell by UIView animation
+        UIView.animate(withDuration: 0.33) {
+            cell.alpha = 1.0
+            cell.layer.transform = CATransform3DIdentity
+        }
+    }
     
     //MARK: SWCalendarDelegate
     func getSelectedDate(selectedDate: Date) {
@@ -97,6 +120,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     }
     
 }
+
 
 
 extension ViewController {

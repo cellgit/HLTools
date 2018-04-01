@@ -60,8 +60,8 @@ class CalendarViewController: UIViewController {
             self.setupViewOfCalendar(from: visibleDates)
         }
     }
-    func handleCellVisibility(cell:SWCalendarCell, cellState:CellState) {
-        cell.isHidden = cellState.dateBelongsTo == .thisMonth ? false : true
+    func handleCellVisibility(cell:SWCalendarCell?, cellState:CellState) {
+        cell?.isHidden = cellState.dateBelongsTo == .thisMonth ? false : true
     }
     func handleCellTextColor(cell: SWCalendarCell?, cellState: CellState) {
         
@@ -75,6 +75,7 @@ class CalendarViewController: UIViewController {
         else {
             cell?.dateLabel.textColor = cellState.isSelected ? selectedMonthColor : monthColor
         }
+        
     }
     
     func handleCellSelected(cell: SWCalendarCell?, cellState: CellState) {
@@ -88,7 +89,7 @@ class CalendarViewController: UIViewController {
         
     }
     
-    func getCellSelected(cell: SWCalendarCell, cellState: CellState) {
+    func getCellSelected(cell: SWCalendarCell?, cellState: CellState) {
         // 如果没选中,则默认为当前
         selectedDate = cellState.date
     }
@@ -155,15 +156,20 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
         
         print("selectedDate:\(cellState.date)")
         print("selectedDateString:\(formatter.string(from: cellState.date))")
-        getCellSelected(cell: cell as! SWCalendarCell, cellState: cellState)
+        getCellSelected(cell: cell as? SWCalendarCell, cellState: cellState)
         cell?.bounce()
     }
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         handleCellTextColor(cell: cell as? SWCalendarCell, cellState: cellState)
         handleCellSelected(cell: cell as? SWCalendarCell, cellState: cellState)
+        
     }
     func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
         setupViewOfCalendar(from: visibleDates)
+        
+        // TODO:有bug
+        self.calendarCollectionView.reloadData()
+        calendarCollectionView.selectDates([selectedDate])
     }
 }
 

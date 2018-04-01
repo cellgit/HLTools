@@ -22,7 +22,7 @@
 		F2111C38206E88900032E6E7 /* SWPopUpsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2111C36206E88900032E6E7 /* SWPopUpsContainerViewController.swift */; };
 		F2111C3C206E88AB0032E6E7 /* CalendarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2111C39206E88AB0032E6E7 /* CalendarViewController.storyboard */; };
 		F2111C3D206E88AB0032E6E7 /* SWCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2111C3A206E88AB0032E6E7 /* SWCalendarCell.swift */; };
-		F2111C3E206E88AB0032E6E7 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2111C3B206E88AB0032E6E7 /* CalendarViewController.swift */; };
+		F2322FF9206FF51500F3B13B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2322FF8206FF51500F3B13B /* CalendarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +57,7 @@
 		F2111C36206E88900032E6E7 /* SWPopUpsContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWPopUpsContainerViewController.swift; sourceTree = "<group>"; };
 		F2111C39206E88AB0032E6E7 /* CalendarViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CalendarViewController.storyboard; sourceTree = "<group>"; };
 		F2111C3A206E88AB0032E6E7 /* SWCalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWCalendarCell.swift; sourceTree = "<group>"; };
-		F2111C3B206E88AB0032E6E7 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		F2322FF8206FF51500F3B13B /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,7 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				F2111C39206E88AB0032E6E7 /* CalendarViewController.storyboard */,
-				F2111C3B206E88AB0032E6E7 /* CalendarViewController.swift */,
+				F2322FF8206FF51500F3B13B /* CalendarViewController.swift */,
 				F2111C3A206E88AB0032E6E7 /* SWCalendarCell.swift */,
 			);
 			path = Calendar;
@@ -349,7 +349,7 @@
 				F2111C3D206E88AB0032E6E7 /* SWCalendarCell.swift in Sources */,
 				F2111C292067FCC90032E6E7 /* HLProgressBar.swift in Sources */,
 				F2111C2D206D20920032E6E7 /* HLProgressBarViewController.swift in Sources */,
-				F2111C3E206E88AB0032E6E7 /* CalendarViewController.swift in Sources */,
+				F2322FF9206FF51500F3B13B /* CalendarViewController.swift in Sources */,
 				F2111C33206D39850032E6E7 /* HLConfiguration.swift in Sources */,
 				F2111C2F206D239B0032E6E7 /* HLBaseViewController.swift in Sources */,
 			);
