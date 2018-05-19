@@ -9,6 +9,13 @@
 
 import UIKit
 
+let WidthScreen = UIScreen.main.bounds.size.width
+let HeightScreen = UIScreen.main.bounds.size.height
+
+
+let KDeviceDirector = UIDevice.current.orientation
+
+
 class HLConfiguration: NSObject {
     
 }

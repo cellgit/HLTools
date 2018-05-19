@@ -8,44 +8,40 @@
 
 import UIKit
 
+struct HomeDataStruct {
+    var title = ""
+    var identifier = ""
+}
+
 class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,SWCalendarDelegate {
-    
-    
     
     let cellId:String = "cellId"
     var tableView:UITableView!
-    var dataArray:Array = ["进度君",
-                           "日历君",
-                           "弹框君",
-                           "Popover君",
-                           "警示君",
-                           "警示君",
-                           "警示君",
-                           "警示君",
-                           "警示君",
-                           "警示君",
-                           "警示君",
-                           "警示君",
-                           "警示君",
-                           "警示君",
-                           "警示君",
-                           "警示君",
-                           "待续... ..."]
+    var homeDataArray = [HomeDataStruct]()
     
-    let shapelayer = CAShapeLayer()
-    let formatter = DateFormatter()
-
+    func getHomeData() {
+        let data1 = HomeDataStruct.init(title: "进度君", identifier: "progressIdentifier")
+        let data2 = HomeDataStruct.init(title: "日历君", identifier: "calandarIdentifier")
+        let data3 = HomeDataStruct.init(title: "弹框君", identifier: "presentIdentifier")
+        let data4 = HomeDataStruct.init(title: "Popover君", identifier: "popoverIdentifier")
+        let data5 = HomeDataStruct.init(title: "视频君", identifier: "videoIdentifier")
+        let data6 = HomeDataStruct.init(title: "流水布局按钮", identifier: "flowLayoutViewIdentifier")
+        homeDataArray = [data1,
+                         data2,
+                         data3,
+                         data4,
+                         data5,
+                         data6]
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        getHomeData()
         configuration()
         setupTableView()
     }
-    
     func configuration() {
         self.title = "小控件"
     }
-    
     func setupTableView() {
         tableView = UITableView.init(frame: self.view.frame, style: .plain)
         self.view.addSubview(tableView)
@@ -57,34 +53,44 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataArray.count
+        return homeDataArray.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
-        cell.textLabel?.text = "row \(indexPath.row) : --  \(dataArray[indexPath.row])"
+        cell.textLabel?.text = "row \(indexPath.row) : --  \(homeDataArray[indexPath.row].title)"
         cell.textLabel?.textColor = UIColor.init(red: 43/255.0, green: 133/255.0, blue: 208/255.0, alpha: 1.0)
         return cell;
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if (dataArray[indexPath.row] .elementsEqual("进度君")) {
+        if (homeDataArray[indexPath.row].identifier .elementsEqual("progressIdentifier")) {
             let vc:HLProgressBarViewController = HLProgressBarViewController.init()
             pushViewController(vc: vc, animated: true)
         }
-        else if (dataArray[indexPath.row] .elementsEqual("日历君")) {
+        else if (homeDataArray[indexPath.row].identifier .elementsEqual("calandarIdentifier")) {
             let vc = UIStoryboard(name: "CalendarViewController", bundle: nil).instantiateViewController(withIdentifier: "KCalendarViewController") as UIViewController
             let viewController:CalendarViewController = vc as! CalendarViewController
-            viewController.delegate = self as? SWCalendarDelegate
+            viewController.delegate = self
             self.present(viewController, animated: true, completion: nil)
         }
-        else if (dataArray[indexPath.row] .elementsEqual("弹框君")) {
+        else if (homeDataArray[indexPath.row].identifier .elementsEqual("presentIdentifier")) {
             let vc = UIStoryboard(name: "SWPopUpsContainerViewController", bundle: nil).instantiateViewController(withIdentifier: "KSWPopUpsContainerViewController") as UIViewController
             // 这里如果有tabBarController,需要用:self.viewController.tabBarController.present(vc, animated: true, completion: nil), 否则遮不住tabBar
             self.present(vc, animated: true, completion: nil)
         }
-        else if (dataArray[indexPath.row] .elementsEqual("Popover君")) {
+        else if (homeDataArray[indexPath.row].identifier .elementsEqual("popoverIdentifier")) {
             let vc = UIStoryboard(name: "HLPopoverViewController", bundle: nil).instantiateViewController(withIdentifier: "KHLPopoverViewController") as UIViewController
             self.pushViewController(vc: vc, animated: true)
+        }
+        else if homeDataArray[indexPath.row].identifier.elementsEqual("videoIdentifier") {
+            let urlStr: String = "https://content.jwplatform.com/manifests/vM7nH0Kl.m3u8"
+            let params = HLPlayerStruct.init(url: urlStr)
+            let vc = HLPlayerViewController.init(params: params)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        else if (homeDataArray[indexPath.row].identifier .elementsEqual("flowLayoutViewIdentifier")) {
+            let vc:HLFlowLayoutViewController = HLFlowLayoutViewController.init()
+            pushViewController(vc: vc, animated: true)
         }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
