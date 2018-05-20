@@ -10,7 +10,7 @@ import UIKit
 
 var buttonBackKey = "buttonBackKey"
 
-class HLClosureButton: UIButton {}
+//class HLClosureButton: UIButton {}
 
 extension UIButton {
     var buttonBack: buttonBlock? {

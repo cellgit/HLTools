@@ -7,15 +7,17 @@
 //
 
 import UIKit
+import SnapKit
+
 
 class HLFlowLayoutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         
-        setupUI()
-        getClosureExample()
-        addOneButton()
+        flowLayoutViewSettings()
+//        getClosureExample()
+//        addOneButton()
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,33 +25,32 @@ class HLFlowLayoutViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    func setupUI() {
-        let containerView = UIView.init(frame: CGRect(x: 0, y: 100, width: UIScreen.main.bounds.size.width, height: 200))
-        self.view.addSubview(containerView)
-        containerView.backgroundColor = .cyan
-        let flowView: FlowButtonView = FlowButtonView.init(frame: containerView.bounds, viewHeight: containerView.bounds.size.height, titleLabelText: "123aghlhdahajd", btnTexts: ["123kashkhbk", "4havb56", "4havb56", "78vajsjklavgighuhuhulhulj9"]) { (button) in
-            //
-            print("button.tag ======= \(button.tag)")
-            
+    
+    func flowLayoutViewSettings() {
+        let flowView = HLFlowLayoutView.init(frame: CGRect(x: 0, y: 100, width: UIScreen.main.bounds.size.width, height: 0))
+        flowView.titles = ["流水标签视图","流水标签","标签按钮","button","签","标签button","这个标签很长很长","标签","标签是按钮","标签不是Label"]    // 设置按钮的标题
+        flowView.contentInset = UIEdgeInsetsMake(10, 20, 10, 20)    // 设置按钮的上左下右缩进
+        flowView.itemBackgroundColor = UIColor.white
+        flowView.itemTitleColor = UIColor.darkGray
+        flowView.itemSpacingX = 8
+        flowView.itemSpacingY = 8
+        flowView.itemHeight = 30
+        flowView.itemCornerRadius = 15
+        flowView.itemFont = UIFont.systemFont(ofSize: 14)
+        flowView.itemOffsetX = 20
+        flowView.itemBorderWidth = 0.5
+        flowView.itemBorderColor = UIColor.init(red: 200.0/255.0, green: 200.0/255.0, blue: 200.0/255.0, alpha: 1.0).cgColor
+        
+        flowView.callbackBlock { (sender) in
+            print("senderTag===1=====\(sender.tag)")
         }
+        self.view.addSubview(flowView)
+        print("flowView.bounds.size.height==== \(flowView.frame.size.height)")
         flowView.backgroundColor = .cyan
-        
-        containerView.addSubview(flowView)
-        
-        
     }
     
     
-    func getflowLayoutViewClass() {
-        let containerView = UIView.init(frame: CGRect(x: 0, y: 400, width: UIScreen.main.bounds.size.width, height: 100))
-        self.view.addSubview(containerView)
-        let flowView: HLFlowLayoutView = HLFlowLayoutView.init(frame: containerView.bounds)
-        flowView.callbackBlock { (button) in
-        }
-        flowView.backgroundColor = .cyan
-        containerView.addSubview(flowView)
-    }
+    
     func getClosureExample() {
         let containerView = UIView.init(frame: CGRect(x: 0, y: 550, width: UIScreen.main.bounds.size.width, height: 100))
         self.view.addSubview(containerView)

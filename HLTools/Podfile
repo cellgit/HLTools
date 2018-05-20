@@ -9,6 +9,6 @@ pod 'JTAppleCalendar', '~> 7.0’
 
 #pod 'WMPlayer', '~> 3.0.6'
 
-#pod 'SnapKit', '~> 4.0.0'
+pod 'SnapKit', '~> 4.0.0'
 
 end
