@@ -20,4 +20,4 @@
 ##### 🐂 4. Popover弹框: PopoverView
 ##### ✅ 5. 流水标签按钮: HLFlowLayoutView
 ##### ✅ 6. 闭包回调按钮: HLClosureButton
-
+##### ✅ 7. html文本转换label显示的字符串: HLRichTextManager

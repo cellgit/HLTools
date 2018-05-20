@@ -30,6 +30,7 @@
 		F2C7B78820AFD13600B49B48 /* HLFlowLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7B78720AFD13600B49B48 /* HLFlowLayoutViewController.swift */; };
 		F2C7B78B20AFF36B00B49B48 /* HLClosureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7B78A20AFF36B00B49B48 /* HLClosureView.swift */; };
 		F2C7B78D20B00D1600B49B48 /* HLClosureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7B78C20B00D1600B49B48 /* HLClosureButton.swift */; };
+		F2C7B79020B1C55E00B49B48 /* HLRichTextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7B78F20B1C55E00B49B48 /* HLRichTextManager.swift */; };
 		F2D4E9742096B3E300861DBB /* HLPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D4E9732096B3E300861DBB /* HLPlayerViewController.swift */; };
 		F2D4E9762096B40B00861DBB /* HLPlayerContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D4E9752096B40B00861DBB /* HLPlayerContainerView.swift */; };
 		F2D4E9782096B70400861DBB /* HLGlobalStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D4E9772096B70400861DBB /* HLGlobalStruct.swift */; };
@@ -75,6 +76,7 @@
 		F2C7B78720AFD13600B49B48 /* HLFlowLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLFlowLayoutViewController.swift; sourceTree = "<group>"; };
 		F2C7B78A20AFF36B00B49B48 /* HLClosureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLClosureView.swift; sourceTree = "<group>"; };
 		F2C7B78C20B00D1600B49B48 /* HLClosureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLClosureButton.swift; sourceTree = "<group>"; };
+		F2C7B78F20B1C55E00B49B48 /* HLRichTextManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLRichTextManager.swift; sourceTree = "<group>"; };
 		F2D4E9422092653E00861DBB /* HLTools-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HLTools-Bridging-Header.h"; sourceTree = "<group>"; };
 		F2D4E9732096B3E300861DBB /* HLPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLPlayerViewController.swift; sourceTree = "<group>"; };
 		F2D4E9752096B40B00861DBB /* HLPlayerContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLPlayerContainerView.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		F2111C272067FC790032E6E7 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F2C7B78E20B1C53800B49B48 /* RichText */,
 				F2C7B78920AFF2F300B49B48 /* Closure */,
 				F2C7B78320AFB05F00B49B48 /* FlowLayoutView */,
 				F2D4E970209266FA00861DBB /* Player */,
@@ -248,6 +251,14 @@
 				F2C7B78C20B00D1600B49B48 /* HLClosureButton.swift */,
 			);
 			path = Closure;
+			sourceTree = "<group>";
+		};
+		F2C7B78E20B1C53800B49B48 /* RichText */ = {
+			isa = PBXGroup;
+			children = (
+				F2C7B78F20B1C55E00B49B48 /* HLRichTextManager.swift */,
+			);
+			path = RichText;
 			sourceTree = "<group>";
 		};
 		F2D4E970209266FA00861DBB /* Player */ = {
@@ -421,6 +432,7 @@
 				F2C7B78B20AFF36B00B49B48 /* HLClosureView.swift in Sources */,
 				F2111C082067FA5A0032E6E7 /* AppDelegate.swift in Sources */,
 				F2111C38206E88900032E6E7 /* SWPopUpsContainerViewController.swift in Sources */,
+				F2C7B79020B1C55E00B49B48 /* HLRichTextManager.swift in Sources */,
 				F2D4E9742096B3E300861DBB /* HLPlayerViewController.swift in Sources */,
 				F2C7B78520AFB08F00B49B48 /* HLFlowLayoutView.swift in Sources */,
 				F2C7B78D20B00D1600B49B48 /* HLClosureButton.swift in Sources */,
