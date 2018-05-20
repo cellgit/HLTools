@@ -21,3 +21,7 @@
 ##### ✅ 5. 流水标签按钮: HLFlowLayoutView
 ##### ✅ 6. 闭包回调按钮: HLClosureButton
 ##### ✅ 7. html文本转换label显示的字符串: HLRichTextManager
+##### ✅ 8. 数值型字符串转换为数值: HLStringExtension
+##### ✅ 9. 动态计算 label 的尺寸: HLLabelExtension
+##### ✅ 9. 将大于 10000 的字符串类型数值转换为 "x万+" 的格式: HLLabelExtension
+
