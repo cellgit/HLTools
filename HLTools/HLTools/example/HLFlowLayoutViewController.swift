@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import SnapKit
-
 
 class HLFlowLayoutViewController: UIViewController {
     override func viewDidLoad() {
@@ -19,16 +17,17 @@ class HLFlowLayoutViewController: UIViewController {
 //        getClosureExample()
 //        addOneButton()
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
+}
+
+/// MARK: 流水标签按钮
+extension HLFlowLayoutViewController {
     func flowLayoutViewSettings() {
         let flowView = HLFlowLayoutView.init(frame: CGRect(x: 0, y: 100, width: UIScreen.main.bounds.size.width, height: 0))
-        flowView.titles = ["流水标签视图","流水标签","标签按钮","button","签","标签button","这个标签很长很长","标签","标签是按钮","标签不是Label"]    // 设置按钮的标题
+        flowView.titles = ["流水标签视图","流水标签","标签按钮","button","签","标签button","这个标签很长很长","标签","标签是按钮","标签不是Label","公元2018年5月20号","2018-05-20"]    // 设置按钮的标题
         flowView.contentInset = UIEdgeInsetsMake(10, 20, 10, 20)    // 设置按钮的上左下右缩进
         flowView.itemBackgroundColor = UIColor.white
         flowView.itemTitleColor = UIColor.darkGray
@@ -40,7 +39,6 @@ class HLFlowLayoutViewController: UIViewController {
         flowView.itemOffsetX = 20
         flowView.itemBorderWidth = 0.5
         flowView.itemBorderColor = UIColor.init(red: 200.0/255.0, green: 200.0/255.0, blue: 200.0/255.0, alpha: 1.0).cgColor
-        
         flowView.callbackBlock { (sender) in
             print("senderTag===1=====\(sender.tag)")
         }
@@ -48,9 +46,26 @@ class HLFlowLayoutViewController: UIViewController {
         print("flowView.bounds.size.height==== \(flowView.frame.size.height)")
         flowView.backgroundColor = .cyan
     }
-    
-    
-    
+}
+
+/// MARK: 按钮闭包回调, HLClosureButton
+extension HLFlowLayoutViewController {
+    func addOneButton() {
+        let button = UIButton.init(type: .custom)
+        self.view.addSubview(button)
+        button.center = self.view.center
+        button.bounds.size = CGSize(width: 200, height: 60)
+        button.setTitle("按钮自身回调", for: .normal)
+        button.tag = 10001
+        button.backgroundColor = .lightGray
+        button.action { (sender) in
+            print("sender.tag====== \(sender.tag)")
+        }
+    }
+}
+
+/// MARK: 闭包回调
+extension HLFlowLayoutViewController {
     func getClosureExample() {
         let containerView = UIView.init(frame: CGRect(x: 0, y: 550, width: UIScreen.main.bounds.size.width, height: 100))
         self.view.addSubview(containerView)
@@ -64,21 +79,8 @@ class HLFlowLayoutViewController: UIViewController {
         closureView.backgroundColor = .cyan
         view.addSubview(closureView)
     }
-    
-    func addOneButton() {
-        let button = UIButton.init(type: .custom)
-        self.view.addSubview(button)
-        button.center = self.view.center
-        button.bounds.size = CGSize(width: 200, height: 60)
-        button.setTitle("按钮自身回调", for: .normal)
-        button.tag = 10001
-        button.backgroundColor = .lightGray
-        button.action { (sender) in
-            print("sender.tag====== \(sender.tag)")
-        }
-    }
-    
-    
-    
-    
 }
+
+
+
+
