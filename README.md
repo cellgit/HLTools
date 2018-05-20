@@ -14,14 +14,14 @@
 
 
 #### 已添加控件
-##### ✅ 1. 环形进度条: CircleProgressBar
-##### ✅ 2. 弹框日历: Calendar
-##### ✅ 3. 模态弹框: PopUpsView
-##### 🐂 4. Popover弹框: PopoverView
-##### ✅ 5. 流水标签按钮: HLFlowLayoutView
-##### ✅ 6. 闭包回调按钮: HLClosureButton
-##### ✅ 7. html文本转换label显示的字符串: HLRichTextManager
-##### ✅ 8. 数值型字符串转换为数值: HLStringExtension
-##### ✅ 9. 动态计算 label 的尺寸: HLLabelExtension
-##### ✅ 9. 将大于 10000 的字符串类型数值转换为 "x万+" 的格式: HLLabelExtension
+##### ✅ 01. 环形进度条: CircleProgressBar
+##### ✅ 02. 弹框日历: Calendar
+##### ✅ 03. 模态弹框: PopUpsView
+##### 🐂 04. Popover弹框: PopoverView
+##### ✅ 05. 流水标签按钮: HLFlowLayoutView
+##### ✅ 06. 闭包回调按钮: HLClosureButton
+##### ✅ 07. html文本转换label显示的字符串: HLRichTextManager
+##### ✅ 08. 数值型字符串转换为数值: HLStringExtension
+##### ✅ 09. 动态计算 label 的尺寸: HLLabelExtension
+##### ✅ 10. 将大于 10000 的字符串类型数值转换为 "x万+" 的格式: HLLabelExtension
 
