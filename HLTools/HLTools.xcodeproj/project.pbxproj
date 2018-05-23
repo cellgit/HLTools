@@ -33,6 +33,8 @@
 		F2C7B79020B1C55E00B49B48 /* HLRichTextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7B78F20B1C55E00B49B48 /* HLRichTextManager.swift */; };
 		F2C7B79320B1CA7600B49B48 /* HLLabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7B79220B1CA7600B49B48 /* HLLabelExtension.swift */; };
 		F2C7B79620B1CB0D00B49B48 /* HLStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7B79520B1CB0D00B49B48 /* HLStringExtension.swift */; };
+		F2C7B79920B5B88A00B49B48 /* HLGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7B79820B5B88A00B49B48 /* HLGridView.swift */; };
+		F2C7B79D20B5BBBC00B49B48 /* HLGridViewExampleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7B79C20B5BBBC00B49B48 /* HLGridViewExampleVC.swift */; };
 		F2D4E9742096B3E300861DBB /* HLPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D4E9732096B3E300861DBB /* HLPlayerViewController.swift */; };
 		F2D4E9762096B40B00861DBB /* HLPlayerContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D4E9752096B40B00861DBB /* HLPlayerContainerView.swift */; };
 		F2D4E9782096B70400861DBB /* HLGlobalStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D4E9772096B70400861DBB /* HLGlobalStruct.swift */; };
@@ -81,6 +83,8 @@
 		F2C7B78F20B1C55E00B49B48 /* HLRichTextManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLRichTextManager.swift; sourceTree = "<group>"; };
 		F2C7B79220B1CA7600B49B48 /* HLLabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLLabelExtension.swift; sourceTree = "<group>"; };
 		F2C7B79520B1CB0D00B49B48 /* HLStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLStringExtension.swift; sourceTree = "<group>"; };
+		F2C7B79820B5B88A00B49B48 /* HLGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLGridView.swift; sourceTree = "<group>"; };
+		F2C7B79C20B5BBBC00B49B48 /* HLGridViewExampleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLGridViewExampleVC.swift; sourceTree = "<group>"; };
 		F2D4E9422092653E00861DBB /* HLTools-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HLTools-Bridging-Header.h"; sourceTree = "<group>"; };
 		F2D4E9732096B3E300861DBB /* HLPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLPlayerViewController.swift; sourceTree = "<group>"; };
 		F2D4E9752096B40B00861DBB /* HLPlayerContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLPlayerContainerView.swift; sourceTree = "<group>"; };
@@ -173,6 +177,7 @@
 		F2111C272067FC790032E6E7 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F2C7B79720B5B86600B49B48 /* GridView */,
 				F2C7B79420B1CAD800B49B48 /* String */,
 				F2C7B79120B1CA4600B49B48 /* Label */,
 				F2C7B78E20B1C53800B49B48 /* RichText */,
@@ -281,6 +286,15 @@
 				F2C7B79520B1CB0D00B49B48 /* HLStringExtension.swift */,
 			);
 			path = String;
+			sourceTree = "<group>";
+		};
+		F2C7B79720B5B86600B49B48 /* GridView */ = {
+			isa = PBXGroup;
+			children = (
+				F2C7B79820B5B88A00B49B48 /* HLGridView.swift */,
+				F2C7B79C20B5BBBC00B49B48 /* HLGridViewExampleVC.swift */,
+			);
+			path = GridView;
 			sourceTree = "<group>";
 		};
 		F2D4E970209266FA00861DBB /* Player */ = {
@@ -453,6 +467,7 @@
 				F2D4E9782096B70400861DBB /* HLGlobalStruct.swift in Sources */,
 				F2C7B78B20AFF36B00B49B48 /* HLClosureView.swift in Sources */,
 				F2111C082067FA5A0032E6E7 /* AppDelegate.swift in Sources */,
+				F2C7B79D20B5BBBC00B49B48 /* HLGridViewExampleVC.swift in Sources */,
 				F2111C38206E88900032E6E7 /* SWPopUpsContainerViewController.swift in Sources */,
 				F2C7B79020B1C55E00B49B48 /* HLRichTextManager.swift in Sources */,
 				F2D4E9742096B3E300861DBB /* HLPlayerViewController.swift in Sources */,
@@ -467,6 +482,7 @@
 				F2111C2D206D20920032E6E7 /* HLProgressBarViewController.swift in Sources */,
 				F2322FF9206FF51500F3B13B /* CalendarViewController.swift in Sources */,
 				F2111C33206D39850032E6E7 /* HLConfiguration.swift in Sources */,
+				F2C7B79920B5B88A00B49B48 /* HLGridView.swift in Sources */,
 				F2C7B79620B1CB0D00B49B48 /* HLStringExtension.swift in Sources */,
 				F2322FFC2070E95800F3B13B /* HLPopoverViewController.swift in Sources */,
 				F2111C2F206D239B0032E6E7 /* HLBaseViewController.swift in Sources */,

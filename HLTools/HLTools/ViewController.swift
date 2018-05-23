@@ -26,12 +26,16 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         let data4 = HomeDataStruct.init(title: "Popover君", identifier: "popoverIdentifier")
         let data5 = HomeDataStruct.init(title: "视频君", identifier: "videoIdentifier")
         let data6 = HomeDataStruct.init(title: "流水布局按钮", identifier: "flowLayoutViewIdentifier")
+        let data7 = HomeDataStruct.init(title: "GridView", identifier: "gridViewIdentifier")
+        
+        //HLGridViewExampleVC
         homeDataArray = [data1,
                          data2,
                          data3,
                          data4,
                          data5,
-                         data6]
+                         data6,
+                         data7]
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,6 +96,11 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             let vc:HLFlowLayoutViewController = HLFlowLayoutViewController.init()
             pushViewController(vc: vc, animated: true)
         }
+        else if (homeDataArray[indexPath.row].identifier .elementsEqual("gridViewIdentifier")) {
+            let vc:HLGridViewExampleVC = HLGridViewExampleVC.init()
+            pushViewController(vc: vc, animated: true)
+        }
+        
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 55
