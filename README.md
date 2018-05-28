@@ -25,4 +25,5 @@
 ##### ✅ 09. 动态计算 label 的尺寸: HLLabelExtension
 ##### ✅ 10. 将大于 10000 的字符串类型数值转换为 "x万+" 的格式: HLLabelExtension
 ##### ✅ 11. GridView: HLGridView
+##### ✅ 12. 字符串截取：HLStringExtension
 

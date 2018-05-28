@@ -27,3 +27,22 @@ extension String {
         return intValue
     }
 }
+
+/// 字符串截取
+//用法:
+//let numChar = model.bankNum
+//let firstFourChar = numChar.subString(start: 0, length: 4)
+//let lastThreeChar = numChar.subString(start: numChar.count - 3, length: 3)
+extension String {
+    /// 截取字符串
+    func subString(start:Int, length:Int = -1) -> String {
+        var len = length
+        if len == -1 {
+            len = self.count - start
+        }
+        let st = self.index(startIndex, offsetBy:start)
+        let en = self.index(st, offsetBy:len)
+        return String(self[st ..< en])
+    }
+}
+

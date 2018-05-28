@@ -27,15 +27,17 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         let data5 = HomeDataStruct.init(title: "视频君", identifier: "videoIdentifier")
         let data6 = HomeDataStruct.init(title: "流水布局按钮", identifier: "flowLayoutViewIdentifier")
         let data7 = HomeDataStruct.init(title: "GridView", identifier: "gridViewIdentifier")
+        let data8 = HomeDataStruct.init(title: "字符串截取", identifier: "cutStringIdentifier")
         
-        //HLGridViewExampleVC
+        
         homeDataArray = [data1,
                          data2,
                          data3,
                          data4,
                          data5,
                          data6,
-                         data7]
+                         data7,
+                         data8]
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,7 +102,10 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             let vc:HLGridViewExampleVC = HLGridViewExampleVC.init()
             pushViewController(vc: vc, animated: true)
         }
-        
+        else if (homeDataArray[indexPath.row].identifier .elementsEqual("cutStringIdentifier")) {
+            let vc:HLStringExtensionExampleViewController = HLStringExtensionExampleViewController.init()
+            pushViewController(vc: vc, animated: true)
+        }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 55

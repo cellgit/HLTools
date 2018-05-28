@@ -26,6 +26,8 @@
 		F2322FFC2070E95800F3B13B /* HLPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2322FFB2070E95800F3B13B /* HLPopoverViewController.swift */; };
 		F2322FFE2070E96500F3B13B /* HLPopoverViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2322FFD2070E96500F3B13B /* HLPopoverViewController.storyboard */; };
 		F23230002070EAEC00F3B13B /* HLPopoverPresentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2322FFF2070EAEC00F3B13B /* HLPopoverPresentedView.swift */; };
+		F2566FE620BBC0FD009F2247 /* HLStringExtensionExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2566FE420BBC0FD009F2247 /* HLStringExtensionExampleViewController.swift */; };
+		F2566FE720BBC0FD009F2247 /* HLStringExtensionExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2566FE520BBC0FD009F2247 /* HLStringExtensionExampleViewController.xib */; };
 		F2C7B78520AFB08F00B49B48 /* HLFlowLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7B78420AFB08F00B49B48 /* HLFlowLayoutView.swift */; };
 		F2C7B78820AFD13600B49B48 /* HLFlowLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7B78720AFD13600B49B48 /* HLFlowLayoutViewController.swift */; };
 		F2C7B78B20AFF36B00B49B48 /* HLClosureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7B78A20AFF36B00B49B48 /* HLClosureView.swift */; };
@@ -76,6 +78,8 @@
 		F2322FFB2070E95800F3B13B /* HLPopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLPopoverViewController.swift; sourceTree = "<group>"; };
 		F2322FFD2070E96500F3B13B /* HLPopoverViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HLPopoverViewController.storyboard; sourceTree = "<group>"; };
 		F2322FFF2070EAEC00F3B13B /* HLPopoverPresentedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLPopoverPresentedView.swift; sourceTree = "<group>"; };
+		F2566FE420BBC0FD009F2247 /* HLStringExtensionExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLStringExtensionExampleViewController.swift; sourceTree = "<group>"; };
+		F2566FE520BBC0FD009F2247 /* HLStringExtensionExampleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HLStringExtensionExampleViewController.xib; sourceTree = "<group>"; };
 		F2C7B78420AFB08F00B49B48 /* HLFlowLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLFlowLayoutView.swift; sourceTree = "<group>"; };
 		F2C7B78720AFD13600B49B48 /* HLFlowLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLFlowLayoutViewController.swift; sourceTree = "<group>"; };
 		F2C7B78A20AFF36B00B49B48 /* HLClosureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLClosureView.swift; sourceTree = "<group>"; };
@@ -284,6 +288,8 @@
 			isa = PBXGroup;
 			children = (
 				F2C7B79520B1CB0D00B49B48 /* HLStringExtension.swift */,
+				F2566FE420BBC0FD009F2247 /* HLStringExtensionExampleViewController.swift */,
+				F2566FE520BBC0FD009F2247 /* HLStringExtensionExampleViewController.xib */,
 			);
 			path = String;
 			sourceTree = "<group>";
@@ -392,6 +398,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2566FE720BBC0FD009F2247 /* HLStringExtensionExampleViewController.xib in Resources */,
 				F2111C37206E88900032E6E7 /* SWPopUpsContainerViewController.storyboard in Resources */,
 				F2111C122067FA5A0032E6E7 /* LaunchScreen.storyboard in Resources */,
 				F2111C3C206E88AB0032E6E7 /* CalendarViewController.storyboard in Resources */,
@@ -481,6 +488,7 @@
 				F23230002070EAEC00F3B13B /* HLPopoverPresentedView.swift in Sources */,
 				F2111C2D206D20920032E6E7 /* HLProgressBarViewController.swift in Sources */,
 				F2322FF9206FF51500F3B13B /* CalendarViewController.swift in Sources */,
+				F2566FE620BBC0FD009F2247 /* HLStringExtensionExampleViewController.swift in Sources */,
 				F2111C33206D39850032E6E7 /* HLConfiguration.swift in Sources */,
 				F2C7B79920B5B88A00B49B48 /* HLGridView.swift in Sources */,
 				F2C7B79620B1CB0D00B49B48 /* HLStringExtension.swift in Sources */,
