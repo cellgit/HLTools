@@ -40,9 +40,14 @@ extension String {
         if len == -1 {
             len = self.count - start
         }
-        let st = self.index(startIndex, offsetBy:start)
-        let en = self.index(st, offsetBy:len)
-        return String(self[st ..< en])
+        if self.count > start && self.count > length {
+            let st = self.index(startIndex, offsetBy:start)
+            let en = self.index(st, offsetBy:len)
+            return String(self[st ..< en])
+        }
+        else {
+            return ""
+        }
     }
 }
 
