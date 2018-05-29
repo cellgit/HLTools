@@ -9,8 +9,8 @@
 
 import UIKit
 
-let WidthScreen = UIScreen.main.bounds.size.width
-let HeightScreen = UIScreen.main.bounds.size.height
+let ScreenWidth = UIScreen.main.bounds.size.width
+let ScreenHeight = UIScreen.main.bounds.size.height
 
 
 let KDeviceDirector = UIDevice.current.orientation
@@ -61,6 +61,8 @@ extension HLColor {
     
     static let controlHighlightedAlpha:CGFloat = 0.5
     static let controlDisabledAlpha:CGFloat = 0.5
+    
+    static let buttonTintColor = HLColor.color(R: 43, G: 133, B: 208, A: 1.0)   // 按钮颜色
 }
 
 let HLSpringAnimationKey = "HLSpringAnimationKey";

@@ -28,6 +28,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         let data6 = HomeDataStruct.init(title: "流水布局按钮", identifier: "flowLayoutViewIdentifier")
         let data7 = HomeDataStruct.init(title: "GridView", identifier: "gridViewIdentifier")
         let data8 = HomeDataStruct.init(title: "字符串截取", identifier: "cutStringIdentifier")
+        let data9 = HomeDataStruct.init(title: "按钮", identifier: "buttonIdentifier")
         
         
         homeDataArray = [data1,
@@ -37,7 +38,8 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
                          data5,
                          data6,
                          data7,
-                         data8]
+                         data8,
+                         data9]
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,6 +108,11 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             let vc:HLStringExtensionExampleViewController = HLStringExtensionExampleViewController.init()
             pushViewController(vc: vc, animated: true)
         }
+        else if (homeDataArray[indexPath.row].identifier .elementsEqual("buttonIdentifier")) {
+            let vc:HLButtonExampleViewController = HLButtonExampleViewController.init()
+            pushViewController(vc: vc, animated: true)
+        }
+        
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 55
