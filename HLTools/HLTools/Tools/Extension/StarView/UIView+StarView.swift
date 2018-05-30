@@ -11,9 +11,9 @@ import UIKit
 import SnapKit
 
 /// 星星打分视图：
-/// 用法： starContainerView.sw_starView(score: score)
+/// 用法： starContainerView.hl_starView(score: 4.6, starWidth: 11)
 extension UIView {
-    func sw_starView(score: CGFloat, starWidth: CGFloat) {
+    func hl_starView(score: CGFloat, starWidth: CGFloat) {
         for item in self.subviews {
             if item.isKind(of: UIImageView.self) {
                 item.removeFromSuperview()

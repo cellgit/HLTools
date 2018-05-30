@@ -16,7 +16,7 @@ class HLStarViewExample: UIViewController {
         super.viewDidLoad()
         
         // 一句话设置评分星星
-        starContainerView.sw_starView(score: 3.6, starWidth: 11)
+        starContainerView.hl_starView(score: 4.6, starWidth: 11)
     }
 
 }

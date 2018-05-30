@@ -50,7 +50,7 @@ class HLRichTextManager: NSObject {
     ///   - font: 字号
     /*
      usage: example
-     SWRichTextManager.shared.htmlTextString(label: contentLabel, htmlText: htmlText, lineSpacing: 8, font: 13)
+     HLRichTextManager.shared.htmlTextString(label: contentLabel, htmlText: htmlText, lineSpacing: 8, font: 13)
      */
     open func htmlTextString(label: UILabel, htmlText: String, lineSpacing: CGFloat, font: CGFloat) {
         let attriStr = htmlTextString(htmlText: htmlText)
