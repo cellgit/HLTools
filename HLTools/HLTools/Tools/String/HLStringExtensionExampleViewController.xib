@@ -24,27 +24,27 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bed-vw-U7h">
-                    <rect key="frame" x="134" y="84" width="108" height="30"/>
+                    <rect key="frame" x="133.5" y="84" width="108" height="30"/>
                     <state key="normal" title="获取前七个字符"/>
                     <connections>
                         <action selector="firstAction:" destination="-1" eventType="touchUpInside" id="WaD-lD-d5r"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xc6-4l-nwr">
-                    <rect key="frame" x="134" y="129" width="108" height="30"/>
+                    <rect key="frame" x="133.5" y="129" width="108" height="30"/>
                     <state key="normal" title="获取后三个字符"/>
                     <connections>
                         <action selector="lastAction:" destination="-1" eventType="touchUpInside" id="SYM-LY-3Uh"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="显示" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMr-9P-8sb">
-                    <rect key="frame" x="173" y="257" width="31" height="18"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="显示" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMr-9P-8sb">
+                    <rect key="frame" x="172.5" y="257" width="31" height="18"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AVa-hj-yKk">
-                    <rect key="frame" x="20" y="374" width="335" height="44"/>
+                    <rect key="frame" x="20" y="305" width="335" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="hFv-8T-itw"/>
                     </constraints>
@@ -57,13 +57,15 @@
             <constraints>
                 <constraint firstItem="pMr-9P-8sb" firstAttribute="centerX" secondItem="xc6-4l-nwr" secondAttribute="centerX" id="1cg-nf-88N"/>
                 <constraint firstItem="xc6-4l-nwr" firstAttribute="top" secondItem="Bed-vw-U7h" secondAttribute="bottom" constant="15" id="HEL-PD-qIR"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pMr-9P-8sb" secondAttribute="trailing" constant="10" id="Igr-jX-iLc"/>
                 <constraint firstItem="xc6-4l-nwr" firstAttribute="centerX" secondItem="Bed-vw-U7h" secondAttribute="centerX" id="O4p-eO-Bq5"/>
                 <constraint firstAttribute="trailing" secondItem="AVa-hj-yKk" secondAttribute="trailing" constant="20" id="P5i-YE-YIN"/>
                 <constraint firstItem="Bed-vw-U7h" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TXV-nY-vkd"/>
                 <constraint firstItem="AVa-hj-yKk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="d8v-wT-gMU"/>
                 <constraint firstItem="Bed-vw-U7h" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="84" id="lOr-bJ-uVR"/>
                 <constraint firstItem="pMr-9P-8sb" firstAttribute="top" secondItem="xc6-4l-nwr" secondAttribute="bottom" constant="98" id="pEw-9I-Yo6"/>
-                <constraint firstItem="AVa-hj-yKk" firstAttribute="top" secondItem="pMr-9P-8sb" secondAttribute="bottom" constant="99" id="suF-ft-uQP"/>
+                <constraint firstItem="AVa-hj-yKk" firstAttribute="top" secondItem="pMr-9P-8sb" secondAttribute="bottom" constant="30" id="suF-ft-uQP"/>
+                <constraint firstItem="pMr-9P-8sb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="yHJ-PI-Yvi"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
