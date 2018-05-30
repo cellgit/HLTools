@@ -29,7 +29,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         let data7 = HomeDataStruct.init(title: "GridView", identifier: "gridViewIdentifier")
         let data8 = HomeDataStruct.init(title: "字符串截取", identifier: "cutStringIdentifier")
         let data9 = HomeDataStruct.init(title: "按钮", identifier: "buttonIdentifier")
-        let data10 = HomeDataStruct.init(title: "字符串转换", identifier: "stringExchangeIdentifier")
+        let data10 = HomeDataStruct.init(title: "星星评分视图", identifier: "starViewIdentifier")
         
         
         homeDataArray = [data1,
@@ -114,8 +114,8 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             let vc:HLButtonExampleViewController = HLButtonExampleViewController.init()
             pushViewController(vc: vc, animated: true)
         }
-        else if (homeDataArray[indexPath.row].identifier .elementsEqual("stringExchangeIdentifier")) {
-            let vc:HLButtonExampleViewController = HLButtonExampleViewController.init()
+        else if (homeDataArray[indexPath.row].identifier .elementsEqual("starViewIdentifier")) {
+            let vc:HLStarViewExample = HLStarViewExample.init()
             pushViewController(vc: vc, animated: true)
         }
         

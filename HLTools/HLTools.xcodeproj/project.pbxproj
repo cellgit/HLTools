@@ -40,6 +40,9 @@
 		F2D2A36020BDB57C00030E62 /* HLButtonExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2A35E20BDB57C00030E62 /* HLButtonExampleViewController.swift */; };
 		F2D2A36120BDB57C00030E62 /* HLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2A35F20BDB57C00030E62 /* HLButton.swift */; };
 		F2D2A36320BDB5CF00030E62 /* HLCommonDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2A36220BDB5CF00030E62 /* HLCommonDefines.swift */; };
+		F2D2A36620BEFA1F00030E62 /* UIView+StarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2A36520BEFA1F00030E62 /* UIView+StarView.swift */; };
+		F2D2A36B20BEFAD500030E62 /* HLStarViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2A36920BEFAD500030E62 /* HLStarViewExample.swift */; };
+		F2D2A36C20BEFAD500030E62 /* HLStarViewExample.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D2A36A20BEFAD500030E62 /* HLStarViewExample.xib */; };
 		F2D4E9742096B3E300861DBB /* HLPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D4E9732096B3E300861DBB /* HLPlayerViewController.swift */; };
 		F2D4E9762096B40B00861DBB /* HLPlayerContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D4E9752096B40B00861DBB /* HLPlayerContainerView.swift */; };
 		F2D4E9782096B70400861DBB /* HLGlobalStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D4E9772096B70400861DBB /* HLGlobalStruct.swift */; };
@@ -95,6 +98,9 @@
 		F2D2A35E20BDB57C00030E62 /* HLButtonExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLButtonExampleViewController.swift; sourceTree = "<group>"; };
 		F2D2A35F20BDB57C00030E62 /* HLButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLButton.swift; sourceTree = "<group>"; };
 		F2D2A36220BDB5CF00030E62 /* HLCommonDefines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLCommonDefines.swift; sourceTree = "<group>"; };
+		F2D2A36520BEFA1F00030E62 /* UIView+StarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+StarView.swift"; sourceTree = "<group>"; };
+		F2D2A36920BEFAD500030E62 /* HLStarViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLStarViewExample.swift; sourceTree = "<group>"; };
+		F2D2A36A20BEFAD500030E62 /* HLStarViewExample.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HLStarViewExample.xib; sourceTree = "<group>"; };
 		F2D4E9422092653E00861DBB /* HLTools-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HLTools-Bridging-Header.h"; sourceTree = "<group>"; };
 		F2D4E9732096B3E300861DBB /* HLPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLPlayerViewController.swift; sourceTree = "<group>"; };
 		F2D4E9752096B40B00861DBB /* HLPlayerContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLPlayerContainerView.swift; sourceTree = "<group>"; };
@@ -187,6 +193,7 @@
 		F2111C272067FC790032E6E7 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F2D2A36420BEF9E000030E62 /* Extension */,
 				F2D2A35D20BDB57C00030E62 /* Button */,
 				F2C7B79720B5B86600B49B48 /* GridView */,
 				F2C7B79420B1CAD800B49B48 /* String */,
@@ -320,6 +327,32 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
+		F2D2A36420BEF9E000030E62 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F2D2A36820BEFA7E00030E62 /* StarView */,
+				F2D2A36720BEFA6E00030E62 /* New Group */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F2D2A36720BEFA6E00030E62 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		F2D2A36820BEFA7E00030E62 /* StarView */ = {
+			isa = PBXGroup;
+			children = (
+				F2D2A36520BEFA1F00030E62 /* UIView+StarView.swift */,
+				F2D2A36920BEFAD500030E62 /* HLStarViewExample.swift */,
+				F2D2A36A20BEFAD500030E62 /* HLStarViewExample.xib */,
+			);
+			path = StarView;
+			sourceTree = "<group>";
+		};
 		F2D4E970209266FA00861DBB /* Player */ = {
 			isa = PBXGroup;
 			children = (
@@ -418,6 +451,7 @@
 				F2566FE720BBC0FD009F2247 /* HLStringExtensionExampleViewController.xib in Resources */,
 				F2111C37206E88900032E6E7 /* SWPopUpsContainerViewController.storyboard in Resources */,
 				F2111C122067FA5A0032E6E7 /* LaunchScreen.storyboard in Resources */,
+				F2D2A36C20BEFAD500030E62 /* HLStarViewExample.xib in Resources */,
 				F2111C3C206E88AB0032E6E7 /* CalendarViewController.storyboard in Resources */,
 				F2111C0F2067FA5A0032E6E7 /* Assets.xcassets in Resources */,
 				F2111C0D2067FA5A0032E6E7 /* Main.storyboard in Resources */,
@@ -512,6 +546,8 @@
 				F2111C33206D39850032E6E7 /* HLConfiguration.swift in Sources */,
 				F2C7B79920B5B88A00B49B48 /* HLGridView.swift in Sources */,
 				F2C7B79620B1CB0D00B49B48 /* HLStringExtension.swift in Sources */,
+				F2D2A36B20BEFAD500030E62 /* HLStarViewExample.swift in Sources */,
+				F2D2A36620BEFA1F00030E62 /* UIView+StarView.swift in Sources */,
 				F2322FFC2070E95800F3B13B /* HLPopoverViewController.swift in Sources */,
 				F2111C2F206D239B0032E6E7 /* HLBaseViewController.swift in Sources */,
 			);

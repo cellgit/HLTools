@@ -8,17 +8,33 @@
 
 import UIKit
 
-class HLStringExtensionExampleViewController: UIViewController {
+class HLStringExtensionExampleViewController: UIViewController, UITextFieldDelegate {
     let str = "1234567654321"
     @IBOutlet weak var firstBtn: UIButton!
     @IBOutlet weak var lastBtn: UIButton!
     @IBOutlet weak var contentLabel: UILabel!
     
+    @IBOutlet weak var textField: UITextField!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "字符串截取"
         self.view.backgroundColor = UIColor.white
+        textField.delegate = self
+        
+        textField.addTarget(self, action: #selector(texAction(sender:)), for: .editingChanged)
+        
     }
+    
+    
+    @objc func texAction(sender: UITextField) {
+        self.contentLabel.text = sender.text
+    }
+    
+    
     
     @IBAction func firstAction(_ sender: UIButton) {
         let firstFourChar = str.subString(start: 0, length: 7)
