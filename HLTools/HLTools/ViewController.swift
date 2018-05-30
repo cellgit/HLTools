@@ -29,6 +29,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         let data7 = HomeDataStruct.init(title: "GridView", identifier: "gridViewIdentifier")
         let data8 = HomeDataStruct.init(title: "字符串截取", identifier: "cutStringIdentifier")
         let data9 = HomeDataStruct.init(title: "按钮", identifier: "buttonIdentifier")
+        let data10 = HomeDataStruct.init(title: "字符串转换", identifier: "stringExchangeIdentifier")
         
         
         homeDataArray = [data1,
@@ -39,7 +40,8 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
                          data6,
                          data7,
                          data8,
-                         data9]
+                         data9,
+                         data10]
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -109,6 +111,10 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             pushViewController(vc: vc, animated: true)
         }
         else if (homeDataArray[indexPath.row].identifier .elementsEqual("buttonIdentifier")) {
+            let vc:HLButtonExampleViewController = HLButtonExampleViewController.init()
+            pushViewController(vc: vc, animated: true)
+        }
+        else if (homeDataArray[indexPath.row].identifier .elementsEqual("stringExchangeIdentifier")) {
             let vc:HLButtonExampleViewController = HLButtonExampleViewController.init()
             pushViewController(vc: vc, animated: true)
         }
