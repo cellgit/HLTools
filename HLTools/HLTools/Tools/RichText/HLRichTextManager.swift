@@ -50,7 +50,7 @@ class HLRichTextManager: NSObject {
     ///   - font: 字号
     /*
      usage: example
-     HLRichTextManager.shared.htmlTextString(label: contentLabel, htmlText: htmlText, lineSpacing: 8, font: 13)
+     SWRichTextManager.shared.htmlTextString(label: contentLabel, htmlText: htmlText, lineSpacing: 8, font: 13)
      */
     open func htmlTextString(label: UILabel, htmlText: String, lineSpacing: CGFloat, font: CGFloat) {
         let attriStr = htmlTextString(htmlText: htmlText)
@@ -61,5 +61,18 @@ class HLRichTextManager: NSObject {
         let str = attriStr.string
         label.attributedText = NSAttributedString(string: str, attributes: attributes)
         label.lineBreakMode = .byTruncatingTail //attributedText需要重新设置，才会出现省略号
+    }
+    
+    open func richTextString(text: String, font: CGFloat,color: UIColor) -> NSAttributedString {
+        let attriStr = htmlTextString(htmlText: text)
+        let paraph = NSMutableParagraphStyle()
+        let attributes = [NSAttributedStringKey.font:UIFont.systemFont(ofSize: font),
+                          NSAttributedStringKey.foregroundColor: color,
+                          NSAttributedStringKey.paragraphStyle: paraph]
+        let str = attriStr.string
+        
+        let attributedString = NSAttributedString(string: str, attributes: attributes)
+        return attributedString
+        //        label.lineBreakMode = .byTruncatingTail //attributedText需要重新设置，才会出现省略号
     }
 }
