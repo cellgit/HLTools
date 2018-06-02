@@ -10,20 +10,15 @@ import UIKit
 
 /// 继承自 HLBaseViewController
 class HLButtonListViewController: HLBaseViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
     let KImageButtonIdentifier = "ImageButtonIdentifier"
-    
     override func tableViewData() {
         let data1 = HLTableViewDataStruct.init(title: "ImageButton -- HLButtonExample", identifier: KImageButtonIdentifier)
         tableviewDataArray = [data1]
     }
 }
-
-
 extension HLButtonListViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)

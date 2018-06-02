@@ -27,6 +27,17 @@
 		F21E573520C29F5F0014FEF5 /* HLButtonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21E573420C29F5F0014FEF5 /* HLButtonListViewController.swift */; };
 		F21E573720C2ADF10014FEF5 /* UILabel+ShowLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21E573620C2ADF10014FEF5 /* UILabel+ShowLabel.swift */; };
 		F21E573B20C2B2270014FEF5 /* HLFlowLayoutButtonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21E573A20C2B2270014FEF5 /* HLFlowLayoutButtonListViewController.swift */; };
+		F21E573D20C2E4F70014FEF5 /* HLProgressBarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21E573C20C2E4F70014FEF5 /* HLProgressBarListViewController.swift */; };
+		F21E573F20C2E7580014FEF5 /* HLPopUpsContainerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21E573E20C2E7580014FEF5 /* HLPopUpsContainerListViewController.swift */; };
+		F21E574120C2E8B40014FEF5 /* HLPopoverListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21E574020C2E8B40014FEF5 /* HLPopoverListViewController.swift */; };
+		F21E574320C2E9CB0014FEF5 /* HLPlayerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21E574220C2E9CB0014FEF5 /* HLPlayerListViewController.swift */; };
+		F21E574520C2EB500014FEF5 /* HLGridViewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21E574420C2EB500014FEF5 /* HLGridViewListViewController.swift */; };
+		F21E574720C2EC8C0014FEF5 /* HLStringListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21E574620C2EC8C0014FEF5 /* HLStringListViewController.swift */; };
+		F21E574920C2EED00014FEF5 /* HLScoreMarkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21E574820C2EED00014FEF5 /* HLScoreMarkListViewController.swift */; };
+		F21E574B20C2F18B0014FEF5 /* HLFlowLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21E574A20C2F18B0014FEF5 /* HLFlowLayoutViewController.swift */; };
+		F21E575020C2FB560014FEF5 /* HLClosureListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21E574F20C2FB560014FEF5 /* HLClosureListViewController.swift */; };
+		F21E575420C2FC450014FEF5 /* HLClosureButtonExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21E575320C2FC450014FEF5 /* HLClosureButtonExampleViewController.swift */; };
+		F21E575720C3032D0014FEF5 /* HLTimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21E575620C3032D0014FEF5 /* HLTimerManager.swift */; };
 		F2322FF9206FF51500F3B13B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2322FF8206FF51500F3B13B /* CalendarViewController.swift */; };
 		F2322FFC2070E95800F3B13B /* HLPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2322FFB2070E95800F3B13B /* HLPopoverViewController.swift */; };
 		F2322FFE2070E96500F3B13B /* HLPopoverViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2322FFD2070E96500F3B13B /* HLPopoverViewController.storyboard */; };
@@ -34,7 +45,6 @@
 		F2566FE620BBC0FD009F2247 /* HLStringExtensionExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2566FE420BBC0FD009F2247 /* HLStringExtensionExampleViewController.swift */; };
 		F2566FE720BBC0FD009F2247 /* HLStringExtensionExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2566FE520BBC0FD009F2247 /* HLStringExtensionExampleViewController.xib */; };
 		F2C7B78520AFB08F00B49B48 /* HLFlowLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7B78420AFB08F00B49B48 /* HLFlowLayoutView.swift */; };
-		F2C7B78820AFD13600B49B48 /* HLFlowLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7B78720AFD13600B49B48 /* HLFlowLayoutViewController.swift */; };
 		F2C7B78B20AFF36B00B49B48 /* HLClosureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7B78A20AFF36B00B49B48 /* HLClosureView.swift */; };
 		F2C7B78D20B00D1600B49B48 /* HLClosureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7B78C20B00D1600B49B48 /* HLClosureButton.swift */; };
 		F2C7B79020B1C55E00B49B48 /* HLRichTextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7B78F20B1C55E00B49B48 /* HLRichTextManager.swift */; };
@@ -92,6 +102,17 @@
 		F21E573420C29F5F0014FEF5 /* HLButtonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLButtonListViewController.swift; sourceTree = "<group>"; };
 		F21E573620C2ADF10014FEF5 /* UILabel+ShowLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+ShowLabel.swift"; sourceTree = "<group>"; };
 		F21E573A20C2B2270014FEF5 /* HLFlowLayoutButtonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLFlowLayoutButtonListViewController.swift; sourceTree = "<group>"; };
+		F21E573C20C2E4F70014FEF5 /* HLProgressBarListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLProgressBarListViewController.swift; sourceTree = "<group>"; };
+		F21E573E20C2E7580014FEF5 /* HLPopUpsContainerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLPopUpsContainerListViewController.swift; sourceTree = "<group>"; };
+		F21E574020C2E8B40014FEF5 /* HLPopoverListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLPopoverListViewController.swift; sourceTree = "<group>"; };
+		F21E574220C2E9CB0014FEF5 /* HLPlayerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLPlayerListViewController.swift; sourceTree = "<group>"; };
+		F21E574420C2EB500014FEF5 /* HLGridViewListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLGridViewListViewController.swift; sourceTree = "<group>"; };
+		F21E574620C2EC8C0014FEF5 /* HLStringListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLStringListViewController.swift; sourceTree = "<group>"; };
+		F21E574820C2EED00014FEF5 /* HLScoreMarkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLScoreMarkListViewController.swift; sourceTree = "<group>"; };
+		F21E574A20C2F18B0014FEF5 /* HLFlowLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLFlowLayoutViewController.swift; sourceTree = "<group>"; };
+		F21E574F20C2FB560014FEF5 /* HLClosureListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLClosureListViewController.swift; sourceTree = "<group>"; };
+		F21E575320C2FC450014FEF5 /* HLClosureButtonExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLClosureButtonExampleViewController.swift; sourceTree = "<group>"; };
+		F21E575620C3032D0014FEF5 /* HLTimerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLTimerManager.swift; sourceTree = "<group>"; };
 		F2322FF8206FF51500F3B13B /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		F2322FFB2070E95800F3B13B /* HLPopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLPopoverViewController.swift; sourceTree = "<group>"; };
 		F2322FFD2070E96500F3B13B /* HLPopoverViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HLPopoverViewController.storyboard; sourceTree = "<group>"; };
@@ -99,7 +120,6 @@
 		F2566FE420BBC0FD009F2247 /* HLStringExtensionExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLStringExtensionExampleViewController.swift; sourceTree = "<group>"; };
 		F2566FE520BBC0FD009F2247 /* HLStringExtensionExampleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HLStringExtensionExampleViewController.xib; sourceTree = "<group>"; };
 		F2C7B78420AFB08F00B49B48 /* HLFlowLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLFlowLayoutView.swift; sourceTree = "<group>"; };
-		F2C7B78720AFD13600B49B48 /* HLFlowLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLFlowLayoutViewController.swift; sourceTree = "<group>"; };
 		F2C7B78A20AFF36B00B49B48 /* HLClosureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLClosureView.swift; sourceTree = "<group>"; };
 		F2C7B78C20B00D1600B49B48 /* HLClosureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLClosureButton.swift; sourceTree = "<group>"; };
 		F2C7B78F20B1C55E00B49B48 /* HLRichTextManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLRichTextManager.swift; sourceTree = "<group>"; };
@@ -186,7 +206,6 @@
 				F21E573620C2ADF10014FEF5 /* UILabel+ShowLabel.swift */,
 				F2D2A36F20C2843000030E62 /* EmptyTableViewSample.swift */,
 				F2D2A37120C289DB00030E62 /* ExampleListVC */,
-				F2C7B78620AFD0E800B49B48 /* example */,
 				F2111C31206D39570032E6E7 /* Config */,
 				F2111C272067FC790032E6E7 /* Tools */,
 				F2111C0B2067FA5A0032E6E7 /* Main.storyboard */,
@@ -210,6 +229,7 @@
 		F2111C272067FC790032E6E7 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F21E575520C3032D0014FEF5 /* TimerManager */,
 				F2D2A36420BEF9E000030E62 /* Extension */,
 				F2D2A35D20BDB57C00030E62 /* Button */,
 				F2C7B79720B5B86600B49B48 /* GridView */,
@@ -274,6 +294,14 @@
 			path = UIViewController;
 			sourceTree = "<group>";
 		};
+		F21E575520C3032D0014FEF5 /* TimerManager */ = {
+			isa = PBXGroup;
+			children = (
+				F21E575620C3032D0014FEF5 /* HLTimerManager.swift */,
+			);
+			path = TimerManager;
+			sourceTree = "<group>";
+		};
 		F2322FFA2070E92100F3B13B /* Popover */ = {
 			isa = PBXGroup;
 			children = (
@@ -287,17 +315,10 @@
 		F2C7B78320AFB05F00B49B48 /* FlowLayoutView */ = {
 			isa = PBXGroup;
 			children = (
+				F21E574A20C2F18B0014FEF5 /* HLFlowLayoutViewController.swift */,
 				F2C7B78420AFB08F00B49B48 /* HLFlowLayoutView.swift */,
 			);
 			path = FlowLayoutView;
-			sourceTree = "<group>";
-		};
-		F2C7B78620AFD0E800B49B48 /* example */ = {
-			isa = PBXGroup;
-			children = (
-				F2C7B78720AFD13600B49B48 /* HLFlowLayoutViewController.swift */,
-			);
-			path = example;
 			sourceTree = "<group>";
 		};
 		F2C7B78920AFF2F300B49B48 /* Closure */ = {
@@ -305,6 +326,7 @@
 			children = (
 				F2C7B78A20AFF36B00B49B48 /* HLClosureView.swift */,
 				F2C7B78C20B00D1600B49B48 /* HLClosureButton.swift */,
+				F21E575320C2FC450014FEF5 /* HLClosureButtonExampleViewController.swift */,
 			);
 			path = Closure;
 			sourceTree = "<group>";
@@ -386,6 +408,14 @@
 				F2D2A37220C28A0400030E62 /* HLCalendarListViewController.swift */,
 				F21E573420C29F5F0014FEF5 /* HLButtonListViewController.swift */,
 				F21E573A20C2B2270014FEF5 /* HLFlowLayoutButtonListViewController.swift */,
+				F21E573C20C2E4F70014FEF5 /* HLProgressBarListViewController.swift */,
+				F21E573E20C2E7580014FEF5 /* HLPopUpsContainerListViewController.swift */,
+				F21E574020C2E8B40014FEF5 /* HLPopoverListViewController.swift */,
+				F21E574220C2E9CB0014FEF5 /* HLPlayerListViewController.swift */,
+				F21E574420C2EB500014FEF5 /* HLGridViewListViewController.swift */,
+				F21E574620C2EC8C0014FEF5 /* HLStringListViewController.swift */,
+				F21E574820C2EED00014FEF5 /* HLScoreMarkListViewController.swift */,
+				F21E574F20C2FB560014FEF5 /* HLClosureListViewController.swift */,
 			);
 			path = ExampleListVC;
 			sourceTree = "<group>";
@@ -558,6 +588,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21E575020C2FB560014FEF5 /* HLClosureListViewController.swift in Sources */,
 				F21E573320C29BF80014FEF5 /* HLColorConfig.swift in Sources */,
 				F21E573120C293450014FEF5 /* UIViewController+Extension.swift in Sources */,
 				F2111C0A2067FA5A0032E6E7 /* ViewController.swift in Sources */,
@@ -565,8 +596,10 @@
 				F2C7B78B20AFF36B00B49B48 /* HLClosureView.swift in Sources */,
 				F2111C082067FA5A0032E6E7 /* AppDelegate.swift in Sources */,
 				F2D2A37020C2843100030E62 /* EmptyTableViewSample.swift in Sources */,
+				F21E574120C2E8B40014FEF5 /* HLPopoverListViewController.swift in Sources */,
 				F2C7B79D20B5BBBC00B49B48 /* HLGridViewExampleVC.swift in Sources */,
 				F2111C38206E88900032E6E7 /* SWPopUpsContainerViewController.swift in Sources */,
+				F21E575420C2FC450014FEF5 /* HLClosureButtonExampleViewController.swift in Sources */,
 				F2C7B79020B1C55E00B49B48 /* HLRichTextManager.swift in Sources */,
 				F2D4E9742096B3E300861DBB /* HLPlayerViewController.swift in Sources */,
 				F2D2A36320BDB5CF00030E62 /* HLCommonDefines.swift in Sources */,
@@ -577,22 +610,29 @@
 				F21E573B20C2B2270014FEF5 /* HLFlowLayoutButtonListViewController.swift in Sources */,
 				F2C7B79320B1CA7600B49B48 /* HLLabelExtension.swift in Sources */,
 				F2D4E9762096B40B00861DBB /* HLPlayerContainerView.swift in Sources */,
-				F2C7B78820AFD13600B49B48 /* HLFlowLayoutViewController.swift in Sources */,
 				F2D2A36120BDB57C00030E62 /* HLButton.swift in Sources */,
 				F21E573520C29F5F0014FEF5 /* HLButtonListViewController.swift in Sources */,
 				F2111C292067FCC90032E6E7 /* HLProgressBar.swift in Sources */,
+				F21E573F20C2E7580014FEF5 /* HLPopUpsContainerListViewController.swift in Sources */,
 				F23230002070EAEC00F3B13B /* HLPopoverPresentedView.swift in Sources */,
 				F2111C2D206D20920032E6E7 /* HLProgressBarViewController.swift in Sources */,
 				F2D2A37320C28A0400030E62 /* HLCalendarListViewController.swift in Sources */,
 				F2322FF9206FF51500F3B13B /* CalendarViewController.swift in Sources */,
+				F21E573D20C2E4F70014FEF5 /* HLProgressBarListViewController.swift in Sources */,
+				F21E575720C3032D0014FEF5 /* HLTimerManager.swift in Sources */,
+				F21E574920C2EED00014FEF5 /* HLScoreMarkListViewController.swift in Sources */,
 				F2566FE620BBC0FD009F2247 /* HLStringExtensionExampleViewController.swift in Sources */,
 				F2111C33206D39850032E6E7 /* HLConfiguration.swift in Sources */,
 				F2C7B79920B5B88A00B49B48 /* HLGridView.swift in Sources */,
 				F2C7B79620B1CB0D00B49B48 /* HLStringExtension.swift in Sources */,
 				F21E573720C2ADF10014FEF5 /* UILabel+ShowLabel.swift in Sources */,
 				F2D2A36B20BEFAD500030E62 /* HLStarViewExample.swift in Sources */,
+				F21E574B20C2F18B0014FEF5 /* HLFlowLayoutViewController.swift in Sources */,
 				F2D2A36620BEFA1F00030E62 /* UIView+StarView.swift in Sources */,
+				F21E574520C2EB500014FEF5 /* HLGridViewListViewController.swift in Sources */,
+				F21E574720C2EC8C0014FEF5 /* HLStringListViewController.swift in Sources */,
 				F2322FFC2070E95800F3B13B /* HLPopoverViewController.swift in Sources */,
+				F21E574320C2E9CB0014FEF5 /* HLPlayerListViewController.swift in Sources */,
 				F2111C2F206D239B0032E6E7 /* HLBaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

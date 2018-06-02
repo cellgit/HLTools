@@ -22,15 +22,11 @@ import UIKit
 class EmptyTableViewSample: UIViewController {
     
     let KUITableViewCell = "UITableViewCell"
-    
     var tableView: UITableView!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.view.backgroundColor = UIColor.white
-        
         setTableViewUI()
     }
 
@@ -38,7 +34,6 @@ class EmptyTableViewSample: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     func setTableViewUI() {
         tableView = UITableView.init(frame: self.view.frame, style: .grouped)
@@ -62,12 +57,9 @@ class EmptyTableViewSample: UIViewController {
         
         // 纯代码注册方法
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: KUITableViewCell)
-        
-        
         tableView.delegate = self
         tableView.dataSource = self
     }
-    
 }
 
 extension EmptyTableViewSample: UITableViewDataSource,UITableViewDelegate {

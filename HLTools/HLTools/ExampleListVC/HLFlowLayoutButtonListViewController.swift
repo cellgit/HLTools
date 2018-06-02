@@ -9,21 +9,15 @@
 import UIKit
 
 class HLFlowLayoutButtonListViewController: HLBaseViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
     let KFlowLayoutButtonIdentifier = "FlowLayoutButtonIdentifier"
-    
     override func tableViewData() {
         let data1 = HLTableViewDataStruct.init(title: "FlowLayoutButton", identifier: KFlowLayoutButtonIdentifier)
         tableviewDataArray = [data1]
     }
 }
-
 extension HLFlowLayoutButtonListViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)

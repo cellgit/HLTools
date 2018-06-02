@@ -28,4 +28,5 @@
 ##### ✅ 12. 字符串截取: HLStringExtension
 ##### ✅ 13. 图片文字按钮: HLButton
 ##### ✅ 14. 星星评分视图: UIView+StarView
+##### ✅ 15. 获取Date和日期格式化: HLTimerManager
 

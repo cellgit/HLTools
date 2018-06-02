@@ -82,7 +82,7 @@ class HLPlayerViewController: UIViewController {
             self.containerView.frame = frame
             playerLayer.frame = self.containerView.bounds
             
-            let transform: CGAffineTransform = CGAffineTransform.init(rotationAngle: CGFloat(M_PI_2))
+            let transform: CGAffineTransform = CGAffineTransform.init(rotationAngle: CGFloat(Double.pi/2)) //M_PI_2
             self.containerView.transform = transform
         }
         else {
