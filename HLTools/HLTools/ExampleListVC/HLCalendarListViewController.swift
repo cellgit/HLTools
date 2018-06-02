@@ -12,9 +12,6 @@ class HLCalendarListViewController: UIViewController {
     
     let KUIStoryboardCalandarIdentifier = "UIStoryboardCalandarIdentifier"
     
-    
-    
-    
     let KUITableViewCell = "UITableViewCell"
     var tableView:UITableView!
     var tableviewDataArray = [HLTableViewDataStruct]()

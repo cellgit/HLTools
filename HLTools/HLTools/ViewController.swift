@@ -70,11 +70,6 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             pushViewController(vc: vc, animated: true)
         }
         else if (tableviewDataArray[indexPath.row].identifier .elementsEqual("calandarIdentifier")) {
-//            let vc = UIStoryboard(name: "CalendarViewController", bundle: nil).instantiateViewController(withIdentifier: "KCalendarViewController") as UIViewController
-//            let viewController:CalendarViewController = vc as! CalendarViewController
-//            viewController.delegate = self
-//            self.present(viewController, animated: true, completion: nil)
-            
             let vc = HLCalendarListViewController()
             self.pushViewController(vc: vc, animated: true)
         }
@@ -94,8 +89,15 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             self.navigationController?.pushViewController(vc, animated: true)
         }
         else if (tableviewDataArray[indexPath.row].identifier .elementsEqual("flowLayoutViewIdentifier")) {
-            let vc:HLFlowLayoutViewController = HLFlowLayoutViewController.init()
+            let vc:HLFlowLayoutButtonListViewController = HLFlowLayoutButtonListViewController.init()
+            
+//            let vc:HLFlowLayoutViewController = HLFlowLayoutViewController.init()
             pushViewController(vc: vc, animated: true)
+            
+            
+            
+            
+            
         }
         else if (tableviewDataArray[indexPath.row].identifier .elementsEqual("gridViewIdentifier")) {
             let vc:HLGridViewExampleVC = HLGridViewExampleVC.init()
@@ -106,7 +108,10 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             pushViewController(vc: vc, animated: true)
         }
         else if (tableviewDataArray[indexPath.row].identifier .elementsEqual("buttonIdentifier")) {
-            let vc:HLButtonExampleViewController = HLButtonExampleViewController.init()
+            
+            
+            let vc:HLButtonListViewController = HLButtonListViewController.init()
+//            let vc:HLButtonExampleViewController = HLButtonExampleViewController.init()
             pushViewController(vc: vc, animated: true)
         }
         else if (tableviewDataArray[indexPath.row].identifier .elementsEqual("starViewIdentifier")) {

@@ -44,7 +44,10 @@ class HLProgressBarViewController: HLBaseViewController,URLSessionDownloadDelega
         shapelayer.transform = CATransform3DMakeRotation(-CGFloat.pi / 2, 0, 0, 1)
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
     }
-    let urlString = "https://firebasestorage.googleapis.com/v0/b/firestorechat-e64ac.appspot.com/o/intermediate_training_rec.mp4?alt=media&token=e20261d0-7219-49d2-b32d-367e1606500c"
+//    let urlString = "https://firebasestorage.googleapis.com/v0/b/firestorechat-e64ac.appspot.com/o/intermediate_training_rec.mp4?alt=media&token=e20261d0-7219-49d2-b32d-367e1606500c"
+    
+    let urlString = ""
+    
     func beginDownLoadingFile() {
         print("attempting to animate stroke")
         shapelayer.strokeEnd = 0
@@ -77,7 +80,7 @@ class HLProgressBarViewController: HLBaseViewController,URLSessionDownloadDelega
     @objc private func handleTap() {
         print("tap to animate stroke")
         beginDownLoadingFile()
-        //        animateCircle()
+//        animateCircle()
     }
 }
 

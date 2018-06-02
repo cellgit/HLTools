@@ -22,16 +22,19 @@ class HLButtonExampleViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
     func setupUI() {
         let button = HLButton(title: "红色代表爱", image: UIImage.init(named: "M_care"))
-        button.frame = CGRect(x: ScreenWidth/2 - 50, y: 200, width: 200, height: 38)
-        self.view.addSubview(button)
-        button.adjustsTitleTintColorAutomatically = true
         button.imagePosition = HLButtonImagePosition.left
-        button.setTitleColor(UIColor.red, for: .normal)
+        button.adjustsTitleTintColorAutomatically = true
         button.imageEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 0)
+        button.center = self.view.center
+        button.bounds.size = CGSize(width: 200, height: 50)
+        self.view.addSubview(button)
+        button.setTitleColor(UIColor.red, for: .normal)
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 5
+        button.layer.borderWidth = 0.5
+        button.layer.borderColor = ThemeColor.cgColor
     }
     
 
