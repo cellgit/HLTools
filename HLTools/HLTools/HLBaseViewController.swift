@@ -10,16 +10,11 @@ import UIKit
 
 class HLBaseViewController: UIViewController {
     
-    open var navTitle: String?
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         
     }
-    
-    
     
 
 }

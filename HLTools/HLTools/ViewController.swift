@@ -8,31 +8,26 @@
 
 import UIKit
 
-struct HomeDataStruct {
-    var title = ""
-    var identifier = ""
-}
-
-class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,SWCalendarDelegate {
+class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     let cellId:String = "cellId"
     var tableView:UITableView!
-    var homeDataArray = [HomeDataStruct]()
+    var tableviewDataArray = [HLTableViewDataStruct]()
     
-    func getHomeData() {
-        let data1 = HomeDataStruct.init(title: "进度君", identifier: "progressIdentifier")
-        let data2 = HomeDataStruct.init(title: "日历君", identifier: "calandarIdentifier")
-        let data3 = HomeDataStruct.init(title: "弹框君", identifier: "presentIdentifier")
-        let data4 = HomeDataStruct.init(title: "Popover君", identifier: "popoverIdentifier")
-        let data5 = HomeDataStruct.init(title: "视频君", identifier: "videoIdentifier")
-        let data6 = HomeDataStruct.init(title: "流水布局按钮", identifier: "flowLayoutViewIdentifier")
-        let data7 = HomeDataStruct.init(title: "GridView", identifier: "gridViewIdentifier")
-        let data8 = HomeDataStruct.init(title: "字符串截取", identifier: "cutStringIdentifier")
-        let data9 = HomeDataStruct.init(title: "按钮", identifier: "buttonIdentifier")
-        let data10 = HomeDataStruct.init(title: "星星评分视图", identifier: "starViewIdentifier")
+    func tableViewData() {
+        let data1 = HLTableViewDataStruct.init(title: "进度君", identifier: "progressIdentifier")
+        let data2 = HLTableViewDataStruct.init(title: "日历君", identifier: "calandarIdentifier")
+        let data3 = HLTableViewDataStruct.init(title: "弹框君", identifier: "presentIdentifier")
+        let data4 = HLTableViewDataStruct.init(title: "Popover君", identifier: "popoverIdentifier")
+        let data5 = HLTableViewDataStruct.init(title: "视频君", identifier: "videoIdentifier")
+        let data6 = HLTableViewDataStruct.init(title: "流水布局按钮", identifier: "flowLayoutViewIdentifier")
+        let data7 = HLTableViewDataStruct.init(title: "GridView", identifier: "gridViewIdentifier")
+        let data8 = HLTableViewDataStruct.init(title: "字符串截取", identifier: "cutStringIdentifier")
+        let data9 = HLTableViewDataStruct.init(title: "按钮", identifier: "buttonIdentifier")
+        let data10 = HLTableViewDataStruct.init(title: "星星评分视图", identifier: "starViewIdentifier")
         
         
-        homeDataArray = [data1,
+        tableviewDataArray = [data1,
                          data2,
                          data3,
                          data4,
@@ -45,12 +40,9 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        getHomeData()
-        configuration()
-        setupTableView()
-    }
-    func configuration() {
         self.title = "小控件"
+        tableViewData()
+        setupTableView()
     }
     func setupTableView() {
         tableView = UITableView.init(frame: self.view.frame, style: .plain)
@@ -63,58 +55,61 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return homeDataArray.count
+        return tableviewDataArray.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
-        cell.textLabel?.text = "row \(indexPath.row) : --  \(homeDataArray[indexPath.row].title)"
+        cell.textLabel?.text = "row \(indexPath.row) : --  \(tableviewDataArray[indexPath.row].title)"
         cell.textLabel?.textColor = UIColor.init(red: 43/255.0, green: 133/255.0, blue: 208/255.0, alpha: 1.0)
         return cell;
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if (homeDataArray[indexPath.row].identifier .elementsEqual("progressIdentifier")) {
+        if (tableviewDataArray[indexPath.row].identifier .elementsEqual("progressIdentifier")) {
             let vc:HLProgressBarViewController = HLProgressBarViewController.init()
             pushViewController(vc: vc, animated: true)
         }
-        else if (homeDataArray[indexPath.row].identifier .elementsEqual("calandarIdentifier")) {
-            let vc = UIStoryboard(name: "CalendarViewController", bundle: nil).instantiateViewController(withIdentifier: "KCalendarViewController") as UIViewController
-            let viewController:CalendarViewController = vc as! CalendarViewController
-            viewController.delegate = self
-            self.present(viewController, animated: true, completion: nil)
+        else if (tableviewDataArray[indexPath.row].identifier .elementsEqual("calandarIdentifier")) {
+//            let vc = UIStoryboard(name: "CalendarViewController", bundle: nil).instantiateViewController(withIdentifier: "KCalendarViewController") as UIViewController
+//            let viewController:CalendarViewController = vc as! CalendarViewController
+//            viewController.delegate = self
+//            self.present(viewController, animated: true, completion: nil)
+            
+            let vc = HLCalendarListViewController()
+            self.pushViewController(vc: vc, animated: true)
         }
-        else if (homeDataArray[indexPath.row].identifier .elementsEqual("presentIdentifier")) {
+        else if (tableviewDataArray[indexPath.row].identifier .elementsEqual("presentIdentifier")) {
             let vc = UIStoryboard(name: "SWPopUpsContainerViewController", bundle: nil).instantiateViewController(withIdentifier: "KSWPopUpsContainerViewController") as UIViewController
             // 这里如果有tabBarController,需要用:self.viewController.tabBarController.present(vc, animated: true, completion: nil), 否则遮不住tabBar
             self.present(vc, animated: true, completion: nil)
         }
-        else if (homeDataArray[indexPath.row].identifier .elementsEqual("popoverIdentifier")) {
+        else if (tableviewDataArray[indexPath.row].identifier .elementsEqual("popoverIdentifier")) {
             let vc = UIStoryboard(name: "HLPopoverViewController", bundle: nil).instantiateViewController(withIdentifier: "KHLPopoverViewController") as UIViewController
             self.pushViewController(vc: vc, animated: true)
         }
-        else if homeDataArray[indexPath.row].identifier.elementsEqual("videoIdentifier") {
+        else if tableviewDataArray[indexPath.row].identifier.elementsEqual("videoIdentifier") {
             let urlStr: String = "https://content.jwplatform.com/manifests/vM7nH0Kl.m3u8"
             let params = HLPlayerStruct.init(url: urlStr)
             let vc = HLPlayerViewController.init(params: params)
             self.navigationController?.pushViewController(vc, animated: true)
         }
-        else if (homeDataArray[indexPath.row].identifier .elementsEqual("flowLayoutViewIdentifier")) {
+        else if (tableviewDataArray[indexPath.row].identifier .elementsEqual("flowLayoutViewIdentifier")) {
             let vc:HLFlowLayoutViewController = HLFlowLayoutViewController.init()
             pushViewController(vc: vc, animated: true)
         }
-        else if (homeDataArray[indexPath.row].identifier .elementsEqual("gridViewIdentifier")) {
+        else if (tableviewDataArray[indexPath.row].identifier .elementsEqual("gridViewIdentifier")) {
             let vc:HLGridViewExampleVC = HLGridViewExampleVC.init()
             pushViewController(vc: vc, animated: true)
         }
-        else if (homeDataArray[indexPath.row].identifier .elementsEqual("cutStringIdentifier")) {
+        else if (tableviewDataArray[indexPath.row].identifier .elementsEqual("cutStringIdentifier")) {
             let vc:HLStringExtensionExampleViewController = HLStringExtensionExampleViewController.init()
             pushViewController(vc: vc, animated: true)
         }
-        else if (homeDataArray[indexPath.row].identifier .elementsEqual("buttonIdentifier")) {
+        else if (tableviewDataArray[indexPath.row].identifier .elementsEqual("buttonIdentifier")) {
             let vc:HLButtonExampleViewController = HLButtonExampleViewController.init()
             pushViewController(vc: vc, animated: true)
         }
-        else if (homeDataArray[indexPath.row].identifier .elementsEqual("starViewIdentifier")) {
+        else if (tableviewDataArray[indexPath.row].identifier .elementsEqual("starViewIdentifier")) {
             let vc:HLStarViewExample = HLStarViewExample.init()
             pushViewController(vc: vc, animated: true)
         }
@@ -135,16 +130,8 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             cell.layer.transform = CATransform3DIdentity
         }
     }
-    //MARK: SWCalendarDelegate 获取点击选择的日期
-    func getSelectedDate(selectedDate: Date) {
-        print("selectedDateString:\(selectedDate)")
-    }
+    
 }
 
-extension ViewController {
-    func pushViewController(vc:UIViewController, animated:Bool) {
-        vc.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-}
+
 

@@ -13,6 +13,12 @@ struct HLDictStruct {
     var dict = [String:String]()
 }
 
+// UITableView 列表的数据 struct
+struct HLTableViewDataStruct {
+    var title = ""
+    var identifier = ""
+}
+
 struct HLPlayerStruct {
     var url: String = ""
 }
