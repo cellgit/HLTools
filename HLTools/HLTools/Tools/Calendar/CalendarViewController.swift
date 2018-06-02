@@ -135,8 +135,19 @@ extension CalendarViewController: JTAppleCalendarViewDataSource{
         formatter.locale = Calendar.current.locale
         let startDate = formatter.date(from: "2017 01 01")
         let endDate = formatter.date(from: "2019 01 01")
-        let parm = ConfigurationParameters(startDate: startDate!, endDate: endDate!)
-        return parm
+//        let parameters = ConfigurationParameters(startDate: startDate!, endDate: endDate!)
+        
+        
+        let parameters = ConfigurationParameters(startDate: startDate!,
+                                                 endDate: endDate!,
+                                                 numberOfRows: 1,
+                                                 generateInDates: .forFirstMonthOnly,
+                                                 generateOutDates: .off,
+                                                 hasStrictBoundaries: false)
+        
+        
+        
+        return parameters
     }
 }
 extension CalendarViewController: JTAppleCalendarViewDelegate {
