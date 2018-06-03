@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 class HLFlowLayoutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,49 +50,3 @@ extension HLFlowLayoutViewController {
         flowView.backgroundColor = .cyan
     }
 }
-
-
-
-
-///////////////// 以下和流水标签无关/////////////////////
-///// MARK: 按钮闭包回调, HLClosureButton
-//extension HLFlowLayoutViewController {
-//    func addOneButton() {
-//        let button = UIButton.init(type: .custom)
-//        self.view.addSubview(button)
-//        button.center = self.view.center
-//        button.bounds.size = CGSize(width: 200, height: 60)
-//        button.setTitle("按钮自身回调", for: .normal)
-//        button.tag = 10001
-//        button.backgroundColor = .lightGray
-//
-//        let showLabel = UILabel.hl_showLabel(containerView: self.view, offsetY: -150)
-//        button.action { (sender) in
-//            print("sender.tag====== \(sender.tag)")
-//            showLabel.text = "Tag\(sender.tag): \(sender.titleLabel?.text ?? "")"
-//        }
-//    }
-//}
-///// MARK: 闭包回调
-//extension HLFlowLayoutViewController {
-//    func getClosureExample() {
-//        let containerView = UIView.init(frame: CGRect(x: 0, y: 550, width: UIScreen.main.bounds.size.width, height: 100))
-//        self.view.addSubview(containerView)
-//        self.closureCallBack(view: containerView)
-//    }
-//    func closureCallBack(view: UIView) {
-//
-//        let closureView: HLClosureView = HLClosureView.init(frame: view.bounds)
-//        let showLabel = UILabel.hl_showLabel(containerView: self.view, offsetY: -150)
-//        closureView.callbackBlock { (sender) in
-//            print("button.tag====== \(sender.tag)")
-//            showLabel.text = "Tag\(sender.tag): \(sender.titleLabel?.text ?? "")"
-//        }
-//        closureView.backgroundColor = .cyan
-//        view.addSubview(closureView)
-//    }
-//}
-///////////////// 以上和流水标签无关/////////////////////
-//
-//
-//
