@@ -38,6 +38,7 @@
 ####部分显示效果:
 
 
+![Popover](https://github.com/cellgit/HLTools/blob/master/Photos/Popover.png)
 
 ![FlowlayoutButton](https://github.com/cellgit/HLTools/blob/master/Photos/FlowlayoutButton.PNG)
 

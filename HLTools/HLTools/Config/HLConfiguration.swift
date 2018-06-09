@@ -15,6 +15,14 @@ let ScreenHeight = UIScreen.main.bounds.size.height
 
 let KDeviceDirector = UIDevice.current.orientation
 
+public let NavigationH: CGFloat = UIScreen.main.bounds.size.height == 812 ? 88 : 64
+public let CMMagin: CGFloat = 10
+public let AppWidth: CGFloat = UIScreen.main.bounds.size.width
+public let AppHeight: CGFloat = UIScreen.main.bounds.size.height
+public let AppSize: CGRect = UIScreen.main.bounds
+public let SafeAreaTopHeight : CGFloat = UIScreen.main.bounds.size.height == 812 ? 88 : 64
+public let TabarHeight : CGFloat = UIScreen.main.bounds.size.height == 812 ? 83 : 49
+
 
 class HLConfiguration: NSObject {
     

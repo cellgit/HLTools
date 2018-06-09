@@ -38,6 +38,7 @@ class HLBaseViewController: UIViewController {
         self.view.addSubview(tableView)
         if #available(iOS 11.0, *) {
             tableView.contentInsetAdjustmentBehavior = .never
+            tableView.contentInset = UIEdgeInsetsMake(NavigationH, 0, 0, 0)
         } else {}
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: KUITableViewCell)
         tableView.delegate = self
