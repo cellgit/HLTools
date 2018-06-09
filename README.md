@@ -31,3 +31,9 @@
 ##### ✅ 15. 获取Date和日期格式化: HLTimerManager
 ##### ✅ 16. 手势滑动或点击进行星星打分: EvaluateStarView
 
+
+
+####部分显示效果:
+1. ![FlowlayoutButton](https://github.com/cellgit/HLTools/blob/master/Photos/FlowlayoutButton.PNG)
+
+
