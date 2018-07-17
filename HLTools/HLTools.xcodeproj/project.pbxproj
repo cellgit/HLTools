@@ -67,6 +67,14 @@
 		F2E4D01120CBC9D20080B41B /* HLPopoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E4D00F20CBC9D20080B41B /* HLPopoverCell.swift */; };
 		F2E4D01220CBC9D20080B41B /* HLPopoverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2E4D01020CBC9D20080B41B /* HLPopoverCell.xib */; };
 		F2E4D01420CBCB4B0080B41B /* HLPopoverExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E4D01320CBCB4B0080B41B /* HLPopoverExampleViewController.swift */; };
+		F2EE76E320FE34D800F90BE3 /* HLWebUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE76E220FE34D800F90BE3 /* HLWebUrl.swift */; };
+		F2EE76EB20FE3E6000F90BE3 /* photo001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2EE76E520FE3E5E00F90BE3 /* photo001.jpg */; };
+		F2EE76EC20FE3E6000F90BE3 /* photo000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2EE76E620FE3E5F00F90BE3 /* photo000.jpg */; };
+		F2EE76ED20FE3E6000F90BE3 /* photo002.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2EE76E720FE3E5F00F90BE3 /* photo002.jpg */; };
+		F2EE76EE20FE3E6000F90BE3 /* photo004.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2EE76E820FE3E5F00F90BE3 /* photo004.jpg */; };
+		F2EE76EF20FE3E6000F90BE3 /* photo003.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2EE76E920FE3E5F00F90BE3 /* photo003.jpg */; };
+		F2EE76F020FE3E6000F90BE3 /* photo005.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2EE76EA20FE3E6000F90BE3 /* photo005.jpg */; };
+		F2EE76F220FE43CB00F90BE3 /* HLSKPhotoBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE76F120FE43CB00F90BE3 /* HLSKPhotoBrowserViewController.swift */; };
 		F2F039C220C70AE500A8F716 /* EvaluateStarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2F039C020C70AE400A8F716 /* EvaluateStarView.xib */; };
 		F2F039C520C70D4D00A8F716 /* EvaluateStarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F039C420C70D4D00A8F716 /* EvaluateStarView.swift */; };
 /* End PBXBuildFile section */
@@ -149,6 +157,14 @@
 		F2E4D00F20CBC9D20080B41B /* HLPopoverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLPopoverCell.swift; sourceTree = "<group>"; };
 		F2E4D01020CBC9D20080B41B /* HLPopoverCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HLPopoverCell.xib; sourceTree = "<group>"; };
 		F2E4D01320CBCB4B0080B41B /* HLPopoverExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLPopoverExampleViewController.swift; sourceTree = "<group>"; };
+		F2EE76E220FE34D800F90BE3 /* HLWebUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLWebUrl.swift; sourceTree = "<group>"; };
+		F2EE76E520FE3E5E00F90BE3 /* photo001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo001.jpg; sourceTree = "<group>"; };
+		F2EE76E620FE3E5F00F90BE3 /* photo000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo000.jpg; sourceTree = "<group>"; };
+		F2EE76E720FE3E5F00F90BE3 /* photo002.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo002.jpg; sourceTree = "<group>"; };
+		F2EE76E820FE3E5F00F90BE3 /* photo004.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo004.jpg; sourceTree = "<group>"; };
+		F2EE76E920FE3E5F00F90BE3 /* photo003.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo003.jpg; sourceTree = "<group>"; };
+		F2EE76EA20FE3E6000F90BE3 /* photo005.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo005.jpg; sourceTree = "<group>"; };
+		F2EE76F120FE43CB00F90BE3 /* HLSKPhotoBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLSKPhotoBrowserViewController.swift; sourceTree = "<group>"; };
 		F2F039C020C70AE400A8F716 /* EvaluateStarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EvaluateStarView.xib; sourceTree = "<group>"; };
 		F2F039C420C70D4D00A8F716 /* EvaluateStarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluateStarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -224,6 +240,7 @@
 				F2111C0E2067FA5A0032E6E7 /* Assets.xcassets */,
 				F2111C102067FA5A0032E6E7 /* LaunchScreen.storyboard */,
 				F2111C132067FA5A0032E6E7 /* Info.plist */,
+				F2EE76E420FE3E2200F90BE3 /* Photos */,
 				F2D4E9422092653E00861DBB /* HLTools-Bridging-Header.h */,
 			);
 			path = HLTools;
@@ -241,6 +258,7 @@
 		F2111C272067FC790032E6E7 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F2EE76E120FE34B100F90BE3 /* WebView */,
 				F21E575520C3032D0014FEF5 /* TimerManager */,
 				F2D2A36420BEF9E000030E62 /* Extension */,
 				F2D2A35D20BDB57C00030E62 /* Button */,
@@ -429,6 +447,7 @@
 				F21E574620C2EC8C0014FEF5 /* HLStringListViewController.swift */,
 				F21E574820C2EED00014FEF5 /* HLScoreMarkListViewController.swift */,
 				F21E574F20C2FB560014FEF5 /* HLClosureListViewController.swift */,
+				F2EE76F120FE43CB00F90BE3 /* HLSKPhotoBrowserViewController.swift */,
 			);
 			path = ExampleListVC;
 			sourceTree = "<group>";
@@ -461,6 +480,27 @@
 				F2E4D01020CBC9D20080B41B /* HLPopoverCell.xib */,
 			);
 			path = PopoverZero;
+			sourceTree = "<group>";
+		};
+		F2EE76E120FE34B100F90BE3 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				F2EE76E220FE34D800F90BE3 /* HLWebUrl.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		F2EE76E420FE3E2200F90BE3 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				F2EE76E620FE3E5F00F90BE3 /* photo000.jpg */,
+				F2EE76E520FE3E5E00F90BE3 /* photo001.jpg */,
+				F2EE76E720FE3E5F00F90BE3 /* photo002.jpg */,
+				F2EE76E920FE3E5F00F90BE3 /* photo003.jpg */,
+				F2EE76E820FE3E5F00F90BE3 /* photo004.jpg */,
+				F2EE76EA20FE3E6000F90BE3 /* photo005.jpg */,
+			);
+			path = Photos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -555,10 +595,16 @@
 				F2D2A36C20BEFAD500030E62 /* HLStarViewExample.xib in Resources */,
 				F2111C3C206E88AB0032E6E7 /* CalendarViewController.storyboard in Resources */,
 				F2111C0F2067FA5A0032E6E7 /* Assets.xcassets in Resources */,
+				F2EE76EF20FE3E6000F90BE3 /* photo003.jpg in Resources */,
 				F2111C0D2067FA5A0032E6E7 /* Main.storyboard in Resources */,
+				F2EE76F020FE3E6000F90BE3 /* photo005.jpg in Resources */,
 				F2E4D01220CBC9D20080B41B /* HLPopoverCell.xib in Resources */,
 				F2F039C220C70AE500A8F716 /* EvaluateStarView.xib in Resources */,
+				F2EE76ED20FE3E6000F90BE3 /* photo002.jpg in Resources */,
+				F2EE76EC20FE3E6000F90BE3 /* photo000.jpg in Resources */,
+				F2EE76EB20FE3E6000F90BE3 /* photo001.jpg in Resources */,
 				F2322FFE2070E96500F3B13B /* HLPopoverViewController.storyboard in Resources */,
+				F2EE76EE20FE3E6000F90BE3 /* photo004.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,8 +680,10 @@
 				F2E4D00E20CBC9270080B41B /* HLPopoverController.swift in Sources */,
 				F2D2A37020C2843100030E62 /* EmptyTableViewSample.swift in Sources */,
 				F21E574120C2E8B40014FEF5 /* HLPopoverListViewController.swift in Sources */,
+				F2EE76F220FE43CB00F90BE3 /* HLSKPhotoBrowserViewController.swift in Sources */,
 				F2C7B79D20B5BBBC00B49B48 /* HLGridViewExampleVC.swift in Sources */,
 				F2111C38206E88900032E6E7 /* SWPopUpsContainerViewController.swift in Sources */,
+				F2EE76E320FE34D800F90BE3 /* HLWebUrl.swift in Sources */,
 				F2E4D01120CBC9D20080B41B /* HLPopoverCell.swift in Sources */,
 				F21E575420C2FC450014FEF5 /* HLClosureButtonExampleViewController.swift in Sources */,
 				F2C7B79020B1C55E00B49B48 /* HLRichTextManager.swift in Sources */,

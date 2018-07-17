@@ -11,4 +11,5 @@ pod 'JTAppleCalendar', '~> 7.0’
 
 pod 'SnapKit', '~> 4.0.0'
 
+pod 'SKPhotoBrowser'
 end

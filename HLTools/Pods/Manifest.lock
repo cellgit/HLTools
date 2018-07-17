@@ -1,15 +1,18 @@
 PODS:
   - JTAppleCalendar (7.1.5)
+  - SKPhotoBrowser (5.0.7)
   - SnapKit (4.0.0)
 
 DEPENDENCIES:
   - JTAppleCalendar (~> 7.0)
+  - SKPhotoBrowser
   - SnapKit (~> 4.0.0)
 
 SPEC CHECKSUMS:
   JTAppleCalendar: 2d4f974f9f3c8b4964d51ca1f6e004883c031fbe
+  SKPhotoBrowser: 4ee6bdad381e8bb10e28be445bb300bbc3077512
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: 3df876160cfe8576d0d8bc4e5ea7879b33da6057
+PODFILE CHECKSUM: 99079d444637bd02b0a041272c56306ece4eead5
 
 COCOAPODS: 1.2.0.beta.3

@@ -20,6 +20,7 @@ class ViewController: HLBaseViewController {
     let KButtonIdentifier = "ButtonIdentifier"
     let KStarViewIdentifier = "StarViewIdentifier"
     let KClosureIdentifier = "ClosureIdentifier"
+    let KSKPhotoBrowserIdentifier = "SKPhotoBrowserIdentifier"
     
     override func tableViewData() {
         let data1 = HLTableViewDataStruct.init(title: "进度", identifier: KProgressIdentifier)
@@ -33,6 +34,7 @@ class ViewController: HLBaseViewController {
         let data9 = HLTableViewDataStruct.init(title: "按钮", identifier: KButtonIdentifier)
         let data10 = HLTableViewDataStruct.init(title: "星星评分视图", identifier: KStarViewIdentifier)
         let data11 = HLTableViewDataStruct.init(title: "闭包", identifier: KClosureIdentifier)
+        let data12 = HLTableViewDataStruct.init(title: "SKPhotoBrowser", identifier: KSKPhotoBrowserIdentifier)
         
         tableviewDataArray = [data1,
                               data2,
@@ -44,7 +46,8 @@ class ViewController: HLBaseViewController {
                               data8,
                               data9,
                               data10,
-                              data11]
+                              data11,
+                              data12]
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,50 +56,39 @@ class ViewController: HLBaseViewController {
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if (tableviewDataArray[indexPath.row].identifier .elementsEqual(KProgressIdentifier)) {
-            let vc = HLProgressBarListViewController.init()
-            pushViewController(vc: vc, animated: true)
+        
+        var vc = UIViewController.init()
+        switch tableviewDataArray[indexPath.row].identifier {
+        case KProgressIdentifier:
+            vc = HLProgressBarListViewController.init()
+        case KCalandarIdentifier:
+            vc = HLCalendarListViewController.init()
+        case KPresentIdentifier:
+            vc = HLPopUpsContainerListViewController.init()
+        case KPopoverIdentifier:
+            vc = HLPopoverListViewController.init()
+        case KVideoIdentifier:
+            vc = HLPlayerListViewController.init()
+        case KFlowLayoutViewIdentifier:
+            vc = HLFlowLayoutButtonListViewController.init()
+        case KGridViewIdentifier:
+            vc = HLGridViewListViewController.init()
+        case KCutStringIdentifier:
+            vc = HLStringListViewController.init()
+        case KButtonIdentifier:
+            vc = HLButtonListViewController.init()
+        case KStarViewIdentifier:
+            vc = HLScoreMarkListViewController.init()
+        case KClosureIdentifier:
+            vc = HLClosureListViewController.init()
+        case KSKPhotoBrowserIdentifier:
+            vc = HLSKPhotoBrowserViewController.init()
+        default:
+            vc = HLProgressBarListViewController.init()
         }
-        else if (tableviewDataArray[indexPath.row].identifier .elementsEqual(KCalandarIdentifier)) {
-            let vc = HLCalendarListViewController()
-            self.pushViewController(vc: vc, animated: true)
-        }
-        else if (tableviewDataArray[indexPath.row].identifier .elementsEqual(KPresentIdentifier)) {
-            let vc = HLPopUpsContainerListViewController.init()
-            pushViewController(vc: vc, animated: true)
-        }
-        else if (tableviewDataArray[indexPath.row].identifier .elementsEqual(KPopoverIdentifier)) {
-            let vc = HLPopoverListViewController.init()
-            self.pushViewController(vc: vc, animated: true)
-        }
-        else if tableviewDataArray[indexPath.row].identifier.elementsEqual(KVideoIdentifier) {
-            let vc = HLPlayerListViewController.init()
-            pushViewController(vc: vc, animated: true)
-        }
-        else if (tableviewDataArray[indexPath.row].identifier .elementsEqual(KFlowLayoutViewIdentifier)) {
-            let vc = HLFlowLayoutButtonListViewController.init()
-            pushViewController(vc: vc, animated: true)
-        }
-        else if (tableviewDataArray[indexPath.row].identifier .elementsEqual(KGridViewIdentifier)) {
-            let vc = HLGridViewListViewController.init()
-            pushViewController(vc: vc, animated: true)
-        }
-        else if (tableviewDataArray[indexPath.row].identifier .elementsEqual(KCutStringIdentifier)) {
-            let vc = HLStringListViewController.init()
-            pushViewController(vc: vc, animated: true)
-        }
-        else if (tableviewDataArray[indexPath.row].identifier .elementsEqual(KButtonIdentifier)) {
-            let vc = HLButtonListViewController.init()
-            pushViewController(vc: vc, animated: true)
-        }
-        else if (tableviewDataArray[indexPath.row].identifier .elementsEqual(KStarViewIdentifier)) {
-            let vc = HLScoreMarkListViewController.init()
-            pushViewController(vc: vc, animated: true)
-        }
-        else if (tableviewDataArray[indexPath.row].identifier .elementsEqual(KClosureIdentifier)) {
-            let vc = HLClosureListViewController.init()
-            pushViewController(vc: vc, animated: true)
-        }
+        pushViewController(vc: vc, animated: true)
+        
+        
     }
     // 在这里设置tableViewCell的动画
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

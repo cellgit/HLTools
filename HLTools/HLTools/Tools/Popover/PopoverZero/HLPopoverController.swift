@@ -8,20 +8,6 @@
 
 import UIKit
 
-//class HLPopoverController: UIViewController {
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        // Do any additional setup after loading the view.
-//    }
-//
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
-//}
-
 struct HLPopoverDataStruct {
     var title: String = ""
     var identifier: String = ""
@@ -73,7 +59,7 @@ class HLPopoverController: UIViewController {
 //        tableView.separatorStyle = .none
         if #available(iOS 11.0, *) {
             tableView.contentInsetAdjustmentBehavior = .never
-            tableView.contentInset = UIEdgeInsetsMake(-35, 0, 0, 0)
+            tableView.contentInset = UIEdgeInsetsMake(-38, 0, 0, 0)
         } else {}
         tableView.separatorInset = UIEdgeInsetsMake(0, -30, 0, -0)
         tableView.showsVerticalScrollIndicator = false
