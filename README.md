@@ -30,6 +30,7 @@
 ##### ✅ 14. 星星评分视图: UIView+StarView
 ##### ✅ 15. 获取Date和日期格式化: HLTimerManager
 ##### ✅ 16. 手势滑动或点击进行星星打分: EvaluateStarView
+##### ✅ 17. SKPhotoBrowser实现放大图片浏览
 
 
 
