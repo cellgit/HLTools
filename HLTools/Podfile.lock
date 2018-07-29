@@ -1,18 +1,25 @@
 PODS:
   - JTAppleCalendar (7.1.5)
+  - RxCocoa (4.1.2):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.1.2)
   - SKPhotoBrowser (5.0.7)
   - SnapKit (4.0.0)
 
 DEPENDENCIES:
   - JTAppleCalendar (~> 7.0)
+  - RxCocoa (~> 4.0)
+  - RxSwift (~> 4.0)
   - SKPhotoBrowser
   - SnapKit (~> 4.0.0)
 
 SPEC CHECKSUMS:
   JTAppleCalendar: 2d4f974f9f3c8b4964d51ca1f6e004883c031fbe
+  RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
+  RxSwift: e49536837d9901277638493ea537394d4b55f570
   SKPhotoBrowser: 4ee6bdad381e8bb10e28be445bb300bbc3077512
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: 99079d444637bd02b0a041272c56306ece4eead5
+PODFILE CHECKSUM: eac344c24b06308a0000ea2fb7d01c8eda8b4d47
 
 COCOAPODS: 1.2.0.beta.3

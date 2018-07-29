@@ -4,12 +4,12 @@ platform :ios, ’9.0’
 
 target 'HLTools' do
 use_frameworks!
-
 pod 'JTAppleCalendar', '~> 7.0’
-
 #pod 'WMPlayer', '~> 3.0.6'
-
 pod 'SnapKit', '~> 4.0.0'
-
 pod 'SKPhotoBrowser'
+
+pod 'RxSwift', '~> 4.0'
+pod 'RxCocoa', '~> 4.0'
+
 end

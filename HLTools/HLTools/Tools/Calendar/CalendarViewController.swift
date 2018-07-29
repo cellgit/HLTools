@@ -21,7 +21,7 @@ class CalendarViewController: UIViewController {
     
     let outsideMonthColor = UIColor.gray
     let monthColor = UIColor.black
-    let selectedMonthColor = UIColor.white
+    let selectedMonthColor = UIColor.darkGray
     let currentDateSelectedViewColor = UIColor.white
     @IBOutlet weak var calendarCollectionView: JTAppleCalendarView!
     @IBOutlet weak var year: UILabel!
@@ -35,6 +35,9 @@ class CalendarViewController: UIViewController {
     
     let todaysDate = Date()
     var selectedDate = Date()
+    var slectedDates = [Date]()
+    
+    
     
     
     override func viewDidLoad() {
@@ -42,8 +45,18 @@ class CalendarViewController: UIViewController {
         
         
         calendarCollectionView.scrollToDate( Date(), animateScroll:false)
-        calendarCollectionView.selectDates([Date()])    // 设置 todaysDate
         
+        let now = Date()
+        let date1 = now.addingTimeInterval(60 * 60 * 40)
+        let date2 = now.addingTimeInterval(60 * 60 * 70)
+        let date3 = now.addingTimeInterval(60 * 60 * 90)
+        
+        self.slectedDates = [now, date1, date2, date3]
+        
+//        calendarCollectionView.isMultipleTouchEnabled = false
+        calendarCollectionView.allowsMultipleSelection = true
+//        calendarCollectionView.selectDates([Date(), date1, date2, date3])    // 设置 todaysDate
+        calendarCollectionView.selectDates(self.slectedDates, triggerSelectionDelegate: true, keepSelectionIfMultiSelectionAllowed: true)
         
         setupCalendarView()
     }
@@ -59,6 +72,7 @@ class CalendarViewController: UIViewController {
         calendarCollectionView.visibleDates { (visibleDates) in
             self.setupViewOfCalendar(from: visibleDates)
         }
+        
     }
     func handleCellVisibility(cell:SWCalendarCell?, cellState:CellState) {
         cell?.isHidden = cellState.dateBelongsTo == .thisMonth ? false : true
@@ -79,14 +93,41 @@ class CalendarViewController: UIViewController {
     }
     
     func handleCellSelected(cell: SWCalendarCell?, cellState: CellState) {
+        guard cell != nil else {return}
+//        print("==========\(String(describing: cell?.tag))====\(cellState.isSelected)")
+        
+        
         guard let validCell = cell else {return}
-        if validCell.isSelected {
+//        if cellState.isSelected {
+//            validCell.selectedView.isHidden = false
+//            validCell.selectedView.layer.borderWidth = 0.5
+//            validCell.selectedView.layer.borderColor = UIColor.red.cgColor
+////            validCell.selectedView.backgroundColor = UIColor.red
+//        }
+//        else {
+//            validCell.selectedView.isHidden = true
+//        }
+        
+        let cellDateStamp = HLTimerManager.shared.getStampFormat(date: cellState.date)
+        let cellDateFormat = HLTimerManager.shared.getFormatTime(dateFormat: HLDateFormat.TimYearToDay, timeStamp: cellDateStamp)
+        var arrayM = [String]()
+        
+        for item in self.slectedDates {
+            let itemStamp = HLTimerManager.shared.getStampFormat(date: item)
+            let itemDateFormat = HLTimerManager.shared.getFormatTime(dateFormat: HLDateFormat.TimYearToDay, timeStamp: itemStamp)
+            arrayM.append(itemDateFormat)
+        }
+        
+        if arrayM.contains(cellDateFormat) {
+            print("======== \(cellDateFormat)")
             validCell.selectedView.isHidden = false
+            validCell.selectedView.layer.borderWidth = 0.5
+            validCell.selectedView.layer.borderColor = UIColor.red.cgColor
+//            validCell.selectedView.backgroundColor = UIColor.red
         }
         else {
             validCell.selectedView.isHidden = true
         }
-        
     }
     
     func getCellSelected(cell: SWCalendarCell?, cellState: CellState) {
@@ -140,7 +181,7 @@ extension CalendarViewController: JTAppleCalendarViewDataSource{
         
         let parameters = ConfigurationParameters(startDate: startDate!,
                                                  endDate: endDate!,
-                                                 numberOfRows: 1,
+                                                 numberOfRows: 6,
                                                  generateInDates: .forFirstMonthOnly,
                                                  generateOutDates: .off,
                                                  hasStrictBoundaries: false)
