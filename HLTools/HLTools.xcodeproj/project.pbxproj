@@ -38,6 +38,12 @@
 		F21E575020C2FB560014FEF5 /* HLClosureListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21E574F20C2FB560014FEF5 /* HLClosureListViewController.swift */; };
 		F21E575420C2FC450014FEF5 /* HLClosureButtonExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21E575320C2FC450014FEF5 /* HLClosureButtonExampleViewController.swift */; };
 		F21E575720C3032D0014FEF5 /* HLTimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21E575620C3032D0014FEF5 /* HLTimerManager.swift */; };
+		F22EBDC3211DFFFE0090D4D2 /* SWAccountBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22EBDC0211DFFFE0090D4D2 /* SWAccountBook.swift */; };
+		F22EBDC4211DFFFE0090D4D2 /* SWTicketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22EBDC1211DFFFE0090D4D2 /* SWTicketManager.swift */; };
+		F22EBDC5211DFFFE0090D4D2 /* SWCouponManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22EBDC2211DFFFE0090D4D2 /* SWCouponManager.swift */; };
+		F22EBDC8211E00690090D4D2 /* HLTicketMangerExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22EBDC6211E00690090D4D2 /* HLTicketMangerExample.swift */; };
+		F22EBDC9211E00690090D4D2 /* HLTicketMangerExample.xib in Resources */ = {isa = PBXBuildFile; fileRef = F22EBDC7211E00690090D4D2 /* HLTicketMangerExample.xib */; };
+		F22EBDCB211E00A10090D4D2 /* HLTicketMangerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22EBDCA211E00A10090D4D2 /* HLTicketMangerViewController.swift */; };
 		F2322FF9206FF51500F3B13B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2322FF8206FF51500F3B13B /* CalendarViewController.swift */; };
 		F2322FFC2070E95800F3B13B /* HLPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2322FFB2070E95800F3B13B /* HLPopoverViewController.swift */; };
 		F2322FFE2070E96500F3B13B /* HLPopoverViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2322FFD2070E96500F3B13B /* HLPopoverViewController.storyboard */; };
@@ -75,6 +81,8 @@
 		F2EE76EF20FE3E6000F90BE3 /* photo003.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2EE76E920FE3E5F00F90BE3 /* photo003.jpg */; };
 		F2EE76F020FE3E6000F90BE3 /* photo005.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2EE76EA20FE3E6000F90BE3 /* photo005.jpg */; };
 		F2EE76F220FE43CB00F90BE3 /* HLSKPhotoBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE76F120FE43CB00F90BE3 /* HLSKPhotoBrowserViewController.swift */; };
+		F2EE76FA2115C25500F90BE3 /* HLFilterNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE76F82115C25500F90BE3 /* HLFilterNumberViewController.swift */; };
+		F2EE76FB2115C25500F90BE3 /* HLFilterNumberViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2EE76F92115C25500F90BE3 /* HLFilterNumberViewController.xib */; };
 		F2F039C220C70AE500A8F716 /* EvaluateStarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2F039C020C70AE400A8F716 /* EvaluateStarView.xib */; };
 		F2F039C520C70D4D00A8F716 /* EvaluateStarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F039C420C70D4D00A8F716 /* EvaluateStarView.swift */; };
 /* End PBXBuildFile section */
@@ -127,6 +135,12 @@
 		F21E574F20C2FB560014FEF5 /* HLClosureListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLClosureListViewController.swift; sourceTree = "<group>"; };
 		F21E575320C2FC450014FEF5 /* HLClosureButtonExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLClosureButtonExampleViewController.swift; sourceTree = "<group>"; };
 		F21E575620C3032D0014FEF5 /* HLTimerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLTimerManager.swift; sourceTree = "<group>"; };
+		F22EBDC0211DFFFE0090D4D2 /* SWAccountBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWAccountBook.swift; sourceTree = "<group>"; };
+		F22EBDC1211DFFFE0090D4D2 /* SWTicketManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWTicketManager.swift; sourceTree = "<group>"; };
+		F22EBDC2211DFFFE0090D4D2 /* SWCouponManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWCouponManager.swift; sourceTree = "<group>"; };
+		F22EBDC6211E00690090D4D2 /* HLTicketMangerExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLTicketMangerExample.swift; sourceTree = "<group>"; };
+		F22EBDC7211E00690090D4D2 /* HLTicketMangerExample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HLTicketMangerExample.xib; sourceTree = "<group>"; };
+		F22EBDCA211E00A10090D4D2 /* HLTicketMangerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLTicketMangerViewController.swift; sourceTree = "<group>"; };
 		F2322FF8206FF51500F3B13B /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		F2322FFB2070E95800F3B13B /* HLPopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLPopoverViewController.swift; sourceTree = "<group>"; };
 		F2322FFD2070E96500F3B13B /* HLPopoverViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HLPopoverViewController.storyboard; sourceTree = "<group>"; };
@@ -165,6 +179,8 @@
 		F2EE76E920FE3E5F00F90BE3 /* photo003.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo003.jpg; sourceTree = "<group>"; };
 		F2EE76EA20FE3E6000F90BE3 /* photo005.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo005.jpg; sourceTree = "<group>"; };
 		F2EE76F120FE43CB00F90BE3 /* HLSKPhotoBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLSKPhotoBrowserViewController.swift; sourceTree = "<group>"; };
+		F2EE76F82115C25500F90BE3 /* HLFilterNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLFilterNumberViewController.swift; sourceTree = "<group>"; };
+		F2EE76F92115C25500F90BE3 /* HLFilterNumberViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HLFilterNumberViewController.xib; sourceTree = "<group>"; };
 		F2F039C020C70AE400A8F716 /* EvaluateStarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EvaluateStarView.xib; sourceTree = "<group>"; };
 		F2F039C420C70D4D00A8F716 /* EvaluateStarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluateStarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -209,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				F2111C062067FA5A0032E6E7 /* HLTools */,
+				F2EE76F32115BD9100F90BE3 /* RxSwiftSample */,
 				F2111C1B2067FA5A0032E6E7 /* HLToolsTests */,
 				F2111C052067FA5A0032E6E7 /* Products */,
 				B1C97856AB5B3AF8478D8BAE /* Pods */,
@@ -258,6 +275,7 @@
 		F2111C272067FC790032E6E7 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F22EBDBF211DFFFE0090D4D2 /* TicketManager */,
 				F2EE76E120FE34B100F90BE3 /* WebView */,
 				F21E575520C3032D0014FEF5 /* TimerManager */,
 				F2D2A36420BEF9E000030E62 /* Extension */,
@@ -330,6 +348,16 @@
 				F21E575620C3032D0014FEF5 /* HLTimerManager.swift */,
 			);
 			path = TimerManager;
+			sourceTree = "<group>";
+		};
+		F22EBDBF211DFFFE0090D4D2 /* TicketManager */ = {
+			isa = PBXGroup;
+			children = (
+				F22EBDC1211DFFFE0090D4D2 /* SWTicketManager.swift */,
+				F22EBDC0211DFFFE0090D4D2 /* SWAccountBook.swift */,
+				F22EBDC2211DFFFE0090D4D2 /* SWCouponManager.swift */,
+			);
+			path = TicketManager;
 			sourceTree = "<group>";
 		};
 		F2322FFA2070E92100F3B13B /* Popover */ = {
@@ -448,6 +476,9 @@
 				F21E574820C2EED00014FEF5 /* HLScoreMarkListViewController.swift */,
 				F21E574F20C2FB560014FEF5 /* HLClosureListViewController.swift */,
 				F2EE76F120FE43CB00F90BE3 /* HLSKPhotoBrowserViewController.swift */,
+				F22EBDCA211E00A10090D4D2 /* HLTicketMangerViewController.swift */,
+				F22EBDC6211E00690090D4D2 /* HLTicketMangerExample.swift */,
+				F22EBDC7211E00690090D4D2 /* HLTicketMangerExample.xib */,
 			);
 			path = ExampleListVC;
 			sourceTree = "<group>";
@@ -501,6 +532,31 @@
 				F2EE76EA20FE3E6000F90BE3 /* photo005.jpg */,
 			);
 			path = Photos;
+			sourceTree = "<group>";
+		};
+		F2EE76F32115BD9100F90BE3 /* RxSwiftSample */ = {
+			isa = PBXGroup;
+			children = (
+				F2EE76F42115BDE100F90BE3 /* Primary */,
+			);
+			path = RxSwiftSample;
+			sourceTree = "<group>";
+		};
+		F2EE76F42115BDE100F90BE3 /* Primary */ = {
+			isa = PBXGroup;
+			children = (
+				F2EE76F52115C1C600F90BE3 /* FilterNumber */,
+			);
+			path = Primary;
+			sourceTree = "<group>";
+		};
+		F2EE76F52115C1C600F90BE3 /* FilterNumber */ = {
+			isa = PBXGroup;
+			children = (
+				F2EE76F82115C25500F90BE3 /* HLFilterNumberViewController.swift */,
+				F2EE76F92115C25500F90BE3 /* HLFilterNumberViewController.xib */,
+			);
+			path = FilterNumber;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -595,6 +651,7 @@
 				F2D2A36C20BEFAD500030E62 /* HLStarViewExample.xib in Resources */,
 				F2111C3C206E88AB0032E6E7 /* CalendarViewController.storyboard in Resources */,
 				F2111C0F2067FA5A0032E6E7 /* Assets.xcassets in Resources */,
+				F22EBDC9211E00690090D4D2 /* HLTicketMangerExample.xib in Resources */,
 				F2EE76EF20FE3E6000F90BE3 /* photo003.jpg in Resources */,
 				F2111C0D2067FA5A0032E6E7 /* Main.storyboard in Resources */,
 				F2EE76F020FE3E6000F90BE3 /* photo005.jpg in Resources */,
@@ -604,6 +661,7 @@
 				F2EE76EC20FE3E6000F90BE3 /* photo000.jpg in Resources */,
 				F2EE76EB20FE3E6000F90BE3 /* photo001.jpg in Resources */,
 				F2322FFE2070E96500F3B13B /* HLPopoverViewController.storyboard in Resources */,
+				F2EE76FB2115C25500F90BE3 /* HLFilterNumberViewController.xib in Resources */,
 				F2EE76EE20FE3E6000F90BE3 /* photo004.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -689,11 +747,14 @@
 				F2C7B79020B1C55E00B49B48 /* HLRichTextManager.swift in Sources */,
 				F2D4E9742096B3E300861DBB /* HLPlayerViewController.swift in Sources */,
 				F2D2A36320BDB5CF00030E62 /* HLCommonDefines.swift in Sources */,
+				F2EE76FA2115C25500F90BE3 /* HLFilterNumberViewController.swift in Sources */,
 				F2C7B78520AFB08F00B49B48 /* HLFlowLayoutView.swift in Sources */,
+				F22EBDC8211E00690090D4D2 /* HLTicketMangerExample.swift in Sources */,
 				F2D2A36020BDB57C00030E62 /* HLButtonExampleViewController.swift in Sources */,
 				F2C7B78D20B00D1600B49B48 /* HLClosureButton.swift in Sources */,
 				F2111C3D206E88AB0032E6E7 /* SWCalendarCell.swift in Sources */,
 				F21E573B20C2B2270014FEF5 /* HLFlowLayoutButtonListViewController.swift in Sources */,
+				F22EBDC5211DFFFE0090D4D2 /* SWCouponManager.swift in Sources */,
 				F2C7B79320B1CA7600B49B48 /* HLLabelExtension.swift in Sources */,
 				F2D4E9762096B40B00861DBB /* HLPlayerContainerView.swift in Sources */,
 				F2D2A36120BDB57C00030E62 /* HLButton.swift in Sources */,
@@ -703,16 +764,19 @@
 				F21E573F20C2E7580014FEF5 /* HLPopUpsContainerListViewController.swift in Sources */,
 				F23230002070EAEC00F3B13B /* HLPopoverPresentedView.swift in Sources */,
 				F2111C2D206D20920032E6E7 /* HLProgressBarViewController.swift in Sources */,
+				F22EBDC3211DFFFE0090D4D2 /* SWAccountBook.swift in Sources */,
 				F2D2A37320C28A0400030E62 /* HLCalendarListViewController.swift in Sources */,
 				F2322FF9206FF51500F3B13B /* CalendarViewController.swift in Sources */,
 				F21E573D20C2E4F70014FEF5 /* HLProgressBarListViewController.swift in Sources */,
 				F21E575720C3032D0014FEF5 /* HLTimerManager.swift in Sources */,
+				F22EBDC4211DFFFE0090D4D2 /* SWTicketManager.swift in Sources */,
 				F21E574920C2EED00014FEF5 /* HLScoreMarkListViewController.swift in Sources */,
 				F2566FE620BBC0FD009F2247 /* HLStringExtensionExampleViewController.swift in Sources */,
 				F2111C33206D39850032E6E7 /* HLConfiguration.swift in Sources */,
 				F2C7B79920B5B88A00B49B48 /* HLGridView.swift in Sources */,
 				F2C7B79620B1CB0D00B49B48 /* HLStringExtension.swift in Sources */,
 				F2F039C520C70D4D00A8F716 /* EvaluateStarView.swift in Sources */,
+				F22EBDCB211E00A10090D4D2 /* HLTicketMangerViewController.swift in Sources */,
 				F21E573720C2ADF10014FEF5 /* UILabel+ShowLabel.swift in Sources */,
 				F2D2A36B20BEFAD500030E62 /* HLStarViewExample.swift in Sources */,
 				F21E574B20C2F18B0014FEF5 /* HLFlowLayoutViewController.swift in Sources */,
@@ -751,6 +815,7 @@
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		F2111C102067FA5A0032E6E7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;

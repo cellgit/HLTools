@@ -21,6 +21,7 @@ class ViewController: HLBaseViewController {
     let KStarViewIdentifier = "StarViewIdentifier"
     let KClosureIdentifier = "ClosureIdentifier"
     let KSKPhotoBrowserIdentifier = "SKPhotoBrowserIdentifier"
+    let KTicketManagerIdentifier = "TicketManagerIdentifier"
     
     override func tableViewData() {
         let data1 = HLTableViewDataStruct.init(title: "进度", identifier: KProgressIdentifier)
@@ -35,6 +36,7 @@ class ViewController: HLBaseViewController {
         let data10 = HLTableViewDataStruct.init(title: "星星评分视图", identifier: KStarViewIdentifier)
         let data11 = HLTableViewDataStruct.init(title: "闭包", identifier: KClosureIdentifier)
         let data12 = HLTableViewDataStruct.init(title: "SKPhotoBrowser", identifier: KSKPhotoBrowserIdentifier)
+        let data13 = HLTableViewDataStruct.init(title: "票券管理器", identifier: KTicketManagerIdentifier)
         
         tableviewDataArray = [data1,
                               data2,
@@ -47,7 +49,8 @@ class ViewController: HLBaseViewController {
                               data9,
                               data10,
                               data11,
-                              data12]
+                              data12,
+                              data13]
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,6 +86,8 @@ class ViewController: HLBaseViewController {
             vc = HLClosureListViewController.init()
         case KSKPhotoBrowserIdentifier:
             vc = HLSKPhotoBrowserViewController.init()
+        case KTicketManagerIdentifier:
+            vc = HLTicketMangerViewController.init()
         default:
             vc = HLProgressBarListViewController.init()
         }

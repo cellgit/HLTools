@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HLTicketMangerExample" customModule="HLTools" customModuleProvider="target">
+            <connections>
+                <outlet property="couponSwitch" destination="aOM-jE-qRs" id="BJ6-eD-wTk"/>
+                <outlet property="ticketSwitch" destination="84I-0a-9xe" id="a1Z-Xk-iH7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aOM-jE-qRs">
+                    <rect key="frame" x="163" y="105" width="51" height="31"/>
+                    <connections>
+                        <action selector="couponAction:" destination="-1" eventType="valueChanged" id="HYA-H6-dLf"/>
+                    </connections>
+                </switch>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="84I-0a-9xe">
+                    <rect key="frame" x="163" y="262" width="51" height="31"/>
+                    <connections>
+                        <action selector="platDollarAction:" destination="-1" eventType="valueChanged" id="dUr-2U-RMh"/>
+                    </connections>
+                </switch>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="优惠券" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DzT-pP-JcZ">
+                    <rect key="frame" x="161.5" y="163" width="52" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.24313725489999999" green="0.4549019608" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="平台虚拟币" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cs9-8n-XNN">
+                    <rect key="frame" x="144" y="323" width="87" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.24313725489999999" green="0.4549019608" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="aOM-jE-qRs" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="4b9-dq-vNo"/>
+                <constraint firstItem="cs9-8n-XNN" firstAttribute="top" secondItem="84I-0a-9xe" secondAttribute="bottom" constant="30" id="6l4-F9-iMS"/>
+                <constraint firstItem="aOM-jE-qRs" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="85" id="7vg-49-DOD"/>
+                <constraint firstItem="84I-0a-9xe" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="FbA-zO-Bf8"/>
+                <constraint firstItem="DzT-pP-JcZ" firstAttribute="top" secondItem="aOM-jE-qRs" secondAttribute="bottom" constant="27" id="LV2-YD-e5X"/>
+                <constraint firstItem="DzT-pP-JcZ" firstAttribute="centerX" secondItem="aOM-jE-qRs" secondAttribute="centerX" id="UoG-2Y-dBQ"/>
+                <constraint firstItem="cs9-8n-XNN" firstAttribute="centerX" secondItem="84I-0a-9xe" secondAttribute="centerX" id="Yee-NT-Zba"/>
+                <constraint firstItem="84I-0a-9xe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="242" id="pxH-oV-xVN"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>
