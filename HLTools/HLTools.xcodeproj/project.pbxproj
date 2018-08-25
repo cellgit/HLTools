@@ -58,6 +58,9 @@
 		F2C7B79620B1CB0D00B49B48 /* HLStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7B79520B1CB0D00B49B48 /* HLStringExtension.swift */; };
 		F2C7B79920B5B88A00B49B48 /* HLGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7B79820B5B88A00B49B48 /* HLGridView.swift */; };
 		F2C7B79D20B5BBBC00B49B48 /* HLGridViewExampleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7B79C20B5BBBC00B49B48 /* HLGridViewExampleVC.swift */; };
+		F2D0AA87212F806F00937057 /* HLImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D0AA86212F806F00937057 /* HLImagePickerViewController.swift */; };
+		F2D0AA8A212F815900937057 /* HLImagePickerPhotoExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D0AA88212F815900937057 /* HLImagePickerPhotoExample.swift */; };
+		F2D0AA8B212F815900937057 /* HLImagePickerPhotoExample.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D0AA89212F815900937057 /* HLImagePickerPhotoExample.xib */; };
 		F2D2A36020BDB57C00030E62 /* HLButtonExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2A35E20BDB57C00030E62 /* HLButtonExampleViewController.swift */; };
 		F2D2A36120BDB57C00030E62 /* HLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2A35F20BDB57C00030E62 /* HLButton.swift */; };
 		F2D2A36320BDB5CF00030E62 /* HLCommonDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2A36220BDB5CF00030E62 /* HLCommonDefines.swift */; };
@@ -155,6 +158,9 @@
 		F2C7B79520B1CB0D00B49B48 /* HLStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLStringExtension.swift; sourceTree = "<group>"; };
 		F2C7B79820B5B88A00B49B48 /* HLGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLGridView.swift; sourceTree = "<group>"; };
 		F2C7B79C20B5BBBC00B49B48 /* HLGridViewExampleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLGridViewExampleVC.swift; sourceTree = "<group>"; };
+		F2D0AA86212F806F00937057 /* HLImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLImagePickerViewController.swift; sourceTree = "<group>"; };
+		F2D0AA88212F815900937057 /* HLImagePickerPhotoExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLImagePickerPhotoExample.swift; sourceTree = "<group>"; };
+		F2D0AA89212F815900937057 /* HLImagePickerPhotoExample.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HLImagePickerPhotoExample.xib; sourceTree = "<group>"; };
 		F2D2A35E20BDB57C00030E62 /* HLButtonExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLButtonExampleViewController.swift; sourceTree = "<group>"; };
 		F2D2A35F20BDB57C00030E62 /* HLButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLButton.swift; sourceTree = "<group>"; };
 		F2D2A36220BDB5CF00030E62 /* HLCommonDefines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLCommonDefines.swift; sourceTree = "<group>"; };
@@ -479,6 +485,9 @@
 				F22EBDCA211E00A10090D4D2 /* HLTicketMangerViewController.swift */,
 				F22EBDC6211E00690090D4D2 /* HLTicketMangerExample.swift */,
 				F22EBDC7211E00690090D4D2 /* HLTicketMangerExample.xib */,
+				F2D0AA86212F806F00937057 /* HLImagePickerViewController.swift */,
+				F2D0AA88212F815900937057 /* HLImagePickerPhotoExample.swift */,
+				F2D0AA89212F815900937057 /* HLImagePickerPhotoExample.xib */,
 			);
 			path = ExampleListVC;
 			sourceTree = "<group>";
@@ -571,7 +580,6 @@
 				F2111C012067FA5A0032E6E7 /* Frameworks */,
 				F2111C022067FA5A0032E6E7 /* Resources */,
 				2643D94030E547D0E2B33F02 /* [CP] Embed Pods Frameworks */,
-				A38F75D2FA0FB416F4D98245 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -657,6 +665,7 @@
 				F2EE76F020FE3E6000F90BE3 /* photo005.jpg in Resources */,
 				F2E4D01220CBC9D20080B41B /* HLPopoverCell.xib in Resources */,
 				F2F039C220C70AE500A8F716 /* EvaluateStarView.xib in Resources */,
+				F2D0AA8B212F815900937057 /* HLImagePickerPhotoExample.xib in Resources */,
 				F2EE76ED20FE3E6000F90BE3 /* photo002.jpg in Resources */,
 				F2EE76EC20FE3E6000F90BE3 /* photo000.jpg in Resources */,
 				F2EE76EB20FE3E6000F90BE3 /* photo001.jpg in Resources */,
@@ -682,9 +691,24 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HLTools/Pods-HLTools-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/PryntTrimmerView/PryntTrimmerView.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SKPhotoBrowser/SKPhotoBrowser.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SteviaLayout/Stevia.framework",
+				"${BUILT_PRODUCTS_DIR}/YPImagePicker/YPImagePicker.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PryntTrimmerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SKPhotoBrowser.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stevia.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YPImagePicker.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -697,28 +721,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HLTools-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		A38F75D2FA0FB416F4D98245 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HLTools/Pods-HLTools-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -741,6 +753,7 @@
 				F2EE76F220FE43CB00F90BE3 /* HLSKPhotoBrowserViewController.swift in Sources */,
 				F2C7B79D20B5BBBC00B49B48 /* HLGridViewExampleVC.swift in Sources */,
 				F2111C38206E88900032E6E7 /* SWPopUpsContainerViewController.swift in Sources */,
+				F2D0AA87212F806F00937057 /* HLImagePickerViewController.swift in Sources */,
 				F2EE76E320FE34D800F90BE3 /* HLWebUrl.swift in Sources */,
 				F2E4D01120CBC9D20080B41B /* HLPopoverCell.swift in Sources */,
 				F21E575420C2FC450014FEF5 /* HLClosureButtonExampleViewController.swift in Sources */,
@@ -780,6 +793,7 @@
 				F21E573720C2ADF10014FEF5 /* UILabel+ShowLabel.swift in Sources */,
 				F2D2A36B20BEFAD500030E62 /* HLStarViewExample.swift in Sources */,
 				F21E574B20C2F18B0014FEF5 /* HLFlowLayoutViewController.swift in Sources */,
+				F2D0AA8A212F815900937057 /* HLImagePickerPhotoExample.swift in Sources */,
 				F2D2A36620BEFA1F00030E62 /* UIView+StarView.swift in Sources */,
 				F21E574520C2EB500014FEF5 /* HLGridViewListViewController.swift in Sources */,
 				F21E574720C2EC8C0014FEF5 /* HLStringListViewController.swift in Sources */,

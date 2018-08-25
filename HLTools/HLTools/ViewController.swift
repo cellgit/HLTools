@@ -22,6 +22,7 @@ class ViewController: HLBaseViewController {
     let KClosureIdentifier = "ClosureIdentifier"
     let KSKPhotoBrowserIdentifier = "SKPhotoBrowserIdentifier"
     let KTicketManagerIdentifier = "TicketManagerIdentifier"
+    let KImagePickerIdentifier = "ImagePickerIdentifier"
     
     override func tableViewData() {
         let data1 = HLTableViewDataStruct.init(title: "进度", identifier: KProgressIdentifier)
@@ -37,6 +38,7 @@ class ViewController: HLBaseViewController {
         let data11 = HLTableViewDataStruct.init(title: "闭包", identifier: KClosureIdentifier)
         let data12 = HLTableViewDataStruct.init(title: "SKPhotoBrowser", identifier: KSKPhotoBrowserIdentifier)
         let data13 = HLTableViewDataStruct.init(title: "票券管理器", identifier: KTicketManagerIdentifier)
+        let data14 = HLTableViewDataStruct.init(title: "图片视频选择器", identifier: KImagePickerIdentifier)
         
         tableviewDataArray = [data1,
                               data2,
@@ -50,7 +52,8 @@ class ViewController: HLBaseViewController {
                               data10,
                               data11,
                               data12,
-                              data13]
+                              data13,
+                              data14]
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,6 +91,8 @@ class ViewController: HLBaseViewController {
             vc = HLSKPhotoBrowserViewController.init()
         case KTicketManagerIdentifier:
             vc = HLTicketMangerViewController.init()
+        case KImagePickerIdentifier:
+            vc = HLImagePickerViewController.init()
         default:
             vc = HLProgressBarListViewController.init()
         }

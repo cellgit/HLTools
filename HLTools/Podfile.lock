@@ -1,25 +1,40 @@
 PODS:
   - JTAppleCalendar (7.1.5)
-  - RxCocoa (4.1.2):
-    - RxSwift (~> 4.0)
-  - RxSwift (4.1.2)
-  - SKPhotoBrowser (5.0.7)
+  - PryntTrimmerView (2.0.1)
+  - RxSwift (4.2.0)
+  - SKPhotoBrowser (5.1.0)
   - SnapKit (4.0.0)
+  - SteviaLayout (4.2.0)
+  - YPImagePicker (3.4.0):
+    - PryntTrimmerView (~> 2.0)
+    - SteviaLayout (~> 4.2.0)
 
 DEPENDENCIES:
   - JTAppleCalendar (~> 7.0)
-  - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
   - SKPhotoBrowser
   - SnapKit (~> 4.0.0)
+  - YPImagePicker (~> 3.4.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - JTAppleCalendar
+    - PryntTrimmerView
+    - RxSwift
+    - SKPhotoBrowser
+    - SnapKit
+    - SteviaLayout
+    - YPImagePicker
 
 SPEC CHECKSUMS:
   JTAppleCalendar: 2d4f974f9f3c8b4964d51ca1f6e004883c031fbe
-  RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
-  RxSwift: e49536837d9901277638493ea537394d4b55f570
-  SKPhotoBrowser: 4ee6bdad381e8bb10e28be445bb300bbc3077512
+  PryntTrimmerView: 4260ae497a2f3e1bbfc0b71247eb74ab92bf0490
+  RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
+  SKPhotoBrowser: c20c1da34d737b4e3e101feead6c8dd92ebf860a
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  SteviaLayout: 0d2112caea45707695e8c718262c8ea3dd37ef17
+  YPImagePicker: 049aa31e2858c63730ace6b6358bba946178dfe3
 
-PODFILE CHECKSUM: eac344c24b06308a0000ea2fb7d01c8eda8b4d47
+PODFILE CHECKSUM: c61f550d167be8b18f29ab5f5392fcb6cc09be67
 
-COCOAPODS: 1.2.0.beta.3
+COCOAPODS: 1.5.3
