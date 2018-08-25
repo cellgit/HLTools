@@ -14,6 +14,8 @@
             <connections>
                 <outlet property="button" destination="tmD-yf-GTQ" id="AO2-Nf-QYv"/>
                 <outlet property="imgView" destination="uYs-Xb-NJc" id="Wua-H5-b5d"/>
+                <outlet property="multiSelectionBtn" destination="uYd-Nk-lKE" id="5aB-EE-2hH"/>
+                <outlet property="sigleVideoBtn" destination="pb7-YD-ngN" id="4Bj-7Z-cEX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,8 +25,12 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmD-yf-GTQ">
-                    <rect key="frame" x="164.5" y="461" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                    <rect key="frame" x="137.5" y="447" width="100" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="duR-cN-vNk"/>
+                        <constraint firstAttribute="width" constant="100" id="iRe-mh-k28"/>
+                    </constraints>
+                    <state key="normal" title="SiglePhoto"/>
                     <connections>
                         <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="j0b-8Q-5iI"/>
                     </connections>
@@ -37,12 +43,32 @@
                         <constraint firstAttribute="width" constant="240" id="smm-dY-uYE"/>
                     </constraints>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pb7-YD-ngN">
+                    <rect key="frame" x="137.5" y="508" width="100" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="JbY-LV-HS8"/>
+                        <constraint firstAttribute="width" constant="100" id="hso-Ky-LoW"/>
+                    </constraints>
+                    <state key="normal" title="SigleVideo"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYd-Nk-lKE">
+                    <rect key="frame" x="127.5" y="568" width="120" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="2dR-Da-15Z"/>
+                        <constraint firstAttribute="height" constant="44" id="w7m-Ig-Ifm"/>
+                    </constraints>
+                    <state key="normal" title="MultiSelection"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="uYd-Nk-lKE" firstAttribute="top" secondItem="pb7-YD-ngN" secondAttribute="bottom" constant="16" id="UXF-jm-pSH"/>
                 <constraint firstItem="uYs-Xb-NJc" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="WcG-J5-MZj"/>
                 <constraint firstItem="uYs-Xb-NJc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="YNJ-WC-e28"/>
+                <constraint firstItem="uYd-Nk-lKE" firstAttribute="centerX" secondItem="pb7-YD-ngN" secondAttribute="centerX" id="ZV7-qf-9QF"/>
                 <constraint firstItem="tmD-yf-GTQ" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Zc0-e9-Mhz"/>
+                <constraint firstItem="pb7-YD-ngN" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="hET-BW-jUZ"/>
+                <constraint firstItem="pb7-YD-ngN" firstAttribute="top" secondItem="tmD-yf-GTQ" secondAttribute="bottom" constant="17" id="woD-ZU-ydt"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="tmD-yf-GTQ" secondAttribute="bottom" constant="176" id="ws8-pm-5vi"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
