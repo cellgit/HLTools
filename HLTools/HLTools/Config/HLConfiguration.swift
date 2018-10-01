@@ -15,7 +15,7 @@ let ScreenHeight = UIScreen.main.bounds.size.height
 
 let KDeviceDirector = UIDevice.current.orientation
 
-public let NavigationH: CGFloat = UIScreen.main.bounds.size.height == 812 ? 88 : 64
+public let NavigationH: CGFloat = UIScreen.main.bounds.size.height >= 812 ? 88 : 64
 public let CMMagin: CGFloat = 10
 public let AppWidth: CGFloat = UIScreen.main.bounds.size.width
 public let AppHeight: CGFloat = UIScreen.main.bounds.size.height

@@ -50,6 +50,10 @@
 		F23230002070EAEC00F3B13B /* HLPopoverPresentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2322FFF2070EAEC00F3B13B /* HLPopoverPresentedView.swift */; };
 		F2566FE620BBC0FD009F2247 /* HLStringExtensionExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2566FE420BBC0FD009F2247 /* HLStringExtensionExampleViewController.swift */; };
 		F2566FE720BBC0FD009F2247 /* HLStringExtensionExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2566FE520BBC0FD009F2247 /* HLStringExtensionExampleViewController.xib */; };
+		F27106B921621B4100209158 /* HLDocumentsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27106B821621B4100209158 /* HLDocumentsListViewController.swift */; };
+		F27106BD21621C4D00209158 /* HLDocumentsExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27106BB21621C4D00209158 /* HLDocumentsExampleViewController.swift */; };
+		F27106BE21621C4D00209158 /* HLDocumentsExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27106BC21621C4D00209158 /* HLDocumentsExampleViewController.xib */; };
+		F27106C12162287200209158 /* SWDocumentsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27106C02162287200209158 /* SWDocumentsManager.swift */; };
 		F2C7B78520AFB08F00B49B48 /* HLFlowLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7B78420AFB08F00B49B48 /* HLFlowLayoutView.swift */; };
 		F2C7B78B20AFF36B00B49B48 /* HLClosureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7B78A20AFF36B00B49B48 /* HLClosureView.swift */; };
 		F2C7B78D20B00D1600B49B48 /* HLClosureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7B78C20B00D1600B49B48 /* HLClosureButton.swift */; };
@@ -150,6 +154,10 @@
 		F2322FFF2070EAEC00F3B13B /* HLPopoverPresentedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLPopoverPresentedView.swift; sourceTree = "<group>"; };
 		F2566FE420BBC0FD009F2247 /* HLStringExtensionExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLStringExtensionExampleViewController.swift; sourceTree = "<group>"; };
 		F2566FE520BBC0FD009F2247 /* HLStringExtensionExampleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HLStringExtensionExampleViewController.xib; sourceTree = "<group>"; };
+		F27106B821621B4100209158 /* HLDocumentsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLDocumentsListViewController.swift; sourceTree = "<group>"; };
+		F27106BB21621C4D00209158 /* HLDocumentsExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLDocumentsExampleViewController.swift; sourceTree = "<group>"; };
+		F27106BC21621C4D00209158 /* HLDocumentsExampleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HLDocumentsExampleViewController.xib; sourceTree = "<group>"; };
+		F27106C02162287200209158 /* SWDocumentsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWDocumentsManager.swift; sourceTree = "<group>"; };
 		F2C7B78420AFB08F00B49B48 /* HLFlowLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLFlowLayoutView.swift; sourceTree = "<group>"; };
 		F2C7B78A20AFF36B00B49B48 /* HLClosureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLClosureView.swift; sourceTree = "<group>"; };
 		F2C7B78C20B00D1600B49B48 /* HLClosureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLClosureButton.swift; sourceTree = "<group>"; };
@@ -281,6 +289,7 @@
 		F2111C272067FC790032E6E7 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F27106BF2162284400209158 /* Documents */,
 				F22EBDBF211DFFFE0090D4D2 /* TicketManager */,
 				F2EE76E120FE34B100F90BE3 /* WebView */,
 				F21E575520C3032D0014FEF5 /* TimerManager */,
@@ -373,6 +382,23 @@
 				F2E4D00B20CBC86D0080B41B /* PopoverOne */,
 			);
 			path = Popover;
+			sourceTree = "<group>";
+		};
+		F27106BA21621C2400209158 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				F27106BB21621C4D00209158 /* HLDocumentsExampleViewController.swift */,
+				F27106BC21621C4D00209158 /* HLDocumentsExampleViewController.xib */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		F27106BF2162284400209158 /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				F27106C02162287200209158 /* SWDocumentsManager.swift */,
+			);
+			path = Documents;
 			sourceTree = "<group>";
 		};
 		F2C7B78320AFB05F00B49B48 /* FlowLayoutView */ = {
@@ -470,6 +496,7 @@
 		F2D2A37120C289DB00030E62 /* ExampleListVC */ = {
 			isa = PBXGroup;
 			children = (
+				F27106BA21621C2400209158 /* Example */,
 				F2D2A37220C28A0400030E62 /* HLCalendarListViewController.swift */,
 				F21E573420C29F5F0014FEF5 /* HLButtonListViewController.swift */,
 				F21E573A20C2B2270014FEF5 /* HLFlowLayoutButtonListViewController.swift */,
@@ -488,6 +515,7 @@
 				F2D0AA86212F806F00937057 /* HLImagePickerViewController.swift */,
 				F2D0AA88212F815900937057 /* HLImagePickerPhotoExample.swift */,
 				F2D0AA89212F815900937057 /* HLImagePickerPhotoExample.xib */,
+				F27106B821621B4100209158 /* HLDocumentsListViewController.swift */,
 			);
 			path = ExampleListVC;
 			sourceTree = "<group>";
@@ -667,6 +695,7 @@
 				F2F039C220C70AE500A8F716 /* EvaluateStarView.xib in Resources */,
 				F2D0AA8B212F815900937057 /* HLImagePickerPhotoExample.xib in Resources */,
 				F2EE76ED20FE3E6000F90BE3 /* photo002.jpg in Resources */,
+				F27106BE21621C4D00209158 /* HLDocumentsExampleViewController.xib in Resources */,
 				F2EE76EC20FE3E6000F90BE3 /* photo000.jpg in Resources */,
 				F2EE76EB20FE3E6000F90BE3 /* photo001.jpg in Resources */,
 				F2322FFE2070E96500F3B13B /* HLPopoverViewController.storyboard in Resources */,
@@ -740,7 +769,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F27106B921621B4100209158 /* HLDocumentsListViewController.swift in Sources */,
 				F21E575020C2FB560014FEF5 /* HLClosureListViewController.swift in Sources */,
+				F27106C12162287200209158 /* SWDocumentsManager.swift in Sources */,
 				F21E573320C29BF80014FEF5 /* HLColorConfig.swift in Sources */,
 				F21E573120C293450014FEF5 /* UIViewController+Extension.swift in Sources */,
 				F2111C0A2067FA5A0032E6E7 /* ViewController.swift in Sources */,
@@ -789,6 +820,7 @@
 				F2C7B79920B5B88A00B49B48 /* HLGridView.swift in Sources */,
 				F2C7B79620B1CB0D00B49B48 /* HLStringExtension.swift in Sources */,
 				F2F039C520C70D4D00A8F716 /* EvaluateStarView.swift in Sources */,
+				F27106BD21621C4D00209158 /* HLDocumentsExampleViewController.swift in Sources */,
 				F22EBDCB211E00A10090D4D2 /* HLTicketMangerViewController.swift in Sources */,
 				F21E573720C2ADF10014FEF5 /* UILabel+ShowLabel.swift in Sources */,
 				F2D2A36B20BEFAD500030E62 /* HLStarViewExample.swift in Sources */,

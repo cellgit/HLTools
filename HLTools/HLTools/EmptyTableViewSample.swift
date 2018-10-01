@@ -70,7 +70,7 @@ extension EmptyTableViewSample: UITableViewDataSource,UITableViewDelegate {
         return 10
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell :UITableViewCell = tableView.dequeueReusableCell(withIdentifier: KUITableViewCell, for: indexPath) as! UITableViewCell
+        let cell :UITableViewCell = tableView.dequeueReusableCell(withIdentifier: KUITableViewCell, for: indexPath) 
         cell.layer.shouldRasterize = true
         cell.textLabel?.text = "\(indexPath.section)-\(indexPath.row)"
         cell.layer.rasterizationScale = UIScreen.main.scale

@@ -32,6 +32,7 @@
 ##### ✅ 16. 手势滑动或点击进行星星打分: EvaluateStarView
 ##### ✅ 17. SKPhotoBrowser实现放大图片浏览
 ##### ✅ 18. SWTicketManager: Add coupon and virtual platform dollar manager
+##### ✅ 19. SWDocumentsManager:  Get file path via SWDocumentsManager
 
 
 

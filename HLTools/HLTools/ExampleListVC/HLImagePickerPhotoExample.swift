@@ -48,8 +48,8 @@ extension HLImagePickerPhotoExample {
                 print("photo.fromCamera==\(photo.fromCamera)") // Image source (camera or library)
                 print("photo.image===\(photo.image)") // Final image selected by the user
                 print("photo.originalImage===\(photo.originalImage)") // original image selected by the user, unfiltered
-                print("---===\(photo.modifiedImage)") // Transformed image, can be nil
-                print("====--\(photo.exifMeta)") // Print exif meta data of original image.
+                print("---===\(String(describing: photo.modifiedImage))") // Transformed image, can be nil
+                print("====--\(String(describing: photo.exifMeta))") // Print exif meta data of original image.
                 
                 self.imgView.image = photo.image
                 
