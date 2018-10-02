@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HLPhotosCoreMLSampleViewController" customModule="HLTools" customModuleProvider="target">
+            <connections>
+                <outlet property="btn" destination="yzA-qM-Fkc" id="zHb-ba-zce"/>
+                <outlet property="confidenceLabel" destination="Lhx-20-FSt" id="leX-EA-6ZT"/>
+                <outlet property="nameLabel" destination="f2t-7G-oqu" id="dD5-XH-36v"/>
+                <outlet property="photoSelected" destination="jcx-rU-dKM" id="P28-QE-ZDb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jcx-rU-dKM">
+                    <rect key="frame" x="0.0" y="30" width="375" height="375"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="jcx-rU-dKM" secondAttribute="height" multiplier="224:224" id="67l-S6-3md"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2t-7G-oqu">
+                    <rect key="frame" x="10" y="534" width="355" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzA-qM-Fkc">
+                    <rect key="frame" x="44" y="603" width="287" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="8id-xP-BhF"/>
+                    </constraints>
+                    <state key="normal" title="相机相册">
+                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="grabPhoto:" destination="-1" eventType="touchUpInside" id="0CC-RN-Aia"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhx-20-FSt">
+                    <rect key="frame" x="10" y="564.5" width="355" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="yzA-qM-Fkc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="44" id="25V-ok-uUb"/>
+                <constraint firstItem="Lhx-20-FSt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="5gf-n4-8JO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jcx-rU-dKM" secondAttribute="trailing" id="BDL-nD-6cl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="f2t-7G-oqu" secondAttribute="trailing" constant="10" id="CPN-2G-sUV"/>
+                <constraint firstItem="jcx-rU-dKM" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Hmy-Tc-s03"/>
+                <constraint firstItem="Lhx-20-FSt" firstAttribute="top" secondItem="f2t-7G-oqu" secondAttribute="bottom" constant="10" id="Jf7-vF-6Bc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Lhx-20-FSt" secondAttribute="trailing" constant="10" id="JjO-h0-WIF"/>
+                <constraint firstItem="jcx-rU-dKM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="PT0-I8-m8G"/>
+                <constraint firstItem="yzA-qM-Fkc" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Ubu-Gs-OJh"/>
+                <constraint firstItem="yzA-qM-Fkc" firstAttribute="top" secondItem="Lhx-20-FSt" secondAttribute="bottom" constant="18" id="m53-1Z-6x9"/>
+                <constraint firstItem="f2t-7G-oqu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="p4b-gO-JUB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yzA-qM-Fkc" secondAttribute="trailing" constant="44" id="qsf-bi-r7U"/>
+                <constraint firstItem="jcx-rU-dKM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="sX9-7s-Vgn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="yzA-qM-Fkc" secondAttribute="bottom" constant="20" id="y5X-Oo-bKK"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

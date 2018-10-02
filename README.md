@@ -33,6 +33,7 @@
 ##### ✅ 17. SKPhotoBrowser实现放大图片浏览
 ##### ✅ 18. SWTicketManager: Add coupon and virtual platform dollar manager
 ##### ✅ 19. SWDocumentsManager:  Get file path via SWDocumentsManager
+##### ✅ 20. CoreML:  Add CoreML(机器学习)
 
 
 

@@ -9,9 +9,7 @@
 import UIKit
 
 class SWDocumentsManager: NSObject {
-    
     static let shared = SWDocumentsManager()   /// 管理路径的管家
-    
     /// 获取沙盒路径
     func documentDirectory() -> URL {
         let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)

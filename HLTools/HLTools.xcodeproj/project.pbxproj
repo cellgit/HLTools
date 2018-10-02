@@ -51,9 +51,15 @@
 		F2566FE620BBC0FD009F2247 /* HLStringExtensionExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2566FE420BBC0FD009F2247 /* HLStringExtensionExampleViewController.swift */; };
 		F2566FE720BBC0FD009F2247 /* HLStringExtensionExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2566FE520BBC0FD009F2247 /* HLStringExtensionExampleViewController.xib */; };
 		F27106B921621B4100209158 /* HLDocumentsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27106B821621B4100209158 /* HLDocumentsListViewController.swift */; };
-		F27106BD21621C4D00209158 /* HLDocumentsExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27106BB21621C4D00209158 /* HLDocumentsExampleViewController.swift */; };
-		F27106BE21621C4D00209158 /* HLDocumentsExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27106BC21621C4D00209158 /* HLDocumentsExampleViewController.xib */; };
 		F27106C12162287200209158 /* SWDocumentsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27106C02162287200209158 /* SWDocumentsManager.swift */; };
+		F27106C32163181100209158 /* HLCoreMLListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27106C22163181100209158 /* HLCoreMLListViewController.swift */; };
+		F27106C82163191B00209158 /* HLDocumentsExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27106C52163191B00209158 /* HLDocumentsExampleViewController.swift */; };
+		F27106C92163191B00209158 /* HLDocumentsExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27106C62163191B00209158 /* HLDocumentsExampleViewController.xib */; };
+		F27106CC216319D900209158 /* HLRealTimeCameraSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27106CA216319D900209158 /* HLRealTimeCameraSampleViewController.swift */; };
+		F27106CD216319D900209158 /* HLRealTimeCameraSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27106CB216319D900209158 /* HLRealTimeCameraSampleViewController.xib */; };
+		F27106D02163258F00209158 /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F27106CF2163258F00209158 /* SqueezeNet.mlmodel */; };
+		F271073C2163CF1200209158 /* HLPhotosCoreMLSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F271073A2163CF1200209158 /* HLPhotosCoreMLSampleViewController.swift */; };
+		F271073D2163CF1200209158 /* HLPhotosCoreMLSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F271073B2163CF1200209158 /* HLPhotosCoreMLSampleViewController.xib */; };
 		F2C7B78520AFB08F00B49B48 /* HLFlowLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7B78420AFB08F00B49B48 /* HLFlowLayoutView.swift */; };
 		F2C7B78B20AFF36B00B49B48 /* HLClosureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7B78A20AFF36B00B49B48 /* HLClosureView.swift */; };
 		F2C7B78D20B00D1600B49B48 /* HLClosureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7B78C20B00D1600B49B48 /* HLClosureButton.swift */; };
@@ -155,9 +161,15 @@
 		F2566FE420BBC0FD009F2247 /* HLStringExtensionExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLStringExtensionExampleViewController.swift; sourceTree = "<group>"; };
 		F2566FE520BBC0FD009F2247 /* HLStringExtensionExampleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HLStringExtensionExampleViewController.xib; sourceTree = "<group>"; };
 		F27106B821621B4100209158 /* HLDocumentsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLDocumentsListViewController.swift; sourceTree = "<group>"; };
-		F27106BB21621C4D00209158 /* HLDocumentsExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLDocumentsExampleViewController.swift; sourceTree = "<group>"; };
-		F27106BC21621C4D00209158 /* HLDocumentsExampleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HLDocumentsExampleViewController.xib; sourceTree = "<group>"; };
 		F27106C02162287200209158 /* SWDocumentsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWDocumentsManager.swift; sourceTree = "<group>"; };
+		F27106C22163181100209158 /* HLCoreMLListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLCoreMLListViewController.swift; sourceTree = "<group>"; };
+		F27106C52163191B00209158 /* HLDocumentsExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLDocumentsExampleViewController.swift; sourceTree = "<group>"; };
+		F27106C62163191B00209158 /* HLDocumentsExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HLDocumentsExampleViewController.xib; sourceTree = "<group>"; };
+		F27106CA216319D900209158 /* HLRealTimeCameraSampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLRealTimeCameraSampleViewController.swift; sourceTree = "<group>"; };
+		F27106CB216319D900209158 /* HLRealTimeCameraSampleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HLRealTimeCameraSampleViewController.xib; sourceTree = "<group>"; };
+		F27106CF2163258F00209158 /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
+		F271073A2163CF1200209158 /* HLPhotosCoreMLSampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLPhotosCoreMLSampleViewController.swift; sourceTree = "<group>"; };
+		F271073B2163CF1200209158 /* HLPhotosCoreMLSampleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HLPhotosCoreMLSampleViewController.xib; sourceTree = "<group>"; };
 		F2C7B78420AFB08F00B49B48 /* HLFlowLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLFlowLayoutView.swift; sourceTree = "<group>"; };
 		F2C7B78A20AFF36B00B49B48 /* HLClosureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLClosureView.swift; sourceTree = "<group>"; };
 		F2C7B78C20B00D1600B49B48 /* HLClosureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLClosureButton.swift; sourceTree = "<group>"; };
@@ -267,6 +279,7 @@
 				F2D2A37120C289DB00030E62 /* ExampleListVC */,
 				F2111C31206D39570032E6E7 /* Config */,
 				F2111C272067FC790032E6E7 /* Tools */,
+				F27106CE2163257F00209158 /* CoreMLModels */,
 				F2111C0B2067FA5A0032E6E7 /* Main.storyboard */,
 				F2111C0E2067FA5A0032E6E7 /* Assets.xcassets */,
 				F2111C102067FA5A0032E6E7 /* LaunchScreen.storyboard */,
@@ -387,8 +400,8 @@
 		F27106BA21621C2400209158 /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				F27106BB21621C4D00209158 /* HLDocumentsExampleViewController.swift */,
-				F27106BC21621C4D00209158 /* HLDocumentsExampleViewController.xib */,
+				F27106C72163191B00209158 /* CoreML */,
+				F27106C42163191B00209158 /* Documents */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -399,6 +412,34 @@
 				F27106C02162287200209158 /* SWDocumentsManager.swift */,
 			);
 			path = Documents;
+			sourceTree = "<group>";
+		};
+		F27106C42163191B00209158 /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				F27106C52163191B00209158 /* HLDocumentsExampleViewController.swift */,
+				F27106C62163191B00209158 /* HLDocumentsExampleViewController.xib */,
+			);
+			path = Documents;
+			sourceTree = "<group>";
+		};
+		F27106C72163191B00209158 /* CoreML */ = {
+			isa = PBXGroup;
+			children = (
+				F27106CA216319D900209158 /* HLRealTimeCameraSampleViewController.swift */,
+				F27106CB216319D900209158 /* HLRealTimeCameraSampleViewController.xib */,
+				F271073A2163CF1200209158 /* HLPhotosCoreMLSampleViewController.swift */,
+				F271073B2163CF1200209158 /* HLPhotosCoreMLSampleViewController.xib */,
+			);
+			path = CoreML;
+			sourceTree = "<group>";
+		};
+		F27106CE2163257F00209158 /* CoreMLModels */ = {
+			isa = PBXGroup;
+			children = (
+				F27106CF2163258F00209158 /* SqueezeNet.mlmodel */,
+			);
+			path = CoreMLModels;
 			sourceTree = "<group>";
 		};
 		F2C7B78320AFB05F00B49B48 /* FlowLayoutView */ = {
@@ -516,6 +557,7 @@
 				F2D0AA88212F815900937057 /* HLImagePickerPhotoExample.swift */,
 				F2D0AA89212F815900937057 /* HLImagePickerPhotoExample.xib */,
 				F27106B821621B4100209158 /* HLDocumentsListViewController.swift */,
+				F27106C22163181100209158 /* HLCoreMLListViewController.swift */,
 			);
 			path = ExampleListVC;
 			sourceTree = "<group>";
@@ -695,7 +737,9 @@
 				F2F039C220C70AE500A8F716 /* EvaluateStarView.xib in Resources */,
 				F2D0AA8B212F815900937057 /* HLImagePickerPhotoExample.xib in Resources */,
 				F2EE76ED20FE3E6000F90BE3 /* photo002.jpg in Resources */,
-				F27106BE21621C4D00209158 /* HLDocumentsExampleViewController.xib in Resources */,
+				F27106C92163191B00209158 /* HLDocumentsExampleViewController.xib in Resources */,
+				F271073D2163CF1200209158 /* HLPhotosCoreMLSampleViewController.xib in Resources */,
+				F27106CD216319D900209158 /* HLRealTimeCameraSampleViewController.xib in Resources */,
 				F2EE76EC20FE3E6000F90BE3 /* photo000.jpg in Resources */,
 				F2EE76EB20FE3E6000F90BE3 /* photo001.jpg in Resources */,
 				F2322FFE2070E96500F3B13B /* HLPopoverViewController.storyboard in Resources */,
@@ -777,6 +821,7 @@
 				F2111C0A2067FA5A0032E6E7 /* ViewController.swift in Sources */,
 				F2D4E9782096B70400861DBB /* HLGlobalStruct.swift in Sources */,
 				F2C7B78B20AFF36B00B49B48 /* HLClosureView.swift in Sources */,
+				F27106CC216319D900209158 /* HLRealTimeCameraSampleViewController.swift in Sources */,
 				F2111C082067FA5A0032E6E7 /* AppDelegate.swift in Sources */,
 				F2E4D00E20CBC9270080B41B /* HLPopoverController.swift in Sources */,
 				F2D2A37020C2843100030E62 /* EmptyTableViewSample.swift in Sources */,
@@ -787,12 +832,15 @@
 				F2D0AA87212F806F00937057 /* HLImagePickerViewController.swift in Sources */,
 				F2EE76E320FE34D800F90BE3 /* HLWebUrl.swift in Sources */,
 				F2E4D01120CBC9D20080B41B /* HLPopoverCell.swift in Sources */,
+				F27106C82163191B00209158 /* HLDocumentsExampleViewController.swift in Sources */,
 				F21E575420C2FC450014FEF5 /* HLClosureButtonExampleViewController.swift in Sources */,
 				F2C7B79020B1C55E00B49B48 /* HLRichTextManager.swift in Sources */,
+				F271073C2163CF1200209158 /* HLPhotosCoreMLSampleViewController.swift in Sources */,
 				F2D4E9742096B3E300861DBB /* HLPlayerViewController.swift in Sources */,
 				F2D2A36320BDB5CF00030E62 /* HLCommonDefines.swift in Sources */,
 				F2EE76FA2115C25500F90BE3 /* HLFilterNumberViewController.swift in Sources */,
 				F2C7B78520AFB08F00B49B48 /* HLFlowLayoutView.swift in Sources */,
+				F27106C32163181100209158 /* HLCoreMLListViewController.swift in Sources */,
 				F22EBDC8211E00690090D4D2 /* HLTicketMangerExample.swift in Sources */,
 				F2D2A36020BDB57C00030E62 /* HLButtonExampleViewController.swift in Sources */,
 				F2C7B78D20B00D1600B49B48 /* HLClosureButton.swift in Sources */,
@@ -809,6 +857,7 @@
 				F23230002070EAEC00F3B13B /* HLPopoverPresentedView.swift in Sources */,
 				F2111C2D206D20920032E6E7 /* HLProgressBarViewController.swift in Sources */,
 				F22EBDC3211DFFFE0090D4D2 /* SWAccountBook.swift in Sources */,
+				F27106D02163258F00209158 /* SqueezeNet.mlmodel in Sources */,
 				F2D2A37320C28A0400030E62 /* HLCalendarListViewController.swift in Sources */,
 				F2322FF9206FF51500F3B13B /* CalendarViewController.swift in Sources */,
 				F21E573D20C2E4F70014FEF5 /* HLProgressBarListViewController.swift in Sources */,
@@ -820,7 +869,6 @@
 				F2C7B79920B5B88A00B49B48 /* HLGridView.swift in Sources */,
 				F2C7B79620B1CB0D00B49B48 /* HLStringExtension.swift in Sources */,
 				F2F039C520C70D4D00A8F716 /* EvaluateStarView.swift in Sources */,
-				F27106BD21621C4D00209158 /* HLDocumentsExampleViewController.swift in Sources */,
 				F22EBDCB211E00A10090D4D2 /* HLTicketMangerViewController.swift in Sources */,
 				F21E573720C2ADF10014FEF5 /* UILabel+ShowLabel.swift in Sources */,
 				F2D2A36B20BEFAD500030E62 /* HLStarViewExample.swift in Sources */,
@@ -987,6 +1035,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				COREML_CODEGEN_LANGUAGE = Swift;
 				DEVELOPMENT_TEAM = UTT4HQ4F3H;
 				INFOPLIST_FILE = HLTools/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1005,6 +1054,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				COREML_CODEGEN_LANGUAGE = Swift;
 				DEVELOPMENT_TEAM = UTT4HQ4F3H;
 				INFOPLIST_FILE = HLTools/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
