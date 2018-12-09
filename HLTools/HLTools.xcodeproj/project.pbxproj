@@ -60,6 +60,9 @@
 		F27106D02163258F00209158 /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F27106CF2163258F00209158 /* SqueezeNet.mlmodel */; };
 		F271073C2163CF1200209158 /* HLPhotosCoreMLSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F271073A2163CF1200209158 /* HLPhotosCoreMLSampleViewController.swift */; };
 		F271073D2163CF1200209158 /* HLPhotosCoreMLSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F271073B2163CF1200209158 /* HLPhotosCoreMLSampleViewController.xib */; };
+		F2896C4621BCE2CD009DC514 /* HLGradientListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2896C4521BCE2CD009DC514 /* HLGradientListViewController.swift */; };
+		F2896C4A21BCE42E009DC514 /* HLGradientTextExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2896C4821BCE42E009DC514 /* HLGradientTextExampleViewController.swift */; };
+		F2896C4B21BCE42E009DC514 /* HLGradientTextExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2896C4921BCE42E009DC514 /* HLGradientTextExampleViewController.xib */; };
 		F2C7B78520AFB08F00B49B48 /* HLFlowLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7B78420AFB08F00B49B48 /* HLFlowLayoutView.swift */; };
 		F2C7B78B20AFF36B00B49B48 /* HLClosureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7B78A20AFF36B00B49B48 /* HLClosureView.swift */; };
 		F2C7B78D20B00D1600B49B48 /* HLClosureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C7B78C20B00D1600B49B48 /* HLClosureButton.swift */; };
@@ -170,6 +173,9 @@
 		F27106CF2163258F00209158 /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
 		F271073A2163CF1200209158 /* HLPhotosCoreMLSampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLPhotosCoreMLSampleViewController.swift; sourceTree = "<group>"; };
 		F271073B2163CF1200209158 /* HLPhotosCoreMLSampleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HLPhotosCoreMLSampleViewController.xib; sourceTree = "<group>"; };
+		F2896C4521BCE2CD009DC514 /* HLGradientListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLGradientListViewController.swift; sourceTree = "<group>"; };
+		F2896C4821BCE42E009DC514 /* HLGradientTextExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLGradientTextExampleViewController.swift; sourceTree = "<group>"; };
+		F2896C4921BCE42E009DC514 /* HLGradientTextExampleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HLGradientTextExampleViewController.xib; sourceTree = "<group>"; };
 		F2C7B78420AFB08F00B49B48 /* HLFlowLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLFlowLayoutView.swift; sourceTree = "<group>"; };
 		F2C7B78A20AFF36B00B49B48 /* HLClosureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLClosureView.swift; sourceTree = "<group>"; };
 		F2C7B78C20B00D1600B49B48 /* HLClosureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLClosureButton.swift; sourceTree = "<group>"; };
@@ -400,6 +406,7 @@
 		F27106BA21621C2400209158 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				F2896C4721BCE3FE009DC514 /* Gradient */,
 				F27106C72163191B00209158 /* CoreML */,
 				F27106C42163191B00209158 /* Documents */,
 			);
@@ -440,6 +447,15 @@
 				F27106CF2163258F00209158 /* SqueezeNet.mlmodel */,
 			);
 			path = CoreMLModels;
+			sourceTree = "<group>";
+		};
+		F2896C4721BCE3FE009DC514 /* Gradient */ = {
+			isa = PBXGroup;
+			children = (
+				F2896C4821BCE42E009DC514 /* HLGradientTextExampleViewController.swift */,
+				F2896C4921BCE42E009DC514 /* HLGradientTextExampleViewController.xib */,
+			);
+			path = Gradient;
 			sourceTree = "<group>";
 		};
 		F2C7B78320AFB05F00B49B48 /* FlowLayoutView */ = {
@@ -558,6 +574,7 @@
 				F2D0AA89212F815900937057 /* HLImagePickerPhotoExample.xib */,
 				F27106B821621B4100209158 /* HLDocumentsListViewController.swift */,
 				F27106C22163181100209158 /* HLCoreMLListViewController.swift */,
+				F2896C4521BCE2CD009DC514 /* HLGradientListViewController.swift */,
 			);
 			path = ExampleListVC;
 			sourceTree = "<group>";
@@ -734,6 +751,7 @@
 				F2111C0D2067FA5A0032E6E7 /* Main.storyboard in Resources */,
 				F2EE76F020FE3E6000F90BE3 /* photo005.jpg in Resources */,
 				F2E4D01220CBC9D20080B41B /* HLPopoverCell.xib in Resources */,
+				F2896C4B21BCE42E009DC514 /* HLGradientTextExampleViewController.xib in Resources */,
 				F2F039C220C70AE500A8F716 /* EvaluateStarView.xib in Resources */,
 				F2D0AA8B212F815900937057 /* HLImagePickerPhotoExample.xib in Resources */,
 				F2EE76ED20FE3E6000F90BE3 /* photo002.jpg in Resources */,
@@ -848,6 +866,7 @@
 				F21E573B20C2B2270014FEF5 /* HLFlowLayoutButtonListViewController.swift in Sources */,
 				F22EBDC5211DFFFE0090D4D2 /* SWCouponManager.swift in Sources */,
 				F2C7B79320B1CA7600B49B48 /* HLLabelExtension.swift in Sources */,
+				F2896C4A21BCE42E009DC514 /* HLGradientTextExampleViewController.swift in Sources */,
 				F2D4E9762096B40B00861DBB /* HLPlayerContainerView.swift in Sources */,
 				F2D2A36120BDB57C00030E62 /* HLButton.swift in Sources */,
 				F21E573520C29F5F0014FEF5 /* HLButtonListViewController.swift in Sources */,
@@ -871,6 +890,7 @@
 				F2F039C520C70D4D00A8F716 /* EvaluateStarView.swift in Sources */,
 				F22EBDCB211E00A10090D4D2 /* HLTicketMangerViewController.swift in Sources */,
 				F21E573720C2ADF10014FEF5 /* UILabel+ShowLabel.swift in Sources */,
+				F2896C4621BCE2CD009DC514 /* HLGradientListViewController.swift in Sources */,
 				F2D2A36B20BEFAD500030E62 /* HLStarViewExample.swift in Sources */,
 				F21E574B20C2F18B0014FEF5 /* HLFlowLayoutViewController.swift in Sources */,
 				F2D0AA8A212F815900937057 /* HLImagePickerPhotoExample.swift in Sources */,

@@ -25,6 +25,7 @@ class ViewController: HLBaseViewController {
     let KImagePickerIdentifier = "ImagePickerIdentifier"
     let KDocumentsIdentifier = "DocumentsIdentifier"
     let KCoreMLIdentifier = "CoreMLIdentifier"
+    let KGradientTextIdentifier = "GradientTextIdentifier"
     
     override func tableViewData() {
         let data1 = HLTableViewDataStruct.init(title: "进度", identifier: KProgressIdentifier)
@@ -43,6 +44,8 @@ class ViewController: HLBaseViewController {
         let data14 = HLTableViewDataStruct.init(title: "图片视频选择器", identifier: KImagePickerIdentifier)
         let data15 = HLTableViewDataStruct.init(title: "访问Documents目录", identifier: KDocumentsIdentifier)
         let data16 = HLTableViewDataStruct.init(title: "CoreMLIdentifier:机器学习", identifier: KCoreMLIdentifier)
+        let data17 = HLTableViewDataStruct.init(title: "渐变字体", identifier: KGradientTextIdentifier)
+        
         
         tableviewDataArray = [data1,
                               data2,
@@ -59,7 +62,8 @@ class ViewController: HLBaseViewController {
                               data13,
                               data14,
                               data15,
-                              data16]
+                              data16,
+                              data17]
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,6 +107,8 @@ class ViewController: HLBaseViewController {
             vc = HLDocumentsExampleViewController.init()
         case KCoreMLIdentifier:
             vc = HLCoreMLListViewController.init()
+        case KGradientTextIdentifier:
+            vc = HLGradientListViewController.init()
             
         default:
             vc = HLProgressBarListViewController.init()
