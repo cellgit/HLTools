@@ -36,7 +36,7 @@ class HLGradientTextExampleViewController: UIViewController {
     
     /// 3. Mask the UILabel onto the color layer
     let label = UILabel(frame: view.bounds)
-    label.text = "App工匠的4K视频"
+    label.text = "小浣熊七夕节葡萄树下听私语"
     label.numberOfLines = 0
     label.textAlignment = .center
     label.lineBreakMode = NSLineBreakMode.byWordWrapping

@@ -114,8 +114,6 @@ class ViewController: HLBaseViewController {
             vc = HLProgressBarListViewController.init()
         }
         pushViewController(vc: vc, animated: true)
-        
-        
     }
     // 在这里设置tableViewCell的动画
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
