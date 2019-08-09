@@ -19,6 +19,7 @@ extension UIView {
                 item.removeFromSuperview()
             }
         }
+        /// padding的值要注意,可能会影响布局,如果影响布局直接写成一个固定值
         let padding: CGFloat = (self.bounds.size.width - starWidth * 5)/4
         var imgViewArray = [UIImageView]()
         for i in 0..<5 {
@@ -27,12 +28,6 @@ extension UIView {
             imgView.tag = i
             imgViewArray.append(imgView)
             if i == 0 {
-                //                imgView.snp.makeConstraints({ (make) in
-                //                    make.left.equalTo(self.snp.left)
-                //                    make.centerY.equalTo(self.snp.centerY)
-                //                    make.width.height.equalTo(starWidth)
-                //                })
-                
                 imgView.translatesAutoresizingMaskIntoConstraints = false
                 self.addConstraint(NSLayoutConstraint.init(item: imgView, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 0))
                 self.addConstraint(NSLayoutConstraint.init(item: imgView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0))
@@ -40,11 +35,6 @@ extension UIView {
                 self.addConstraint(NSLayoutConstraint.init(item: imgView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: starWidth))
             }
             else {
-//                imgView.snp.makeConstraints({ (make) in
-//                    make.left.equalTo(imgViewArray[i-1].snp.right).offset(padding)
-//                    make.centerY.equalTo(self.snp.centerY)
-//                    make.width.height.equalTo(starWidth)
-//                })
                 imgView.translatesAutoresizingMaskIntoConstraints = false
                 self.addConstraint(NSLayoutConstraint.init(item: imgView, attribute: .left, relatedBy: .equal, toItem: imgViewArray[i-1], attribute: .right, multiplier: 1, constant: padding))
                 self.addConstraint(NSLayoutConstraint.init(item: imgView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0))
@@ -64,26 +54,13 @@ extension UIView {
                 imgView.tag = i
                 imgViewArray.append(imgView)
                 if i == 0 {
-//                    imgView.snp.makeConstraints({ (make) in
-//                        make.left.equalTo(self.snp.left)
-//                        make.centerY.equalTo(self.snp.centerY)
-//                        make.width.height.equalTo(starWidth)
-//                    })
-                    
                     imgView.translatesAutoresizingMaskIntoConstraints = false
                     self.addConstraint(NSLayoutConstraint.init(item: imgView, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 0))
                     self.addConstraint(NSLayoutConstraint.init(item: imgView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0))
                     self.addConstraint(NSLayoutConstraint.init(item: imgView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: starWidth))
                     self.addConstraint(NSLayoutConstraint.init(item: imgView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: starWidth))
-                    
                 }
                 else {
-//                    imgView.snp.makeConstraints({ (make) in
-//                        make.left.equalTo(imgViewArray[i-1].snp.right).offset(padding)
-//                        make.centerY.equalTo(self.snp.centerY)
-//                        make.width.height.equalTo(starWidth)
-//                    })
-                    
                     imgView.translatesAutoresizingMaskIntoConstraints = false
                     self.addConstraint(NSLayoutConstraint.init(item: imgView, attribute: .left, relatedBy: .equal, toItem: imgViewArray[i-1], attribute: .right, multiplier: 1, constant: padding))
                     self.addConstraint(NSLayoutConstraint.init(item: imgView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0))
@@ -107,12 +84,6 @@ extension UIView {
                 imgView.tag = i
                 imgViewArray.append(imgView)
                 if i == 0 {
-//                    imgView.snp.makeConstraints({ (make) in
-//                        make.left.equalTo(self.snp.left)
-//                        make.centerY.equalTo(self.snp.centerY)
-//                        make.width.height.equalTo(starWidth)
-//                    })
-                    
                     imgView.translatesAutoresizingMaskIntoConstraints = false
                     self.addConstraint(NSLayoutConstraint.init(item: imgView, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 0))
                     self.addConstraint(NSLayoutConstraint.init(item: imgView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0))
@@ -120,12 +91,6 @@ extension UIView {
                     self.addConstraint(NSLayoutConstraint.init(item: imgView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: starWidth))
                 }
                 else {
-//                    imgView.snp.makeConstraints({ (make) in
-//                        make.left.equalTo(imgViewArray[i-1].snp.right).offset(padding)
-//                        make.centerY.equalTo(self.snp.centerY)
-//                        make.width.height.equalTo(starWidth)
-//                    })
-                    
                     imgView.translatesAutoresizingMaskIntoConstraints = false
                     self.addConstraint(NSLayoutConstraint.init(item: imgView, attribute: .left, relatedBy: .equal, toItem: imgViewArray[i-1], attribute: .right, multiplier: 1, constant: padding))
                     self.addConstraint(NSLayoutConstraint.init(item: imgView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0))
