@@ -41,11 +41,11 @@ class HLStarViewExample: UIViewController {
 extension HLStarViewExample: EvaluateStarViewDelegate {
     /// edit star score, via tap and pan gesture
     func evaluateScoreStarView() {
-        
-        
-        let starView = EvaluateStarView(frame: CGRect(x: (ScreenWidth - 110) / 2 , y: 260, width: 110, height: 22))
+        let height: CGFloat = 18
+        let starView = EvaluateStarView(frame: CGRect(x: (ScreenWidth - height*5) / 2 , y: 200, width: height*5, height: height))
         starView.delegate = self
-        view.addSubview(starView)
+        self.view.addSubview(starView)
+        starView.backgroundColor = .lightGray
     }
     func evaluateStarView(_ evaluateStarView: EvaluateStarView, progressChangedTo progress: Float) {
         print("===== \(progress)")

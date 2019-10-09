@@ -17,6 +17,10 @@ class EvaluateStarView: UIView {
     
     @IBOutlet weak var fgView: UIView!
     
+    @IBOutlet weak var fgViewTralingConst: NSLayoutConstraint!
+    
+    
+    
     lazy var evaluateStarView: UIView = {
         let evaluateStarView = UINib(nibName: String(describing: type(of: self)), bundle: Bundle(for: type(of: self))).instantiate(withOwner: self, options: nil).first as! UIView
         evaluateStarView.frame = self.bounds
@@ -68,8 +72,17 @@ class EvaluateStarView: UIView {
         if point.x <= halfWidth / 2 {
             fgViewWidth = 0
         }
+        print("fgViewWidth======\(fgViewWidth)")
         //改变前景view的宽度让它看起来被设置了评分
-        fgView.frame.size.width = fgViewWidth
+//        fgView.frame.size.width = fgViewWidth
+//        
+//        fgView.backgroundColor = .red
+//        
+//        fgView.frame = CGRect(x: fgView.frame.origin.x, y: fgView.frame.origin.y, width: fgViewWidth, height: fgView.frame.height)
+        
+        fgViewTralingConst.constant = self.bounds.width - fgViewWidth
+        
+//        print("fgViewWidth====222222==\(fgView.bounds.size.width)")
         delegate?.evaluateStarView(self, progressChangedTo: Float(fgViewWidth / frame.width))
     }
     

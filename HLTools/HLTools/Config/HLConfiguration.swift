@@ -54,12 +54,12 @@ extension HLColor {
     static let blueColour =  HLColor.color(R: 43, G: 133, B: 208, A: 1.0)
     static let yellowColour =  HLColor.color(R: 255, G: 252, B: 233, A: 1.0)
     
-    static let linkColor =  HLColor.color(R: 56, G: 116, B: 171, A: 1.0)
+//    static let linkColor =  HLColor.color(R: 56, G: 116, B: 171, A: 1.0)
     static let disabledColor =  HLColor.color(R: 179, G: 179, B: 179, A: 1.0)
     static let backgroundColor = HLColor.color(R: 246, G: 246, B: 246, A: 1.0)
     static let maskDarkColor = HLColor.color(R: 0, G: 0, B: 0, A: 0.35)
     static let maskLightColor = HLColor.color(R: 255, G: 255, B: 255, A: 0.5)
-    static let separatorColor = HLColor.color(R: 200, G: 199, B: 204, A: 1.0)
+//    static let separatorColor = HLColor.color(R: 200, G: 199, B: 204, A: 1.0)
     static let separatorDashedColor = HLColor.color(R: 17, G: 17, B: 17, A: 1.0)
     static let placeholderColor = HLColor.color(R: 187, G: 187, B: 187, A: 1.0)
     
